@@ -1,0 +1,249 @@
+1583831365975	geckodriver	INFO	Listening on 127.0.0.1:51089
+1583833157799	geckodriver	INFO	Listening on 127.0.0.1:52664
+1583833546253	geckodriver	INFO	Listening on 127.0.0.1:53248
+1583833549262	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.uWHGvDyxOeJG
+1583833549264	geckodriver::marionette	INFO	Starting browser /tools/geckodriver.exe
+1583833799673	geckodriver	INFO	Listening on 127.0.0.1:53505
+1583833802705	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.8MU3WqgOSV9k
+1583833802710	geckodriver::marionette	INFO	Starting browser D:\AutomationTest\driver\firefox\geckodriver-v0.11.1-win64\geckodriver.exe
+1583833803132	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53514
+error: Found argument '--marionette' which wasn't expected, or isn't valid in this context
+	Did you mean --marionette-port?
+
+USAGE:
+    geckodriver.exe --marionette-port <PORT>
+
+For more information try --help
+1583833859458	geckodriver	INFO	Listening on 127.0.0.1:53615
+1583833862497	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.g4A1k6L996hB
+1583833862502	geckodriver::marionette	INFO	Starting browser D:\AutomationTest\driver\firefox\geckodriver-v0.11.1-win64\geckodriver.exe
+1583833862569	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53625
+error: Found argument '--marionette' which wasn't expected, or isn't valid in this context
+	Did you mean --marionette-port?
+
+USAGE:
+    geckodriver.exe --marionette-port <PORT>
+
+For more information try --help
+1583833864258	geckodriver	INFO	Listening on 127.0.0.1:53631
+1583833869337	geckodriver	INFO	Listening on 127.0.0.1:53645
+1583833872367	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.1we657Sj0GWN
+1583833872370	geckodriver::marionette	INFO	Starting browser D:\AutomationTest\driver\firefox\geckodriver-v0.11.1-win64\geckodriver.exe
+1583833872422	geckodriver::marionette	INFO	Connecting to Marionette on localhost:53653
+error: Found argument '--marionette' which wasn't expected, or isn't valid in this context
+	Did you mean --marionette-port?
+
+USAGE:
+    geckodriver.exe --marionette-port <PORT>
+
+For more information try --help
+1583834003050	geckodriver	INFO	Listening on 127.0.0.1:54023
+1583834006068	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.fb9Fxj9tJVWN
+1583834006070	geckodriver::marionette	INFO	Starting browser D:\AutomationTest\driver\firefox\geckodriver-v0.11.1-win64\geckodriver.exe
+1583834006108	geckodriver::marionette	INFO	Connecting to Marionette on localhost:54035
+error: Found argument '--marionette' which wasn't expected, or isn't valid in this context
+	Did you mean --marionette-port?
+
+USAGE:
+    geckodriver.exe --marionette-port <PORT>
+
+For more information try --help
+1583834502683	geckodriver	INFO	Listening on 127.0.0.1:54893
+1583834776105	geckodriver	INFO	Listening on 127.0.0.1:55317
+1583834779121	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.3pNilbo7iRtX
+1583834779126	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1583834779267	geckodriver::marionette	INFO	Connecting to Marionette on localhost:55327
+1583834780293	addons.xpi-utils	WARN	addMetadata: Add-on e10srollout@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583834780294	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583834780297	addons.xpi-utils	WARN	addMetadata: Add-on firefox@getpocket.com is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583834780298	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583834780304	addons.xpi-utils	WARN	addMetadata: Add-on loop@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583834780305	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583834780308	addons.xpi-utils	WARN	addMetadata: Add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583834780308	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583834780993	Marionette	INFO	Listening on port 55327
+1583834864008	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: timeout
+1583835038615	geckodriver	INFO	Listening on 127.0.0.1:55770
+1583835041868	geckodriver	INFO	Listening on 127.0.0.1:55782
+1583835044889	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.SegosUBL28JL
+1583835044893	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1583835044974	geckodriver::marionette	INFO	Connecting to Marionette on localhost:55792
+1583835046100	addons.xpi-utils	WARN	addMetadata: Add-on e10srollout@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835046101	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835046107	addons.xpi-utils	WARN	addMetadata: Add-on firefox@getpocket.com is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835046108	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835046112	addons.xpi-utils	WARN	addMetadata: Add-on loop@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835046113	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835046116	addons.xpi-utils	WARN	addMetadata: Add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835046116	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835046616	Marionette	INFO	Listening on port 55792
+1583835049576	geckodriver	INFO	Listening on 127.0.0.1:55800
+1583835052601	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.cD5IRXuqYTMC
+1583835052606	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1583835052688	geckodriver::marionette	INFO	Connecting to Marionette on localhost:55812
+1583835053188	addons.xpi-utils	WARN	addMetadata: Add-on e10srollout@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835053189	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835053192	addons.xpi-utils	WARN	addMetadata: Add-on firefox@getpocket.com is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835053192	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835053197	addons.xpi-utils	WARN	addMetadata: Add-on loop@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835053198	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835053200	addons.xpi-utils	WARN	addMetadata: Add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835053201	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835053893	Marionette	INFO	Listening on port 55812
+1583835178503	geckodriver	INFO	Listening on 127.0.0.1:56052
+1583835181513	mozprofile::profile	INFO	Using profile path C:\Users\LENOVO\AppData\Local\Temp\rust_mozprofile.UcEUWiEGZDPR
+1583835181515	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1583835181603	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56068
+1583835182611	addons.xpi-utils	WARN	addMetadata: Add-on e10srollout@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835182611	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835182614	addons.xpi-utils	WARN	addMetadata: Add-on firefox@getpocket.com is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835182614	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835182618	addons.xpi-utils	WARN	addMetadata: Add-on loop@mozilla.org is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835182618	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835182620	addons.xpi-utils	WARN	addMetadata: Add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} is invalid: [Exception... "Component returned failure code: 0x8052000b (NS_ERROR_FILE_CORRUPTED) [nsIZipReader.open]"  nsresult: "0x8052000b (NS_ERROR_FILE_CORRUPTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadManifestFromZipFile< :: line 1401"  data: no] Stack trace: loadManifestFromZipFile<()@resource://gre/modules/addons/XPIProvider.jsm:1401 < TaskImpl_run()@resource://gre/modules/Task.jsm:319 < TaskImpl()@resource://gre/modules/Task.jsm:280 < createAsyncFunction/asyncFunction()@resource://gre/modules/Task.jsm:254 < loadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1416 < syncLoadManifestFromFile()@resource://gre/modules/addons/XPIProvider.jsm:1429 < addMetadata()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:1647 < processFileChanges()@resource://gre/modules/addons/XPIProvider.jsm -> resource://gre/modules/addons/XPIProviderUtils.js:2011 < this.XPIProvider.checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3620 < this.XPIProvider.startup()@resource://gre/modules/addons/XPIProvider.jsm:2622 < callProvider()@resource://gre/modules/AddonManager.jsm:227 < _startProvider()@resource://gre/modules/AddonManager.jsm:755 < AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:938 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:2773 < amManager.prototype.observe()@resource://gre/components/addonManager.js:57
+1583835182621	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1583835183138	Marionette	INFO	Listening on port 56068
+1583835342172	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1583837104230	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofile.SnAtS4GSKJC4"
+1583837105225	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1583837106375	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1583837106375	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1583837106376	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1583837106376	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1583837112479	Marionette	INFO	Listening on port 59184
+1583837112625	Marionette	WARN	TLS certificate errors will be ignored for this session
+1583837127235	Marionette	INFO	Stopped listening on port 59184
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1583837622262	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofiledS5lc9"
+1583837626877	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1583837629210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1583837629211	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1583837629211	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1583837629211	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1583837641062	Marionette	INFO	Listening on port 59666
+1583837641635	Marionette	WARN	TLS certificate errors will be ignored for this session
+1583837652832	Marionette	INFO	Stopped listening on port 59666
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1583839829403	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofileb133fW"
+1583839830283	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1583839831261	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1583839831261	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1583839831262	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1583839831262	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1583839835613	Marionette	INFO	Listening on port 62046
+1583839835995	Marionette	WARN	TLS certificate errors will be ignored for this session
+1583839845636	Marionette	INFO	Stopped listening on port 62046
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1583842575939	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofileTIKAad"
+1583842576612	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1583842577960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1583842577961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1583842577961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1583842577961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1583842580785	Marionette	INFO	Listening on port 63113
+1583842580888	Marionette	WARN	TLS certificate errors will be ignored for this session
+1583842591547	Marionette	INFO	Stopped listening on port 63113
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: (msgtype=0x5D0005,name=PImageBridge::Msg_WillClose) Channel error: cannot send/recv
+
+1583842617517	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofilebbi5a7"
+1583842618620	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1583842619794	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1583842619794	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1583842619794	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1583842619794	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1583842622380	Marionette	INFO	Listening on port 63187
+1583842622472	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 680: TypeError: this.tablesData[table] is undefined
+1583842630202	Marionette	INFO	Stopped listening on port 63187
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: (msgtype=0x5D0005,name=PImageBridge::Msg_WillClose) Channel error: cannot send/recv
+
+1583843619902	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofileDYKZTW"
+1583843621965	Marionette	INFO	Enabled via --marionette
+[Child 26884, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26884, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1583843626605	Marionette	INFO	Listening on port 64230
+1583843626672	Marionette	WARN	TLS certificate errors will be ignored for this session
+1583843626803	Marionette	DEBUG	Register listener.js for window 4294967297
+[Child 22676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 22676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 25040, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 25040, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: resource://shield-recipe-client/lib/RecipeRunner.jsm, line 137: TypeError: prefs is undefined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 21704, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1583843970319	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofile6r1IEP"
+1583843971364	Marionette	INFO	Enabled via --marionette
+[Child 25872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 25872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1583843974858	Marionette	INFO	Listening on port 64698
+1583843974891	Marionette	WARN	TLS certificate errors will be ignored for this session
+1583843974972	Marionette	DEBUG	Register listener.js for window 4294967297
+1583843975081	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1583843975832	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1583843975832	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1583843989112	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.5itest.cn/register"
+1583843989116	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.5itest.cn/register"
+1583843999166	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+[Parent 24996, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26332, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26332, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 24996, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: resource://shield-recipe-client/lib/RecipeRunner.jsm, line 137: TypeError: prefs is undefined
+[Child 24644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 26648, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1583844399972	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\LENOVO\\AppData\\Local\\Temp\\rust_mozprofilehmmmVA"
+1583844401070	Marionette	INFO	Enabled via --marionette
+[Child 19492, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19492, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1583844404577	Marionette	INFO	Listening on port 65336
+1583844404980	Marionette	WARN	TLS certificate errors will be ignored for this session
+1583844405069	Marionette	DEBUG	Register listener.js for window 4294967297
+1583844405103	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1583844405517	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1583844405518	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1583844418954	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.5itest.cn/register"
+1583844418956	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.5itest.cn/register"
+1583844426063	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+[Parent 27024, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 20932, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 20932, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26144, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 26144, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: resource://shield-recipe-client/lib/RecipeRunner.jsm, line 137: TypeError: prefs is undefined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 22112, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
