@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>this is the first report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-03-24 09:27:37</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:31.191767</p>
-<p class='attribute'><strong>Status:</strong> Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-03-27 17:01:01</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:39.497106</p>
+<p class='attribute'><strong>Status:</strong> Pass 1</p>
 
 <p class='description'>这是我们第一次测试报告</p>
 </div>
@@ -221,63 +221,31 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>FirstCase</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_register_email_error</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_register_email_error</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: Traceback (most recent call last):
-  File "D:\pythonWork\untitled2\case\first_case.py", line 56, in test_register_email_error
-    register_email_error = self.rb.register_email_error('test01', 'test01', 'test01abc', self.file_name)
-  File "D:/pythonWork/untitled2\business\register_business.py", line 40, in register_email_error
-    self.common_register(register_email, nickname, password, file_name)
-  File "D:/pythonWork/untitled2\business\register_business.py", line 19, in common_register
-    self.rh.send_register_captcha(file_name)
-  File "D:/pythonWork/untitled2\handle\register_handle.py", line 30, in send_register_captcha
-    captcha = get_code_text.discern_captcha_image(file_name)
-  File "D:/pythonWork/untitled2\util\get_code.py", line 34, in discern_captcha_image
-    self.get_captcha_image(file_name)
-  File "D:/pythonWork/untitled2\util\get_code.py", line 27, in get_captcha_image
-    image = Image.open(file_name)
-  File "C:\Users\fengyx\AppData\Local\Programs\Python\Python38\lib\site-packages\PIL\Image.py", line 2809, in open
-    fp = builtins.open(filename, "rb")
-FileNotFoundError: [Errno 2] No such file or directory: '../Image/test_captcha.png'
-Traceback (most recent call last):
-  File "D:\pythonWork\untitled2\case\first_case.py", line 56, in test_register_email_error
-    register_email_error = self.rb.register_email_error('test01', 'test01', 'test01abc', self.file_name)
-  File "D:/pythonWork/untitled2\business\register_business.py", line 40, in register_email_error
-    self.common_register(register_email, nickname, password, file_name)
-  File "D:/pythonWork/untitled2\business\register_business.py", line 19, in common_register
-    self.rh.send_register_captcha(file_name)
-  File "D:/pythonWork/untitled2\handle\register_handle.py", line 30, in send_register_captcha
-    captcha = get_code_text.discern_captcha_image(file_name)
-  File "D:/pythonWork/untitled2\util\get_code.py", line 34, in discern_captcha_image
-    self.get_captcha_image(file_name)
-  File "D:/pythonWork/untitled2\util\get_code.py", line 27, in get_captcha_image
-    image = Image.open(file_name)
-  File "C:\Users\fengyx\AppData\Local\Programs\Python\Python38\lib\site-packages\PIL\Image.py", line 2809, in open
-    fp = builtins.open(filename, "rb")
-FileNotFoundError: [Errno 2] No such file or directory: '../Image/test_captcha.png'
-
+pt1.1: 
 
         </pre>
     </div>
@@ -289,9 +257,9 @@ FileNotFoundError: [Errno 2] No such file or directory: '../Image/test_captcha.p
 <tr id='total_row'>
     <td>Total</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

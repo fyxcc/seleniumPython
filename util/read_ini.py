@@ -8,7 +8,7 @@ class ReadIni(object):
     # 初始化配置文件路径及节点加载
     def __init__(self, file_name=None, node=None):
         if file_name is None:
-            self.file_name = r"D:\pythonWork\untitled2\config\LocalElement.ini"
+            self.file_name = r"D:\pythonWork\autoTest\config\LocalElement.ini"
         if node is None:
             self.node = 'RegisterElement'
         else:

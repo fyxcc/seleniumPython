@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 import sys
-sys.path.append('D:/pythonWork/untitled2')
+
+sys.path.append('D:/pythonWork/autoTest')
 import time
 from business.register_business import RegisterBusiness
 from selenium import webdriver
@@ -91,7 +92,7 @@ class FirstCase(unittest.TestCase):
 if __name__ == "__main__":
     # 报告存放路径
     # fire_path = os.path.join(os.path.pardir + "/report/" + "first_case.html")
-    fire_path = r"D:\pythonWork\untitled2/report/first_case.html"
+    fire_path = r"D:\pythonWork\autoTest/report/first_case.html"
     f = open(fire_path, 'wb')
 
     # 把需要运行的case加载在容器中，达到选择性运行
