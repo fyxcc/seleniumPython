@@ -50,21 +50,18 @@ class LoginPage(object):
     def get_login_auto_btn(self):
         return self.fe.get_element('login_auto')
 
-    # 不合法密码错误提示语
+    # 不合法登录用户名错误提示语
+    def get_login_name_error(self):
+        return self.fe.get_element('login_name_error')
+
+    # 不合法登录密码错误提示语
     def get_login_password_error(self):
         return self.fe.get_element('login_password_error')
 
-
-''' 
-    # 不合法登录户错误提示语
-    def get_register_nickname_error(self):
-        return self.fe.get_element('register_nickname_error')
-
-
     # 不合法验证码错误提示语
     def get_captcha_code_error(self):
-        return self.fe.get_element('captcha_code_error')
-'''
+        return self.fe.get_element('login_captcha_error')
+
 
 if __name__ == "__main__":
     register_url = 'http://localhost:9090/exam-place/login'

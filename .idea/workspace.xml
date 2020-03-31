@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/case/login_ddt_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/loginDdtData.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/register_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/register_business.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/unnitest_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/login_business.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle/login_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/login_handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/test_captcha0330.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/test_captcha0330.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/login_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/first_ddt_case.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test_captcha_code_error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test_register_case_1____test01____test01____test01abc____D__pythonWork_untitled2_image_test_captcha01_png____register_email_error____请输入有效的电子邮件地址__.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test_register_case_2___test02_163_com____1____test02abc____D__pythonWork_untitled2_image_test_captcha02_png____register_nickname_error____字符长度必须大于等于4_一个中文字算2个字符__.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test_register_case_3___test03_163_com____test03____test03abc____D__pythonWork_untitled2_image_test_captcha03_png____register_password_error____最少需要输入_5_个字符__.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test_register_case_4___test04_163_com____test04____test04abc____D__pythonWork_untitled2_image_test_captcha04_png____captcha_code_error____验证码错误__.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test_register_email_error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test_register_password_error.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +48,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/pathonWork/untitled" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/login_ddt_case.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -59,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.login_handle">
+  <component name="RunManager" selected="Python.login_ddt_case">
     <configuration name="data_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,6 +153,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/first_ddt_case.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="login_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\fengyx\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/login_ddt_case.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,6 +338,7 @@
       <item itemvalue="Python.data_test" />
       <item itemvalue="Python.untitled2" />
       <item itemvalue="Python.run_case" />
+      <item itemvalue="Python.login_ddt_case" />
       <item itemvalue="Python.user_log" />
       <item itemvalue="Python.read_ini" />
       <item itemvalue="Python.find_element" />
@@ -353,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585616577842</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="登录元素配置">
+      <created>1585621453682</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585621453682</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,6 +482,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="511" y="255" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1583918804807" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/case/login_ddt_case.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/case/login_ddt_case.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled2$first_register_code__1_.coverage" NAME="first_register_code (1) Coverage Results" MODIFIED="1583835003944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Imooc_Selenium" />

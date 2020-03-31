@@ -30,10 +30,10 @@ class LoginHandle(object):
     def get_user_text(self, error_info, error_value):
         try:
 
-            if error_info == 'register_nickname_error':
-                text = self.lp.get_register_nickname_error().text
+            if error_info == 'login_name_error':
+                text = self.lp.get_login_name_error().text
             elif error_info == 'login_password_error':
-                text = self.lp.login_password_error().text
+                text = self.lp.get_login_password_error().text
             else:
                 text = self.lp.get_captcha_code_error().text
         except:
@@ -65,5 +65,6 @@ if __name__ == "__main__":
     lh.send_login_captcha(file_name)
     lh.click_login_auto_btn()
     lh.click_login_btn()
+    print(lh.get_user_text())
     sleep(5)
     driver.close()
