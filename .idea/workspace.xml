@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/handle/login_handle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/find_element.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/find_element.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/register_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/register_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/get_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/get_code.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +32,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/pathonWork/untitled" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -352,6 +346,14 @@
       <workItem from="1584185881240" duration="598000" />
       <workItem from="1584239780123" duration="5112000" />
     </task>
+    <task id="LOCAL-00001" summary="登录元素配置">
+      <created>1585616577842</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585616577842</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,6 +371,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="登录元素配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录元素配置" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
