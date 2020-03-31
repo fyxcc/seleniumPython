@@ -2,16 +2,16 @@
 # -*- encoding: utf-8 -*-
 
 
-from handle.register_handle import RegisterHandle
+from handle.login_handle import LoginHandle
 from selenium import webdriver
 from time import sleep
 
 
 class RegisterBusiness(object):
     def __init__(self, driver):
-        self.rh = RegisterHandle(driver)
+        self.rh = LoginHandle(driver)
 
-    # 正常注册
+    # 正常登录
     def common_register(self, register_email, nickname, password, file_name):
         self.rh.send_register_email(register_email)
         self.rh.send_register_nickname(nickname)

@@ -19,7 +19,7 @@ class GetCode:
     # 获取验证码图片
     def get_captcha_image(self, file_name):
         self.driver.save_screenshot(file_name)
-        captcha_element = self.get_user_element('getcode_num')
+        captcha_element = self.get_user_element('login_getcode_num')
         left = captcha_element.location['x']
         top = captcha_element.location['y']
         right = captcha_element.size['width'] + left
