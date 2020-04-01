@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case/login_ddt_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/loginDdtData.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/register_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/register_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/unnitest_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/login_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handle/login_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/login_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/test_captcha0330.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/test_captcha0330.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/first_ddt_case.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_captcha_code_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_register_case_1____test01____test01____test01abc____D__pythonWork_untitled2_image_test_captcha01_png____register_email_error____请输入有效的电子邮件地址__.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_register_case_2___test02_163_com____1____test02abc____D__pythonWork_untitled2_image_test_captcha02_png____register_nickname_error____字符长度必须大于等于4_一个中文字算2个字符__.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_register_case_3___test03_163_com____test03____test03abc____D__pythonWork_untitled2_image_test_captcha03_png____register_password_error____最少需要输入_5_个字符__.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_register_case_4___test04_163_com____test04____test04abc____D__pythonWork_untitled2_image_test_captcha04_png____captcha_code_error____验证码错误__.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_register_email_error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_register_password_error.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -398,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585621453682</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="登录数据驱动实现&#10;用户名密码验证码测试用例编写">
+      <created>1585647910881</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585647910881</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +410,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="登录元素配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录元素配置" />
+    <MESSAGE value="登录数据驱动实现&#10;用户名密码验证码测试用例编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录数据驱动实现&#10;用户名密码验证码测试用例编写" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
