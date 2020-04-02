@@ -1,10 +1,16 @@
 # coding=utf-8
 import os
+from threading import Thread
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 
 from page.login_page import LoginPage
 from selenium import webdriver
 from time import sleep
 from util.get_code import GetCode
+from selenium.webdriver.common.action_chains import ActionChains
+import time
 
 
 class LoginHandle(object):
@@ -27,19 +33,25 @@ class LoginHandle(object):
         self.lp.get_login_captcha_code().send_keys(captcha)
 
     # 获取错误信息
-    def get_user_text(self, error_info, error_value):
+    def get_user_text(self, error_info,assertText):
         try:
 
             if error_info == 'login_name_error':
                 text = self.lp.get_login_name_error().text
             elif error_info == 'login_password_error':
                 text = self.lp.get_login_password_error().text
+            elif error_info == 'verify_login_error':
+                WebDriverWait(self.driver, 10).until(
+                    lambda x: x.find_element_by_xpath('/html/body/div[3]/div/div'))
+                text = self.driver.find_element_by_xpath('/html/body/div[3]/div/div').text
+                #text = self.lp.get_verify_login_error().text
             else:
                 text = self.lp.get_captcha_code_error().text
-        except:
-            text = None
 
-        return text
+            return text
+        except BaseException as e:
+            print(repr(e))
+            return None
 
     # 点击自动登录按钮
     def click_login_auto_btn(self):
@@ -61,10 +73,10 @@ if __name__ == "__main__":
     driver.get(register_url)
     lh = LoginHandle(driver)
     lh.send_login_name('fyx')
-    lh.send_login_password('1212')
+    lh.send_login_password('121212')
     lh.send_login_captcha(file_name)
-    lh.click_login_auto_btn()
+    # lh.click_login_auto_btn()
     lh.click_login_btn()
-    print(lh.get_user_text())
-    sleep(5)
+    print(lh.get_user_text('verify_login_error','1212'))
+    time.sleep(2)
     driver.close()

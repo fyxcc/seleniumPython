@@ -35,3 +35,4 @@ if __name__ == "__main__":
     driver = webdriver.Chrome()
     driver.get(register_url)
     fe = FindElement()
+

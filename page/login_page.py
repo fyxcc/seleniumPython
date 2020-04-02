@@ -4,6 +4,9 @@
 
 from basic.find_element import FindElement
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 
 class LoginPage(object):
@@ -61,6 +64,10 @@ class LoginPage(object):
     # 不合法验证码错误提示语
     def get_captcha_code_error(self):
         return self.fe.get_element('login_captcha_error')
+
+    # 登录名或者密码验证不通过提示语
+    def get_verify_login_error(self):
+        return self.fe.get_element('verify_login_error')
 
 
 if __name__ == "__main__":

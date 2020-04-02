@@ -9,10 +9,8 @@ from business.login_business import LoginBusiness
 from util.excel_util import ExcelUtil
 
 # 获取数据
-ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\loginDdtData.xls")
+ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\loginDdtData1.xls")
 data = ex.get_data()
-
-
 # 测试类前加修饰@ddt.ddt
 @ddt.ddt
 # 用户名，密码，验证码，错误信息定位元素，错误提示信息
@@ -63,7 +61,8 @@ class LoginDdtCase(unittest.TestCase):
     def test_login_case(self, data):
         username, password, file_name, assertCode, assertText = data
         login_error = self.lb.login_function(username, password, file_name, assertCode, assertText)
-        self.assertTrue(login_error, "账号登录成功，该用例执行失败")
+        if len(assertCode) != 0:
+            self.assertTrue(login_error, "账号登录成功，该用例执行失败")
 
 
 if __name__ == "__main__":
