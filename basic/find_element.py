@@ -9,8 +9,8 @@ class FindElement(object):
     def __init__(self, driver):
         self.driver = driver
 
-    def get_element(self, key):
-        read_ini = ReadIni(node='LoginElemnet')  # 实例化配置文件
+    def get_element(self, key,node):
+        read_ini = ReadIni(node=node)  # 实例化配置文件
         data = read_ini.get_value(key)
         by = data.split('>')[0]  # 获取配置文件中的定位方式
         value = data.split('>')[1]  # 获取定位值
@@ -35,4 +35,5 @@ if __name__ == "__main__":
     driver = webdriver.Chrome()
     driver.get(register_url)
     fe = FindElement()
+
 

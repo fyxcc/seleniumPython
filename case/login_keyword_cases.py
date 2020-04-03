@@ -12,20 +12,20 @@
    对比结果一样，测试结论为pass；否则为fail
 '''
 from util.excel_util import ExcelUtil
-from keyword_modal.register_keyword import RegisterKeyword
+from keyword_modal.login_keyword import LoginKeyword
 from selenium import webdriver
 
 
-class RegisterKeywordCases(object):
+class LoginKeywordCases(object):
     # 执行关键词测试用例
 
     def run_keyword_excel_cases(self):
-        self.rk = RegisterKeyword()
-        self.excel_path = r'D:\pythonWork\autoTest\data\keyword.xls'
+        self.lk = LoginKeyword()
+        self.excel_path = r'D:\pythonWork\autoTest\data\loginKeyWord.xls'
         handle_excel = ExcelUtil(self.excel_path)
         # 获取 excel 关键词测试用例的条数
         cases_numbers = handle_excel.get_lines()
-        actual_case_numbers=int( cases_numbers)-1
+        actual_case_numbers = int(cases_numbers) - 1
         print("注册页获取到的关键词测试的测试用例条数为：%d" % actual_case_numbers)
 
         # 循环行数遍历测试用例
@@ -86,7 +86,7 @@ class RegisterKeywordCases(object):
         print("operator_element --->", operator_element)
         print("send_value --->", send_value)
         # 反射机制
-        execute_method = getattr(self.rk, keyword_method)
+        execute_method = getattr(self.lk, keyword_method)
         if operator_element == '' and send_value != '':
             result = execute_method(send_value)
         elif operator_element != '' and send_value == '':
@@ -103,8 +103,8 @@ class RegisterKeywordCases(object):
 
 
 if __name__ == "__main__":
-    rkc = RegisterKeywordCases()
-    rkc.run_keyword_excel_cases()
+    lkc = LoginKeywordCases()
+    lkc.run_keyword_excel_cases()
     # rkc.run_keyword_method('open_browser', '', 'chrome')
     # rkc.run_keyword_method('get_url', '', 'http://www.5itest.cn/register')
     # rkc.run_keyword_method('send_element_key', 'register_email', '123')

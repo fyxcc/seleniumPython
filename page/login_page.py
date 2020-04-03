@@ -16,58 +16,58 @@ class LoginPage(object):
 
     # 用户昵称
     def get_login_name(self):
-        return self.fe.get_element('login_name')
+        return self.fe.get_element('login_name', 'LoginElemnet')
 
     # 密码
     def get_login_password(self):
-        return self.fe.get_element('login_password')
+        return self.fe.get_element('login_password', 'LoginElemnet')
 
     # 验证码输入框
     def get_login_captcha_code(self):
-        return self.fe.get_element('login_captcha_code')
+        return self.fe.get_element('login_captcha_code', 'LoginElemnet')
 
     # 验证码图片
     def get_login_getcode_num(self):
-        return self.fe.get_element('login_getcode_num ')
+        return self.fe.get_element('login_getcode_num', 'LoginElemnet')
 
     # 登录按钮
     def get_login_btn(self):
-        return self.fe.get_element('login_btn')
+        return self.fe.get_element('login_btn', 'LoginElemnet')
 
     # 用户框文本提示语
     def get_login_name_placeholder(self):
-        print(self.fe.get_element('login_name').get_attribute('placeholder'))
-        return self.fe.get_element('login_name').get_attribute('placeholder')
+        print(self.fe.get_element('login_name', 'LoginElemnet').get_attribute('placeholder'))
+        return self.fe.get_element('login_name', 'LoginElemnet').get_attribute('placeholder')
 
     # 密码框文本提示语
     def get_login_password_placeholder(self):
-        print(self.fe.get_element('login_password').get_attribute('placeholder'))
-        return self.fe.get_element('login_password').get_attribute('placeholder')
+        print(self.fe.get_element('login_password', 'LoginElemnet').get_attribute('placeholder'))
+        return self.fe.get_element('login_password', 'LoginElemnet').get_attribute('placeholder')
 
     # 验证码框文本提示语
     def get_captcha_code_placeholder(self):
-        print(self.fe.get_element('login_captcha_code').get_attribute('placeholder'))
-        return self.fe.get_element('login_captcha_code').get_attribute('placeholder')
+        print(self.fe.get_element('login_captcha_code', 'LoginElemnet').get_attribute('placeholder'))
+        return self.fe.get_element('login_captcha_code', 'LoginElemnet').get_attribute('placeholder')
 
     # 自动登录按钮
     def get_login_auto_btn(self):
-        return self.fe.get_element('login_auto')
+        return self.fe.get_element('login_auto', 'LoginElemnet')
 
     # 不合法登录用户名错误提示语
     def get_login_name_error(self):
-        return self.fe.get_element('login_name_error')
+        return self.fe.get_element('login_name_error', 'LoginElemnet')
 
     # 不合法登录密码错误提示语
     def get_login_password_error(self):
-        return self.fe.get_element('login_password_error')
+        return self.fe.get_element('login_password_error', 'LoginElemnet')
 
     # 不合法验证码错误提示语
     def get_captcha_code_error(self):
-        return self.fe.get_element('login_captcha_error')
+        return self.fe.get_element('login_captcha_error', 'LoginElemnet')
 
     # 登录名或者密码验证不通过提示语
     def get_verify_login_error(self):
-        return self.fe.get_element('verify_login_error')
+        return self.fe.get_element('verify_login_error', 'LoginElemnet')
 
 
 if __name__ == "__main__":

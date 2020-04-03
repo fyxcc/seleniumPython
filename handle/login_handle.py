@@ -29,8 +29,8 @@ class LoginHandle(object):
     # 输入验证码
     def send_login_captcha(self, file_name):
         get_code_text = GetCode(self.driver)
-        captcha = get_code_text.discern_captcha_image(file_name)
-        self.lp.get_login_captcha_code().send_keys(captcha)
+        #captcha = get_code_text.discern_captcha_image(file_name)
+        self.lp.get_login_captcha_code().send_keys('1212')
 
     # 获取错误信息
     def get_user_text(self, error_info,assertText):
