@@ -22,7 +22,7 @@ class LoginKeyword(object):
     # 定位元素
     def get_element(self, key):
         find_element = FindElement(self.driver)
-        element = find_element.get_element(key)
+        element = find_element.get_element(key, 'LoginElemnet')
         return element
 
     # 输入元素
@@ -33,7 +33,7 @@ class LoginKeyword(object):
     # 点击元素
     def click_element(self, key):
         find_element = FindElement(self.driver)
-        find_element.get_element(key).click()
+        find_element.get_element(key, 'LoginElemnet').click()
 
     # 页面等待
     @staticmethod
