@@ -71,9 +71,9 @@ class LoginPage(object):
 
 
 if __name__ == "__main__":
-    register_url = 'http://localhost:9090/exam-place/login'
+    login_url = 'http://localhost:9090/exam-place/login'
     driver = webdriver.Chrome()
-    driver.get(register_url)
+    driver.get(login_url)
     lp = LoginPage(driver)
     lp.get_login_name_placeholder()
     lp.get_login_password_placeholder()

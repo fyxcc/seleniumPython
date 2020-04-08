@@ -105,6 +105,7 @@ class LoginKeywordCases(object):
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()
+
     # rkc.run_keyword_method('open_browser', '', 'chrome')
     # rkc.run_keyword_method('get_url', '', 'http://www.5itest.cn/register')
     # rkc.run_keyword_method('send_element_key', 'register_email', '123')

@@ -15,6 +15,10 @@ class LoginKeyword(object):
         else:
             self.driver = webdriver.Edge()
 
+    # 获取driver
+    def get_driver(self):
+        return self.driver
+
     # 输入测试地址
     def get_url(self, url):
         self.driver.get(url)

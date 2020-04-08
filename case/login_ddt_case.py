@@ -11,9 +11,12 @@ from selenium import webdriver
 from business.login_business import LoginBusiness
 from util.excel_util import ExcelUtil
 
+
 # 获取数据
 ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\loginDdtData.xls")
 data = ex.get_data()
+
+
 # 测试类前加修饰@ddt.ddt
 @ddt.ddt
 # 用户名，密码，验证码，错误信息定位元素，错误提示信息
@@ -70,7 +73,7 @@ class LoginDdtCase(unittest.TestCase):
 
 if __name__ == "__main__":
     # 报告存放路径
-    #fire_path = os.path.join(os.path.pardir + "/report/" + "login_ddt_case.html")
+    # fire_path = os.path.join(os.path.pardir + "/report/" + "login_ddt_case.html")
     fire_path = r"D:\pythonWork\autoTest/report/first_case.html"
     f = open(fire_path, 'wb')
 
