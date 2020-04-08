@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/business/examination_place_business.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handle/examination_place_handle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page/examination_place_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/login_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/login_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/login_keyword_cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/login_keyword_cases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/loginDdtData.xls" beforeDir="false" afterPath="$PROJECT_DIR$/data/loginDdtData.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyword_modal/login_keyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_modal/login_keyword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/first_case.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/first_case.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -427,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586222111739</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加考点page,handle,business层脚本实现">
+      <created>1586331186280</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586331186280</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +448,8 @@
     <MESSAGE value="登录数据驱动实现&#10;用户名密码验证码测试用例编写" />
     <MESSAGE value="登录数据驱动模块" />
     <MESSAGE value="read_ini初始化增加node变量，使配置文件可以根node进行读取" />
-    <option name="LAST_COMMIT_MESSAGE" value="read_ini初始化增加node变量，使配置文件可以根node进行读取" />
+    <MESSAGE value="添加考点page,handle,business层脚本实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加考点page,handle,business层脚本实现" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
