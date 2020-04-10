@@ -54,6 +54,10 @@ class ExaminationPlacePage(object):
     # 状态
     def get_place_status(self):
         return self.fe.get_element('place_status', 'ExaminationPlacePage')
+    # 状态值
+
+    def get_place_status_value(self):
+        return self.fe.get_element('place_status_value', 'ExaminationPlacePage')
 
     # 考点编号提示语
     def get_place_code_placeholder(self):
@@ -128,6 +132,9 @@ class ExaminationPlacePage(object):
     # 添加验证不通过提示语
     def get_verify_login_error(self):
         return self.fe.get_element('verify_login_error', 'ExaminationPlacePage')
+    #添加成功提示语
+    def add_success(self):
+        return self.fe.get_element('add_success','ExaminationPlacePage')
 
 
 if __name__ == "__main__":
@@ -140,10 +147,11 @@ if __name__ == "__main__":
     sleep(3)
 
     Ep.get_confirm_add_btn().click()
-
+    print(Ep.get_place_address_error().text)
+'''
     Ep.get_place_code_placeholder()
     Ep.get_place_address_placeholder()
     Ep.get_place_name_placeholder()
     Ep.get_place_person_placeholder()
-    Ep.get_place_person_tel_placeholder()
+    Ep.get_place_person_tel_placeholder()'''
     # Ep.get_place_address_placeholder()

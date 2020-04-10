@@ -1,5 +1,8 @@
 # coding=utf-8
 import sys
+from time import sleep
+
+from case.login_keyword_cases import LoginKeywordCases
 
 sys.path.append('D:/pythonWork/autoTest')
 import ddt
@@ -7,44 +10,41 @@ import unittest
 import os
 import HTMLTestRunner
 from selenium import webdriver
-from business.login_business import LoginBusiness
+from business.examination_place_business import ExaminationPlaceBusiness
 from util.excel_util import ExcelUtil
 
 
 # 获取数据
-ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\loginDdtData.xls")
+ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\examinationPlaceAddDdtData.xls")
 data = ex.get_data()
 
 
 # 测试类前加修饰@ddt.ddt
 @ddt.ddt
-# 用户名，密码，验证码，错误信息定位元素，错误提示信息
-class LoginDdtCase(unittest.TestCase):
+# 考点编号，考点名称，考点地址，考点负责人，负责人联系电话
+class ExaminationPlaceAddDdtCase(unittest.TestCase):
     # 所有case执行之前的装饰器---前置条件
-
     @classmethod
     def setUpClass(cls):
         print('所有case执行的前置条件')
-        cls.login_url = 'http://localhost:9090/exam-place/login'
-        cls.driver = webdriver.Chrome()
-        cls.driver.get(cls.login_url)
+        lkc = LoginKeywordCases()
+        lkc.run_keyword_excel_cases()
+        cls.driver = getattr(getattr(lkc, 'lk'), 'driver')
         cls.driver.maximize_window()
-        cls.lb = LoginBusiness(cls.driver)
+        cls.Eb = ExaminationPlaceBusiness(cls.driver)
+        Eh = getattr(cls.Eb, 'Eh')
+        Eh.click_add_btn()
 
     # 所有case执行之后的后置条件
     @classmethod
     def tearDownClass(cls):
         print('所有case执行的后置条件')
-        cls.driver.close()
+        # cls.driver.close()
 
     # 每一条case执行之前的前置条件
     def setUp(self):
-        print('每一条case执行前的前置条件')
-        # self.login_url = 'http://localhost:9090/exam-place/login'
-        # self.driver = webdriver.Chrome()
-        # self.driver.get(self.login_url)
-        # self.driver.maximize_window()
-        # self.lb = LoginBusiness(self.driver)
+        # print('每一条case执行前的前置条件')
+        pass
 
     # 每一条case执行之后的后置条件
     def tearDown(self):
@@ -57,27 +57,34 @@ class LoginDdtCase(unittest.TestCase):
                 # 设置失败截图存储路径
                 file_path = os.path.join(os.path.pardir + "/report/" + case_name + ".png")
                 self.driver.save_screenshot(file_path)
-        self.driver.refresh()
-        # self.driver.close()
+        # self.driver.refresh()
+        Ep = getattr(getattr(self.Eb, 'Eh'), 'Ep')
+        Ep.get_place_code().clear()
+        Ep.get_place_name().clear()
+        #Ep.get_place_division_code().clear()
+        Ep.get_place_address().clear()
+        Ep.get_place_person().clear()
+        Ep.get_place_person_tel().clear()
 
     # case前加修饰 @ ddt.data()
     @ddt.data(*data)
     # 执行用例，并判断是否执行成功
-    def test_login_case(self, data):
-        username, password, file_name, assertCode, assertText = data
-        login_error = self.lb.login_function(username, password, file_name, assertCode, assertText)
+    def test_examination_place_add_case(self, data):
+        place_code, place_name, place_address, place_person, place_person_tel, assertCode, assertText = data
+        add_error = self.Eb.add_function(place_code, place_name, place_address, place_person, place_person_tel,
+                                         assertCode, assertText)
         if len(assertCode) != 0:
-            self.assertTrue(login_error, "账号登录成功，该用例执行失败")
+            self.assertTrue(add_error, "添加考点成功，该用例执行失败")
 
 
 if __name__ == "__main__":
     # 报告存放路径
     # fire_path = os.path.join(os.path.pardir + "/report/" + "login_ddt_case.html")
-    fire_path = r"D:\pythonWork\autoTest/report/first_case.html"
+    fire_path = r"D:\pythonWork\autoTest\report\examination_place_add.html"
     f = open(fire_path, 'wb')
 
     # 添加测试用例
-    suite = unittest.TestLoader().loadTestsFromTestCase(LoginDdtCase)
+    suite = unittest.TestLoader().loadTestsFromTestCase(ExaminationPlaceAddDdtCase)
 
     # 测试结果以报告显示
     runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',

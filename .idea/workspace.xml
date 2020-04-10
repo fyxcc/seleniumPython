@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/case/examination_place_add_keyword_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/examination_place_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_place_business.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle/examination_place_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_place_handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/examination_place_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_place_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/first_case.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,15 +43,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\pythonWork\untitled2\basic" />
-      <recent name="D:\pythonWork\untitled2\api" />
-      <recent name="D:\pythonWork\untitled2\util" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\pythonWork\autoTest\data" />
       <recent name="D:\pythonWork\untitled2\util" />
       <recent name="D:\pythonWork\untitled2\tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pythonWork\untitled2\basic" />
+      <recent name="D:\pythonWork\untitled2\api" />
+      <recent name="D:\pythonWork\untitled2\util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -59,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_place_business">
+  <component name="RunManager" selected="Python.examination_place_add_ddt_case">
     <configuration name="data_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,40 +88,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="examinationPlaceHandle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="examination_place_add_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/handle" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\fengyx\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\pythonWork\autoTest\handle\examination_place_handle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="examinationPlacePage" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/page" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\pythonWork\autoTest\page\examination_place_page.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -229,27 +215,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="login_keyword_cases" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/login_keyword_cases.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="register_keyword_cases" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,6 +281,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.examination_place_add_ddt_case" />
       <item itemvalue="Python.register_keyword_cases" />
       <item itemvalue="Python.first_ddt_case" />
       <item itemvalue="Python.first_case" />
@@ -323,9 +289,6 @@
       <item itemvalue="Python.untitled2" />
       <item itemvalue="Python.run_case" />
       <item itemvalue="Python.login_ddt_case" />
-      <item itemvalue="Python.login_keyword_cases" />
-      <item itemvalue="Python.examinationPlacePage" />
-      <item itemvalue="Python.examinationPlaceHandle" />
       <item itemvalue="Python.examination_place_handle" />
       <item itemvalue="Python.examination_place_business" />
     </list>
@@ -333,9 +296,6 @@
       <list>
         <item itemvalue="Python.examination_place_business" />
         <item itemvalue="Python.examination_place_handle" />
-        <item itemvalue="Python.examinationPlaceHandle" />
-        <item itemvalue="Python.examinationPlacePage" />
-        <item itemvalue="Python.login_keyword_cases" />
       </list>
     </recent_temporary>
   </component>
@@ -424,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586331186280</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加考点page,handle,business层脚本实现">
+      <created>1586331321734</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586331321734</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,8 +485,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
-          <line>51</line>
+          <line>58</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/page/examination_place_page.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/handle/examination_place_handle.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
