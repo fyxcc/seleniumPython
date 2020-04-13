@@ -4,13 +4,12 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
 from basic.find_element import FindElement
-from handle.examination_place_handle import ExaminationPlaceHandle
 from time import sleep
 
 from case.login_keyword_cases import LoginKeywordCases
 
 
-class ExaminationPlaceAddKeyword(object):
+class ExaminationPlaceKeyword(object):
     def __init__(self):
         lkc = LoginKeywordCases()
         lkc.run_keyword_excel_cases()
@@ -42,16 +41,17 @@ class ExaminationPlaceAddKeyword(object):
     # 获取title
     def get_title(self):
         return self.driver.title
-    #获取添加结果信息
+
+    # 获取添加结果信息
     def get_info(self):
-        #self.wait_loading()
-        #@Eh=ExaminationPlaceHandle(self.driver)
+        # self.wait_loading()
+        # Eh=ExaminationPlaceHandle(self.driver)
         WebDriverWait(self.driver, 10).until(
             lambda x: x.find_element_by_xpath('/html/body/div[17]/div/div'))
         text = self.driver.find_element_by_xpath('/html/body/div[17]/div/div').text
-        print(text)
         return text
-        #Eh.get_add_success_text()
+        # Eh.get_add_success_text()
+
     # 关闭浏览器
     def close_browser(self):
         self.driver.close()

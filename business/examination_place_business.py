@@ -12,23 +12,24 @@ class ExaminationPlaceBusiness(object):
         self.Eh = ExaminationPlaceHandle(driver)
 
     # 成功添加
-    def success_add(self, place_code, place_name, place_address, place_person, place_person_tel):
-        #self.Eh.click_add_btn()
-        #sleep(3)
+    def success_add(self, place_code, place_name, place_address, place_person, place_person_tel, assertCode):
+        # self.Eh.click_add_btn()
+        # sleep(3)
         self.Eh.send_place_code(place_code)
         self.Eh.send_place_name(place_name)
-        #self.Eh.send_place_division_code()
+        if len(assertCode) == 0:
+            self.Eh.send_place_division_code()
         self.Eh.send_place_address(place_address)
         self.Eh.send_place_person(place_person)
         self.Eh.send_place_person_tel(place_person_tel)
-        #self.Eh.select_place_status()
+        # self.Eh.select_place_status()
         self.Eh.click_confirm_add_btn()
         sleep(3)
 
     # 数据驱动整合代码
     def add_function(self, place_code, place_name, place_address, place_person, place_person_tel, assertCode,
                      assertText):
-        self.success_add(place_code, place_name, place_address, place_person, place_person_tel)
+        self.success_add(place_code, place_name, place_address, place_person, place_person_tel, assertCode)
         if len(assertCode) != 0:
             if self.Eh.get_user_text(assertCode, assertText) is None:
                 return False
@@ -48,6 +49,12 @@ class ExaminationPlaceBusiness(object):
         else:
             return False
 
+    # 删除考点
+    def delete_examination_place(self):
+        self.Eh.click_delete_examination_place_btn()
+        self.Eh.click_confirm_delete_btn()
+        return self.Eh.get_delete_result()
+
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
@@ -55,7 +62,6 @@ if __name__ == "__main__":
     driver = getattr(getattr(lkc, 'lk'), 'driver')
     driver.maximize_window()
     Eb = ExaminationPlaceBusiness(driver)
-
-    Eb.success_add('1212', '西北税务学校', '电子一路', '小冯', '15002933333')
-    #driver.refresh()
+    print(Eb.delete_examination_place())
+    # driver.refresh()
     sleep(3)

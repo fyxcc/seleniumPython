@@ -18,7 +18,7 @@ class ExaminationPlaceHandle(object):
     # 输入考点编号
     def send_place_code(self, place_code):
         if place_code is not None:
-            #value = str(place_code)
+            # value = str(place_code)
             self.Ep.get_place_code().send_keys(place_code)
 
     # 输入考点名称
@@ -124,9 +124,38 @@ class ExaminationPlaceHandle(object):
     def click_add_btn(self):
         self.Ep.get_add_btn().click()
 
+    # 判断添加考点弹框是否打开
+    def judge_add_frame(self):
+        if self.Ep.get_add_frame().text == '添加考点':
+            return True
+        else:
+            return False
     # 获取添加成功提示语
     def get_add_success_text(self):
         return self.Ep.add_success().text
+
+    # 点击删除考点按钮
+    def click_delete_examination_place_btn(self):
+        self.Ep.get_delete_examination_place_btn().click()
+
+    # 判断删除考点弹框是否打开
+    def judge_delete_frame(self):
+        if self.Ep.get_delete_frame().text == '确定删除所选记录？':
+            return True
+        else:
+            return False
+
+    # 点击确认删除按钮
+    def click_confirm_delete_btn(self):
+        self.Ep.get_confirm_delete_btn().click()
+
+    # 点击取消删除按钮
+    def click_cancle_delete_btn(self):
+        self.Ep.get_cancle_delete_btn().click()
+
+    # 获得删除考点信息结果内容
+    def get_delete_result(self):
+        return self.Ep.get_delete_examination_place_result()
 
 
 if __name__ == "__main__":
@@ -135,18 +164,6 @@ if __name__ == "__main__":
     driver = getattr(getattr(lkc, 'lk'), 'driver')
     driver.maximize_window()
     Eh = ExaminationPlaceHandle(getattr(getattr(lkc, 'lk'), 'driver'))
-    time.sleep(1)
     Eh.click_add_btn()
-    # Eh.send_place_code('123456')
-    # Eh.send_place_name('西北')
-    # Eh.send_place_division_code()
-    # Eh.send_place_address('西北税务学校')
-    # Eh.send_place_person('小冯')
-    # Eh.send_place_person_tel('15002933333')
-    # Eh.select_place_status()
-    # Eh.click_confirm_add_btn()
-    # Eh.click_cancle_add_btn()
-    # print(Eh.get_user_text('place_code_error', '1212'))
-    # print(Eh.get_user_text('place_name_error', '1212'))
-    print(Eh.get_place_status())
+    print(Eh.judge_add_frame())
     time.sleep(10)

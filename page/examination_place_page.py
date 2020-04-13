@@ -3,6 +3,8 @@
 import unittest
 from time import sleep
 
+from selenium.webdriver.support.wait import WebDriverWait
+
 from basic.find_element import FindElement
 from selenium import webdriver
 
@@ -13,7 +15,7 @@ import HTMLTestRunner
 class ExaminationPlacePage(object):
     # 初始化元素查找类，执行该类的时候就会加载
     def __init__(self, driver):
-        self.driver=driver
+        self.driver = driver
         self.fe = FindElement(driver)
 
     # 考点编号
@@ -27,7 +29,8 @@ class ExaminationPlacePage(object):
     # 行政区划
     def get_place_division_code(self):
         return self.fe.get_element('place_division_code', 'ExaminationPlacePage')
-    #行政区划市级子菜单
+
+    # 行政区划市级子菜单
     def get_place_division_code_fchild(self):
         return self.fe.get_element('place_division_code_fchild', 'ExaminationPlacePage')
         # 行政区划市级子菜单
@@ -38,9 +41,9 @@ class ExaminationPlacePage(object):
 
     def get_place_division_code_tchild(self):
         return self.fe.get_element('place_division_code_tchild', 'ExaminationPlacePage')
+
     # 考点地址
     def get_place_address(self):
-
         return self.fe.get_element('place_address', 'ExaminationPlacePage')
 
     # 考点负责人
@@ -54,6 +57,7 @@ class ExaminationPlacePage(object):
     # 状态
     def get_place_status(self):
         return self.fe.get_element('place_status', 'ExaminationPlacePage')
+
     # 状态值
 
     def get_place_status_value(self):
@@ -132,26 +136,56 @@ class ExaminationPlacePage(object):
     # 添加验证不通过提示语
     def get_verify_login_error(self):
         return self.fe.get_element('verify_login_error', 'ExaminationPlacePage')
-    #添加成功提示语
+    # 获取添加考点弹框
+    def get_add_frame(self):
+        return self.fe.get_element('add_frame', 'ExaminationPlacePage')
+
+    # 添加成功提示语
     def add_success(self):
-        return self.fe.get_element('add_success','ExaminationPlacePage')
+        return self.fe.get_element('add_success', 'ExaminationPlacePage')
+
+    # 删除考点按钮
+    def get_delete_examination_place_btn(self):
+        return self.fe.get_element('delete_examination_place_btn', 'ExaminationPlacePage')
+
+    # 获取删除考点弹框
+    def get_delete_frame(self):
+        return self.fe.get_element('delete_frame', 'ExaminationPlacePage')
+
+    # 确认删除按钮
+    def get_confirm_delete_btn(self):
+        sleep(1)
+        return self.fe.get_element('confirm_delete', 'ExaminationPlacePage')
+
+    # 取消删除按钮
+    def get_cancle_delete_btn(self):
+        return self.fe.get_element('cancle_delete', 'ExaminationPlacePage')
+
+    # 定位删除考点失败提示信息
+    def get_delete_examination_place_result(self):
+        WebDriverWait(self.driver, 10).until(
+            lambda x: x.find_element_by_xpath('/html/body/div[17]/div/div'))
+        return self.driver.find_element_by_xpath('/html/body/div[17]/div/div').text
 
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()
+    driver = getattr(getattr(lkc, 'lk'), 'driver')
+    Ep = ExaminationPlacePage(driver)
+    driver.maximize_window()
 
-    Ep = ExaminationPlacePage(getattr(getattr(lkc, 'lk'), 'driver'))
-    sleep(3)
     Ep.get_add_btn().click()
-    sleep(3)
-
+    print(Ep.get_add_frame().text)
+    '''
     Ep.get_confirm_add_btn().click()
     print(Ep.get_place_address_error().text)
-'''
     Ep.get_place_code_placeholder()
     Ep.get_place_address_placeholder()
     Ep.get_place_name_placeholder()
     Ep.get_place_person_placeholder()
     Ep.get_place_person_tel_placeholder()'''
     # Ep.get_place_address_placeholder()
+    #Ep.get_delete_examination_place_btn().click()
+    #Ep.get_confirm_delete_btn().click()
+

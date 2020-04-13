@@ -13,16 +13,16 @@
 '''
 
 from util.excel_util import ExcelUtil
-from keyword_modal.examination_place_keyword import ExaminationPlaceAddKeyword
+from keyword_modal.examination_place_keyword import ExaminationPlaceKeyword
 from selenium import webdriver
 
 
-class ExaminationPlaceAddKeywordCases(object):
+class ExaminationPlaceDeleteKeywordCases(object):
     # 执行关键词测试用例
 
     def run_keyword_excel_cases(self):
-        self.Ek = ExaminationPlaceAddKeyword()
-        self.excel_path = r'D:\pythonWork\autoTest\data\ExaninationPlaceAddKeyWord.xls'
+        self.Ek = ExaminationPlaceKeyword()
+        self.excel_path = r'D:\pythonWork\autoTest\data\ExaminationPlaceDeleteDdtData.xls'
         handle_excel = ExcelUtil(self.excel_path)
         # 获取 excel 关键词测试用例的条数
         cases_numbers = handle_excel.get_lines()
@@ -58,10 +58,10 @@ class ExaminationPlaceAddKeywordCases(object):
                         if except_value[0] == 'text':
                             result = self.run_keyword_method(except_result_method)
                             if except_value[1] in result:
-                                handle_excel.write_value(i, 'pass')
+                                handle_excel.write_value(i, 'True')
                                 print('第 %s 条用例执行预期结果，用例名称是: [%s]' % (i, testcase_name))
                             else:
-                                handle_excel.write_value(i, 'fail')
+                                handle_excel.write_value(i, 'False')
                                 print('第 %s 条用例执行预期结果，用例名称是: [%s]' % (i, testcase_name))
                         elif except_value[0] == 'element':
                             result = self.run_keyword_method(except_result_method, except_value[1])
@@ -104,7 +104,7 @@ class ExaminationPlaceAddKeywordCases(object):
 
 
 if __name__ == "__main__":
-    lkc = ExaminationPlaceAddKeywordCases()
+    lkc = ExaminationPlaceDeleteKeywordCases()
     lkc.run_keyword_excel_cases()
 
     # rkc.run_keyword_method('open_browser', '', 'chrome')

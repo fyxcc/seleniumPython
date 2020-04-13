@@ -2,10 +2,7 @@
 import sys
 sys.path.append('D:/pythonWork/autoTest')
 from time import sleep
-
 from case.login_keyword_cases import LoginKeywordCases
-
-
 import ddt
 import unittest
 import os
@@ -60,12 +57,15 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
                 self.driver.save_screenshot(file_path)
         # self.driver.refresh()
         Ep = getattr(getattr(self.Eb, 'Eh'), 'Ep')
-        Ep.get_place_code().clear()
-        Ep.get_place_name().clear()
-        #Ep.get_place_division_code().clear()
-        Ep.get_place_address().clear()
-        Ep.get_place_person().clear()
-        Ep.get_place_person_tel().clear()
+        Eh=getattr(self.Eb, 'Eh')
+        sleep(2)
+        if Eh.judge_add_frame():
+            Ep.get_place_code().clear()
+            Ep.get_place_name().clear()
+            #Ep.get_place_division_code().clear()
+            Ep.get_place_address().clear()
+            Ep.get_place_person().clear()
+            Ep.get_place_person_tel().clear()
 
     # case前加修饰 @ ddt.data()
     @ddt.data(*data)
