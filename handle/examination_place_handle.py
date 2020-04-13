@@ -18,8 +18,8 @@ class ExaminationPlaceHandle(object):
     # 输入考点编号
     def send_place_code(self, place_code):
         if place_code is not None:
-            value = str(place_code)
-            self.Ep.get_place_code().send_keys(value)
+            #value = str(place_code)
+            self.Ep.get_place_code().send_keys(place_code)
 
     # 输入考点名称
     def send_place_name(self, place_name):

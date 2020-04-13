@@ -11,17 +11,18 @@
 (5)对比预期结果和实际结果的值
    对比结果一样，测试结论为pass；否则为fail
 '''
+
 from util.excel_util import ExcelUtil
-from keyword_modal.login_keyword import LoginKeyword
+from keyword_modal.examination_place__add_keyword import ExaminationPlaceAddKeyword
 from selenium import webdriver
 
 
-class LoginKeywordCases(object):
+class ExaminationPlaceAddKeywordCases(object):
     # 执行关键词测试用例
 
     def run_keyword_excel_cases(self):
-        self.lk = LoginKeyword()
-        self.excel_path = r'D:\pythonWork\autoTest\data\loginKeyWord.xls'
+        self.Ek = ExaminationPlaceAddKeyword()
+        self.excel_path = r'D:\pythonWork\autoTest\data\ExaninationPlaceAddKeyWord.xls'
         handle_excel = ExcelUtil(self.excel_path)
         # 获取 excel 关键词测试用例的条数
         cases_numbers = handle_excel.get_lines()
@@ -86,7 +87,7 @@ class LoginKeywordCases(object):
         print("operator_element --->", operator_element)
         print("send_value --->", send_value)
         # 反射机制
-        execute_method = getattr(self.lk, keyword_method)
+        execute_method = getattr(self.Ek, keyword_method)
         if operator_element == '' and send_value != '':
             result = execute_method(send_value)
         elif operator_element != '' and send_value == '':
@@ -103,7 +104,7 @@ class LoginKeywordCases(object):
 
 
 if __name__ == "__main__":
-    lkc = LoginKeywordCases()
+    lkc = ExaminationPlaceAddKeywordCases()
     lkc.run_keyword_excel_cases()
 
     # rkc.run_keyword_method('open_browser', '', 'chrome')

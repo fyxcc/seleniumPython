@@ -1,10 +1,11 @@
 # coding=utf-8
 import sys
+sys.path.append('D:/pythonWork/autoTest')
 from time import sleep
 
 from case.login_keyword_cases import LoginKeywordCases
 
-sys.path.append('D:/pythonWork/autoTest')
+
 import ddt
 import unittest
 import os
