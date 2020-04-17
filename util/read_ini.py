@@ -26,8 +26,6 @@ class ReadIni(object):
     def get_value(self, key):
         data = self.cf.get(self.node, key)
         return data
-
-
 if __name__ == "__main__":
     ri = ReadIni()
     print(ri.get_value('register_nickname'))

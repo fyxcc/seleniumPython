@@ -71,6 +71,7 @@ class LoginDdtCase(unittest.TestCase):
             self.assertTrue(login_error, "账号登录成功，该用例执行失败")
 
 
+
 if __name__ == "__main__":
     # 报告存放路径
     # fire_path = os.path.join(os.path.pardir + "/report/" + "login_ddt_case.html")

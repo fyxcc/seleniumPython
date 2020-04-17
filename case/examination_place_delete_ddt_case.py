@@ -1,6 +1,5 @@
 # coding=utf-8
 import sys
-
 sys.path.append('D:/pythonWork/autoTest')
 from time import sleep
 from case.login_keyword_cases import LoginKeywordCases
@@ -30,8 +29,6 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
         cls.driver = getattr(getattr(lkc, 'lk'), 'driver')
         cls.driver.maximize_window()
         cls.Eb = ExaminationPlaceBusiness(cls.driver)
-        Eh = getattr(cls.Eb, 'Eh')
-        Eh.click_add_btn()
 
     # 所有case执行之后的后置条件
     @classmethod
@@ -56,33 +53,17 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
                 file_path = os.path.join(os.path.pardir + "/report/" + case_name + ".png")
                 self.driver.save_screenshot(file_path)
         # self.driver.refresh()
-        Ep = getattr(getattr(self.Eb, 'Eh'), 'Ep')
-        Eh = getattr(self.Eb, 'Eh')
-        sleep(2)
 
-        if Eh.judge_add_frame():
-            Ep.get_place_code().clear()
-            Ep.get_place_name().clear()
-            #Ep.get_place_division_code().clear()
-            Ep.get_place_address().clear()
-            Ep.get_place_person().clear()
-            Ep.get_place_person_tel().clear()
-
-    # case前加修饰 @ ddt.data()
-    @ddt.data(*data)
     # 执行用例，并判断是否执行成功
-    def test_examination_place_add_case(self, data):
-        place_code, place_name, place_address, place_person, place_person_tel, assertCode, assertText = data
-        add_error = self.Eb.add_function(place_code, place_name, place_address, place_person, place_person_tel,
-                                         assertCode, assertText)
-        if len(assertCode) != 0:
-            self.assertTrue(add_error, "添加考点成功，该用例执行失败")
+    def test_examination_place_delete_case(self):
+        delete_error = self.Eb.delete_examination_place()
+        self.assertTrue(delete_error, "删除考点用例成功，该用例执行失败")
 
 
 if __name__ == "__main__":
     # 报告存放路径
     # fire_path = os.path.join(os.path.pardir + "/report/" + "login_ddt_case.html")
-    fire_path = r"D:\pythonWork\autoTest\report\examination_place_add.html"
+    fire_path = r"D:\pythonWork\autoTest\report\examination_place_delete.html"
     f = open(fire_path, 'wb')
 
     # 添加测试用例
