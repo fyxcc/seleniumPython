@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case/examination_place_delete_ddt_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/table_util.py" afterDir="false" />
+    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="编辑考点成功关键字测试用例编写&#10;查询考点行政区划一级查询">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/examination_place_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_place_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/Examination_place_delete_keyword_case.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/login_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/login_ddt_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handle/examination_place_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_place_handle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/examination_place_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_place_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/read_ini.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/read_ini.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/table_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/table_util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="autoTest" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,10 +39,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -71,7 +70,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase.test_examination_place_query_b">
+  <component name="RunManager" selected="Python.examination_place_add_ddt_case">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\fengyx\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="data_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,6 +189,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examination_place_handle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/handle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/handle/examination_place_handle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examination_place_query_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\fengyx\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,27 +346,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="table_util" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/table_util.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="untitled2" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -327,50 +368,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase.test_examination_place_query_b" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase.test_examination_place_query_b&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in examination_place_query_ddt_case.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/examination_place_query_ddt_case.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Python.examination_place_query_ddt_case" />
       <item itemvalue="Python.examination_place_edit_ddt_case" />
+      <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.examination_place_delete_ddt_case" />
       <item itemvalue="Python.examination_place_add_ddt_case" />
       <item itemvalue="Python.register_keyword_cases" />
@@ -380,19 +381,13 @@
       <item itemvalue="Python.untitled2" />
       <item itemvalue="Python.run_case" />
       <item itemvalue="Python.login_ddt_case" />
-      <item itemvalue="Python tests.Unittests in examination_place_query_ddt_case.py" />
-      <item itemvalue="Python.table_util" />
-      <item itemvalue="Python tests.Unittests for examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase.test_examination_place_query_b" />
-      <item itemvalue="Python tests.Unittests for examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase" />
       <item itemvalue="Python.examination_place_business" />
+      <item itemvalue="Python.examination_place_handle" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase.test_examination_place_query_b" />
+        <item itemvalue="Python.examination_place_handle" />
         <item itemvalue="Python.examination_place_business" />
-        <item itemvalue="Python tests.Unittests for examination_place_query_ddt_case.ExaminationPlaceQueryDdtCase" />
-        <item itemvalue="Python tests.Unittests in examination_place_query_ddt_case.py" />
-        <item itemvalue="Python.table_util" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586772049578</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="编辑考点成功关键字测试用例编写&#10;查询考点行政区划一级查询">
+      <created>1587108381676</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587108381676</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +538,8 @@
     <MESSAGE value="添加考点page,handle,business层脚本实现" />
     <MESSAGE value="添加考点失败测试用例编写" />
     <MESSAGE value="添加考点成功关键字测试用例编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加考点成功关键字测试用例编写" />
+    <MESSAGE value="编辑考点成功关键字测试用例编写&#10;查询考点行政区划一级查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="编辑考点成功关键字测试用例编写&#10;查询考点行政区划一级查询" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
@@ -604,9 +607,44 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/page/examination_place_page.py</url>
-          <line>91</line>
-          <option name="timeStamp" value="22" />
+          <url>file://$PROJECT_DIR$/handle/examination_place_handle.py</url>
+          <line>338</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
+          <line>174</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/case/examination_place_query_ddt_case.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
+          <line>246</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
+          <line>151</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/case/examination_place_add_ddt_case.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

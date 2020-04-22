@@ -1,7 +1,10 @@
 # coding=utf-8
 import os
 
+import selenium
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 
 from page.examination_place_page import ExaminationPlacePage
@@ -187,13 +190,15 @@ class ExaminationPlaceHandle(object):
 
     # 判断添加考点弹框是否打开
     def judge_add_frame(self):
-        if self.Ep.get_add_frame().text == '添加考点':
-            return True
+        if self.Ep.get_add_frame() is not None:
+            if self.Ep.get_add_frame().text == '添加考点':
+                return True
         else:
             return False
 
     # 获取添加成功提示语
     def get_add_success_text(self):
+        time.sleep(2)
         return self.Ep.add_success().text
 
     # 点击删除考点按钮
@@ -323,6 +328,22 @@ class ExaminationPlaceHandle(object):
         if len(query_place_code) != 0:
             self.Ep.get_query_place_code().send_keys(query_place_code)
 
+    # 清空查询条件
+    def clear_query_condition(self):
+        self.Ep.get_query_place_code().send_keys(Keys.CONTROL, 'a')
+        self.Ep.get_query_place_code().send_keys(Keys.BACK_SPACE)
+        self.Ep.get_query_place_name().send_keys(Keys.CONTROL, 'a')
+        self.Ep.get_query_place_name().send_keys(Keys.BACK_SPACE)
+        # self.Ep.get_query_place_division_code().send_keys(Keys.CONTROL, 'a')
+        # self.Ep.get_query_place_division_code().send_keys(Keys.BACK_SPACE)
+        # self.Ep.get_query_place_division_code().clear()
+
+    # 点击行政区划取消按钮
+    def click_clear_query_place_division_code_btn(self):
+        cl = self.Ep.get_clear_query_place_division_code()
+        ActionChains(self.driver).move_to_element(cl).perform()
+        # self.Ep.get_clear_query_place_division_code().click()
+
     # 输入查询考点名称
 
     def send_query_place_name(self, query_place_name):
@@ -330,21 +351,30 @@ class ExaminationPlaceHandle(object):
             self.Ep.get_query_place_name().send_keys(query_place_name)
 
     # 输入查询一级行政区划
-    def send_query_place_division_code_fchild(self):
-        self.Ep.get_query_place_division_code().click()
-        self.Ep.get_query_place_division_code_fchild().click()
-        time.sleep(1)
+    def send_query_place_division_code_child(self, way):
+        if way == 'fchild':
+            self.Ep.get_query_place_division_code().click()
+            self.Ep.get_query_place_division_code_fchild().click()
+        elif way == 'schild':
+            try:
+                self.Ep.get_query_place_division_code().click()
+                ActionChains(self.driver).move_to_element(self.Ep.get_query_place_division_code_fchild()).perform()
+                self.Ep.get_query_place_division_code().click()
+                ActionChains(self.driver).move_to_element(self.Ep.get_query_place_division_code_schild()).perform()
+            except StaleElementReferenceException:
+                self.Ep.get_query_place_division_code_schild().click()
 
-    # 输入查询二级行政区划
-    def send_query_place_division_code_schild(self):
-        self.send_query_place_division_code_fchild()
-        self.Ep.get_query_place_division_code_schild().click()
-        time.sleep(1)
-
-    # 输入查询三级行政区划
-    def send_query_place_division_code_tchild(self):
-        self.send_query_place_division_code_schild()
-        self.Ep.get_query_place_division_code_tchild().click()
+        else:
+            try:
+                self.Ep.get_query_place_division_code().click()
+                ActionChains(self.driver).move_to_element(self.Ep.get_query_place_division_code_fchild()).perform()
+                self.Ep.get_query_place_division_code().click()
+                ActionChains(self.driver).move_to_element(self.Ep.get_query_place_division_code_schild()).perform()
+                self.Ep.get_query_place_division_code().click()
+                ActionChains(self.driver).move_to_element(
+                    self.Ep.get_query_place_division_code_tchild()).click().perform()
+            except StaleElementReferenceException:
+                self.Ep.get_query_place_division_code_tchild().click()
 
     # 点击查询按钮
     def click_query_btn(self):
@@ -352,7 +382,7 @@ class ExaminationPlaceHandle(object):
 
     # 获取总计数目项
     def get_query_total_count_text(self):
-        return self.Ep.get_query_result_count().text
+        return int(self.Ep.get_query_result_count().text)
 
     # 获取查询结果数目
 
@@ -371,6 +401,21 @@ class ExaminationPlaceHandle(object):
     # 获取查询条件行政区划内容
     def get_place_division_code_condition(self):
         content = self.Ep.get_query_place_division_code().get_attribute('value')
+        if content.find('/'):
+            content_list = content.split('/')
+            result = content_list[0].strip() + '-'
+            return result
+        result = content
+        return result
+
+    # 获取查询条件考点编号内容：
+    def get_query_code_condition(self):
+        content = self.Ep.get_query_place_code().get_attribute('value')
+        return content
+
+    # 获取查询条件考点名称内容
+    def get_query_name_condition(self):
+        content = self.Ep.get_query_place_name().get_attribute('value')
         return content
 
     # 获取列表考点编号内容
@@ -439,7 +484,8 @@ class ExaminationPlaceHandle(object):
 
     def judge_count_result_complete(self):
         if self.get_query_total_count_text() is not None and self.get_query_result_count_text() is not None and self.get_query_choiced_count_text() is not None:
-            if self.Ep.get_clear_btn().text == '清空':
+            if self.Ep.get_clear_btn().text == '清空' and self.get_query_total_count_text() == self.get_query_result_count_text():
+
                 return True
             else:
                 return False
@@ -471,6 +517,48 @@ class ExaminationPlaceHandle(object):
         else:
             return False
 
+    # 未查询到结果弹框内容
+    def get_empty_result_text(self):
+        return self.Ep.get_empty_result().text
+
+    # 点击确定未查询到结果弹框按钮
+
+    def click_empty_result_btn(self):
+        return self.Ep.get_empty_result_btn().click()
+
+    # 点击考点编号正序按钮
+
+    def click_table_code_positive_seq(self):
+        return self.Ep.get_table_code_positive_seq().click()
+
+    # 点击考点编号倒序按钮
+    def click_table_code_inverted_seq(self):
+        return self.Ep.get_table_code_inverted_seq().click()
+
+    # 点击考场数正序按钮
+    def click_exam_place_num_positive_seq(self):
+        return self.Ep.get_exam_place_num_positive_seq().click()
+
+    # 点击考场数倒序按钮
+    def click_exam_place_num_inverted_seq(self):
+        return self.Ep.get_exam_place_num_inverted_seq().click()
+
+    # 点击可编排机位数正序按钮
+    def click_use_computer_num_positive_seq(self):
+        return self.Ep.get_use_computer_num_positive_seq().click()
+
+    # 点击可编排机位数倒序按钮
+    def click_use_computer_num_inverted_seq(self):
+        return self.Ep.get_use_computer_num_inverted_seq().click()
+
+    # 点击总机位数正序按钮
+    def click_table_total_computer_num_positive_seq(self):
+        return self.Ep.get_table_total_computer_num_positive_seq().click()
+
+    # 点击总机位数倒序按钮
+    def click_table_total_computer_num_inverted_seq(self):
+        return self.Ep.get_table_total_computer_num_inverted_seq().click()
+
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
@@ -478,7 +566,10 @@ if __name__ == "__main__":
     driver = getattr(getattr(lkc, 'lk'), 'driver')
     driver.maximize_window()
     Eh = ExaminationPlaceHandle(getattr(getattr(lkc, 'lk'), 'driver'))
-    Eh.send_query_place_division_code_fchild()
-    print(Eh.get_place_division_code_condition())
+    # Eh.send_query_place_code('999')
+    # Eh.click_query_btn()
+    # time.sleep(1)
+    print(Eh.get_query_result_count_text())
+    print(Eh.get_query_total_count_text())
 
     time.sleep(10)

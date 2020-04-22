@@ -312,11 +312,11 @@ class ExaminationPlacePage(object):
     def get_query_place_division_code_fchild(self):
         return self.fe.get_element('query_place_division_code_fchild', 'ExaminationPlacePage')
 
-    # 查询行政区划市级一级子菜单
+    # 查询行政区划市级二级子菜单
     def get_query_place_division_code_schild(self):
         return self.fe.get_element('query_place_division_code_schild', 'ExaminationPlacePage')
 
-    # 查询行政区划市级一级子菜单
+    # 查询行政区划市级三级子菜单
 
     def get_query_place_division_code_tchild(self):
         return self.fe.get_element('query_place_division_code_tchild', 'ExaminationPlacePage')
@@ -412,6 +412,51 @@ class ExaminationPlacePage(object):
     def get_export_btn(self):
         return self.fe.get_element('export_btn', 'ExaminationPlacePage')
 
+    # 行政区划选择取消按钮
+    def get_clear_query_place_division_code(self):
+        return self.fe.get_element('clear_query_place_division_code', 'ExaminationPlacePage')
+
+    # 未查询到结果弹框
+    def get_empty_result(self):
+        return self.fe.get_element('empty_query_result', 'ExaminationPlacePage')
+
+    # 确定未查询到结果弹框按钮
+    def get_empty_result_btn(self):
+        return self.fe.get_element('confirm_empty_query_result', 'ExaminationPlacePage')
+
+    # 考点编号正序按钮
+    def get_table_code_positive_seq(self):
+        return self.fe.get_element('table_code_positive_seq', 'ExaminationPlacePage')
+
+    # 考点编号倒序按钮
+
+    def get_table_code_inverted_seq(self):
+        return self.fe.get_element('table_code_inverted_seq', 'ExaminationPlacePage')
+
+    # 考场数正序按钮
+    def get_exam_place_num_positive_seq(self):
+        return self.fe.get_element('exam_place_num_positive_seq', 'ExaminationPlacePage')
+
+    # 考场数倒序按钮
+    def get_exam_place_num_inverted_seq(self):
+        return self.fe.get_element('exam_place_num_inverted_seq', 'ExaminationPlacePage')
+
+    # 可编排机位数正序按钮
+    def get_use_computer_num_positive_seq(self):
+        return self.fe.get_element('use_computer_num_positive_seq', 'ExaminationPlacePage')
+
+    # 可编排机位数倒序按钮
+    def get_use_computer_num_inverted_seq(self):
+        return self.fe.get_element('use_computer_num_inverted_seq', 'ExaminationPlacePage')
+
+    # 总机位数正序按钮
+    def get_table_total_computer_num_positive_seq(self):
+        return self.fe.get_element('table_total_computer_num_positive_seq', 'ExaminationPlacePage')
+
+    # 总机位数倒序按钮
+    def get_table_total_computer_num_inverted_seq(self):
+        return self.fe.get_element('table_total_computer_num_inverted_seq', 'ExaminationPlacePage')
+
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
@@ -419,14 +464,3 @@ if __name__ == "__main__":
     driver = getattr(getattr(lkc, 'lk'), 'driver')
     Ep = ExaminationPlacePage(driver)
     driver.maximize_window()
-    print(Ep.get_table_place_code().text)
-    print(Ep.get_table_place_name().text)
-    print(Ep.get_table_place_division_code().text)
-    print(Ep.get_table_place_address().text)
-    print(Ep.get_table_place_person().text)
-    print(Ep.get_table_place_person_tel().text)
-    print(Ep.get_table_exam_place_num().text)
-    print(Ep.get_table_use_computer_num().text)
-    print(Ep.get_table_total_computer_num().text)
-    print(Ep.get_table_update_time().text)
-    print(Ep.get_table_status().text)

@@ -48,7 +48,12 @@ class TableUtil:
 
     # 点击下一页
     def click_next_page(self):
-        next_page_btn = self.fe.get_element(next, 'ExaminationPlacePage')
+        next_page_btn = self.fe.get_element('next_page_btn', 'ExaminationPlacePage')
+        next_page_btn.click()
+    # 点击刷新的下一页
+
+    def click_refresh_next_page(self):
+        next_page_btn = self.fe.get_element('refresh_next_page_btn', 'ExaminationPlacePage')
         next_page_btn.click()
 
     # 点击下一页次数

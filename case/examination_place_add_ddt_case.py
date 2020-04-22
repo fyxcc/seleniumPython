@@ -63,7 +63,7 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
         if Eh.judge_add_frame():
             Ep.get_place_code().clear()
             Ep.get_place_name().clear()
-            #Ep.get_place_division_code().clear()
+            # Ep.get_place_division_code().clear()
             Ep.get_place_address().clear()
             Ep.get_place_person().clear()
             Ep.get_place_person_tel().clear()
@@ -75,8 +75,10 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
         place_code, place_name, place_address, place_person, place_person_tel, assertCode, assertText = data
         add_error = self.Eb.add_function(place_code, place_name, place_address, place_person, place_person_tel,
                                          assertCode, assertText)
-        if len(assertCode) != 0:
+        if len(assertCode) != 0 and assertText != '添加成功':
             self.assertTrue(add_error, "添加考点成功，该用例执行失败")
+        else:
+            self.assertTrue(add_error, "添加考点失败，该用例执行失败")
 
 
 if __name__ == "__main__":
