@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 import time
-
-from selenium.webdriver.support.wait import WebDriverWait
-
 from case.login_keyword_cases import LoginKeywordCases
 from handle.examination_place_handle import ExaminationPlaceHandle
 from util.table_util import TableUtil
@@ -33,8 +30,8 @@ class ExaminationPlaceBusiness(object):
     def add_function(self, place_code, place_name, place_address, place_person, place_person_tel, assertCode,
                      assertText):
         self.success_add(place_code, place_name, place_address, place_person, place_person_tel, assertCode)
-        if assertText=='添加成功':
-            result=self.Eh.get_add_success_text()
+        if assertText == '添加成功':
+            self.result = self.Eh.get_add_success_text()
         if len(assertCode) != 0:
             if self.Eh.get_user_text(assertCode, assertText) is None:
                 return False
@@ -42,10 +39,15 @@ class ExaminationPlaceBusiness(object):
                 print("用例通过")
                 return True
         else:
-            if assertText == '添加成功':
+            if assertText == '添加失败!':
+                if self.Eh.judge_add_frame():
+                    return True
+                else:
+                    return False
+            elif assertText == '添加成功':
                 if self.Eh.judge_add_frame():
                     return False
-                elif result == assertText:
+                elif self.result == assertText:
                     self.driver.refresh()
                     if place_code == self.get_last_table_data():
                         print('添加成功，用例通过')
@@ -156,6 +158,37 @@ class ExaminationPlaceBusiness(object):
                         return False
                 return True
 
+    # 获取启用数量
+    def get_enable_num(self):
+        count = 0
+        # 获取table查询总数
+        total_query_nums = self.Tu.get_lines()
+        # 判断查询结果和table查询结果数目是否相等
+        if self.Tu.get_lines() == self.Eh.get_query_result_count_text():
+            # 当查询数据存储在一页的时候
+            if self.Tu.judge_click_next_page() == 0:
+                for rows in range(1, total_query_nums + 1):
+                    # 判断对应字段字段是否包含查询条件内容
+                    if self.Tu.get_data(rows, '12') == '启用':
+                        count += 1
+            # 当查询结果分页保存的时候
+            else:
+                # 获取点击下一页次数
+                click_next_page = self.Tu.judge_click_next_page()
+                # 获取table每页行数
+                page_size = self.Tu.get_page_size()
+                for click_nums in range(1, click_next_page + 1):
+                    for rows in range(1, page_size + 1):
+                        if self.Tu.get_data(rows, '12') == '启用':
+                            count += 1
+                    # 遍历完一页数据后记录剩余个数
+                    total_query_nums -= page_size
+                    self.Tu.click_refresh_next_page()
+                # 遍历最后一页数据
+                for rows in range(1, total_query_nums + 1):
+                    if self.Tu.get_data(rows, '12')=='启用':
+                        count+=1
+                return count
     # 清空输入条件
     def clear_query_condition(self):
         self.Eh.clear_query_condition()
@@ -241,11 +274,21 @@ class ExaminationPlaceBusiness(object):
     # 获取列表最后一行数据
     def get_last_table_data(self):
         rows = self.Tu.get_lines() % self.Tu.get_page_size()
-        click_num=self.Tu.judge_click_next_page()
-        for i in range(1,click_num+1):
+        click_num = self.Tu.judge_click_next_page()
+        for i in range(1, click_num + 1):
             self.Tu.click_refresh_next_page()
         code_data = self.Tu.get_data(rows, '2')
         return code_data
+
+    # 判断是否点击详情跳转考场管理页面
+    def judge_detailed_btn(self):
+        self.Eh.click_detailed_btn()
+        time.sleep(1)
+        current_url=self.driver.current_url
+        if current_url=='http://localhost:9090/exam-place/examinationRoom':
+            return True
+        else:
+            return False
 
 
 if __name__ == "__main__":
@@ -254,6 +297,5 @@ if __name__ == "__main__":
     driver = getattr(getattr(lkc, 'lk'), 'driver')
     driver.maximize_window()
     Eb = ExaminationPlaceBusiness(driver)
-    Eb.judge_query_place_division_code('schild')
-
+    print(Eb.get_enable_num())
     sleep(3)

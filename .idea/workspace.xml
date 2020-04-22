@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="编辑考点成功关键字测试用例编写&#10;查询考点行政区划一级查询">
+    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/business/examination_room_business.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handle/examination_room_handle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/examination_room_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/examination_place_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_place_business.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" afterDir="false" />
@@ -44,18 +47,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\pythonWork\autoTest\data" />
-      <recent name="D:\pythonWork\untitled2\util" />
-      <recent name="D:\pythonWork\untitled2\tools" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\pythonWork\untitled2\basic" />
       <recent name="D:\pythonWork\untitled2\api" />
       <recent name="D:\pythonWork\untitled2\util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonWork\autoTest\data" />
+      <recent name="D:\pythonWork\untitled2\util" />
+      <recent name="D:\pythonWork\untitled2\tools" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -70,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_place_add_ddt_case">
+  <component name="RunManager" selected="Python.examination_place_query_ddt_case">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,27 +200,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="examination_place_handle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/handle" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/handle/examination_place_handle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="examination_place_query_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -231,6 +213,69 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examination_room_business" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/business" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/business/examination_room_business.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examination_room_handle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/handle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/handle/examination_room_handle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examination_room_page" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/page" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/page/examination_room_page.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -346,6 +391,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="table_util" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/table_util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="untitled2" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -382,12 +448,18 @@
       <item itemvalue="Python.run_case" />
       <item itemvalue="Python.login_ddt_case" />
       <item itemvalue="Python.examination_place_business" />
-      <item itemvalue="Python.examination_place_handle" />
+      <item itemvalue="Python.examination_room_page" />
+      <item itemvalue="Python.examination_room_handle" />
+      <item itemvalue="Python.examination_room_business" />
+      <item itemvalue="Python.table_util" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.examination_place_handle" />
         <item itemvalue="Python.examination_place_business" />
+        <item itemvalue="Python.table_util" />
+        <item itemvalue="Python.examination_room_business" />
+        <item itemvalue="Python.examination_room_handle" />
+        <item itemvalue="Python.examination_room_page" />
       </list>
     </recent_temporary>
   </component>
@@ -511,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587108381676</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="完善查询添加">
+      <created>1587515440361</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587515440361</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +618,8 @@
     <MESSAGE value="添加考点失败测试用例编写" />
     <MESSAGE value="添加考点成功关键字测试用例编写" />
     <MESSAGE value="编辑考点成功关键字测试用例编写&#10;查询考点行政区划一级查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="编辑考点成功关键字测试用例编写&#10;查询考点行政区划一级查询" />
+    <MESSAGE value="完善查询添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善查询添加" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
@@ -608,43 +688,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/handle/examination_place_handle.py</url>
-          <line>338</line>
+          <line>333</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
-          <line>174</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/case/examination_place_query_ddt_case.py</url>
-          <line>79</line>
+          <line>81</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
-          <line>220</line>
-          <option name="timeStamp" value="61" />
+          <line>187</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
-          <line>246</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
-          <line>151</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/business/examination_place_business.py</url>
-          <line>145</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/case/examination_place_add_ddt_case.py</url>
-          <line>75</line>
-          <option name="timeStamp" value="70" />
+          <line>181</line>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

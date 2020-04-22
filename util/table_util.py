@@ -20,7 +20,7 @@ class TableUtil:
 
     # # 获取单元格的数据(行号与列号）
     def get_data(self, row=0, col=0):
-        if self.get_lines() >=row:
+        if self.get_lines() >= row:
             data_xpath = '//*[@id="app"]/div/div[2]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/table/tbody' + '/tr[' + str(
                 row) + ']/td[' + str(col) + ']'
             data = self.driver.find_element_by_xpath(data_xpath).text
@@ -50,6 +50,7 @@ class TableUtil:
     def click_next_page(self):
         next_page_btn = self.fe.get_element('next_page_btn', 'ExaminationPlacePage')
         next_page_btn.click()
+
     # 点击刷新的下一页
 
     def click_refresh_next_page(self):
@@ -70,5 +71,4 @@ if __name__ == '__main__':
     driver = getattr(getattr(lkc, 'lk'), 'driver')
     driver.maximize_window()
     tu = TableUtil(driver)
-    print(tu.judge_click_next_page())
-
+    print(tu.get_enable_num())

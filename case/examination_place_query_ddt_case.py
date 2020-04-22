@@ -56,12 +56,14 @@ class ExaminationPlaceQueryDdtCase(unittest.TestCase):
                 # 设置失败截图存储路径
                 file_path = os.path.join(os.path.pardir + "/report/" + case_name + ".png")
                 self.driver.save_screenshot(file_path)
-        self.Eb.clear_query_condition()
+        if self.driver.current_url=='http://localhost:9090/exam-place/examinationPlace':
+            self.Eb.clear_query_condition()
 
     # 判断页面元素是否完整
     def test_examination_place_query_a(self):
         page_complete = self.Eb.judge_page_complete()
         self.assertTrue(page_complete, "页面元素不完整，该用例执行失败")
+
     # case前加修饰@ddt.data()
     @ddt.data(*data)
     # 考点名称,考点编号查询
@@ -140,11 +142,16 @@ class ExaminationPlaceQueryDdtCase(unittest.TestCase):
         result = self.Eb.judge_query_result('4')
         self.assertTrue(result, "行政区划三级查询数据有误，该用例执行失败")
 
+    # 判断是否点击详情跳转考场管理页面
+    def test_examination_place_query_o(self):
+        result = self.Eb.judge_detailed_btn()
+        self.assertTrue(result, "详情跳转地址有误，该用例执行失败")
+
 
 if __name__ == "__main__":
     # 报告存放路径
     # fire_path = os.path.join(os.path.pardir + "/report/" + "login_ddt_case.html")
-    fire_path = r"D:\pythonWork\autoTest\report\examination_place_edit.html"
+    fire_path = r"D:\pythonWork\autoTest\report\examination_place_query.html"
     f = open(fire_path, 'wb')
 
     # 添加测试用例

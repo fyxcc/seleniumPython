@@ -77,6 +77,8 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
                                          assertCode, assertText)
         if len(assertCode) != 0 and assertText != '添加成功':
             self.assertTrue(add_error, "添加考点成功，该用例执行失败")
+        elif assertText == '添加失败!':
+            self.assertTrue(add_error, "输入重复考点编号，添加成功，该用例执行失败")
         else:
             self.assertTrue(add_error, "添加考点失败，该用例执行失败")
 

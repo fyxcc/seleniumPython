@@ -1,14 +1,9 @@
 # coding=utf-8
-import os
-
-import selenium
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
-
 from page.examination_place_page import ExaminationPlacePage
-from selenium import webdriver
 import time
 from case.login_keyword_cases import LoginKeywordCases
 
@@ -198,7 +193,7 @@ class ExaminationPlaceHandle(object):
 
     # 获取添加成功提示语
     def get_add_success_text(self):
-        time.sleep(2)
+        #time.sleep(2)
         return self.Ep.add_success().text
 
     # 点击删除考点按钮
@@ -558,6 +553,9 @@ class ExaminationPlaceHandle(object):
     # 点击总机位数倒序按钮
     def click_table_total_computer_num_inverted_seq(self):
         return self.Ep.get_table_total_computer_num_inverted_seq().click()
+    #点击详情按钮
+    def click_detailed_btn(self):
+        return self.Ep.get_detailed_btn().click()
 
 
 if __name__ == "__main__":

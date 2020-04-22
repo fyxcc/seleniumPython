@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-import unittest
+
 from time import sleep
-
 from selenium.webdriver.support.wait import WebDriverWait
-
 from basic.find_element import FindElement
-from selenium import webdriver
-
 from case.login_keyword_cases import LoginKeywordCases
-import HTMLTestRunner
 
 
 class ExaminationPlacePage(object):
@@ -456,6 +451,10 @@ class ExaminationPlacePage(object):
     # 总机位数倒序按钮
     def get_table_total_computer_num_inverted_seq(self):
         return self.fe.get_element('table_total_computer_num_inverted_seq', 'ExaminationPlacePage')
+
+    # 详情按钮
+    def get_detailed_btn(self):
+        return self.fe.get_element('detailed_btn', 'ExaminationPlacePage')
 
 
 if __name__ == "__main__":
