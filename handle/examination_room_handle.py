@@ -64,6 +64,15 @@ class ExaminationRoomHandle(object):
     def get_basic_person_tel_text(self):
         return self.ERp.get_basic_person_tel().text
 
+    # 点击基本资料编辑按钮
+    def click_basic_edit_btn(self):
+        return self.ERp.get_basic_edit_btn().click()
+
+    # 获取基本资料编辑按钮字段
+
+    def get_basic_edit_btn_text(self):
+        return self.ERp.get_basic_edit_btn().text
+
     # 获取交通路线的考点地址字段
     def get_traffic_address_text(self):
         return self.ERp.get_traffic_address().text
@@ -88,6 +97,10 @@ class ExaminationRoomHandle(object):
     # 获取交通路线的纬度字段
     def get_traffic_latitude_text(self):
         return self.ERp.get_traffic_latitude().text
+
+    # 获取交通路线编辑按钮段
+    def get_traffic_edit_btn_text(self):
+        return self.ERp.get_traffic_edit_btn().text
 
     # 获取通讯录姓名字段
     def get_book_table_name_text(self):
@@ -126,6 +139,81 @@ class ExaminationRoomHandle(object):
     # 获取qq字段
     def get_book_table_text(self):
         return self.ERp.get_book_table_qq().text
+
+    # 获取通讯录添加按钮字段
+    def get_book_add_btn_text(self):
+        return self.ERp.get_book_add_btn().text
+
+    # 获取考点数字段
+    def get_place_num_text(self):
+        text_string = self.ERp.get_place_num().text
+        text_list = text_string.split('：')
+        return text_list[1]
+
+    # 点击选择考点按钮
+    def click_select_btn(self):
+        return self.ERp.get_select_btn().click()
+
+    # 获取选择考点框内容
+    def get_select_text(self):
+        return self.ERp.get_select_text().text
+
+    # 获取按照行政区划选择考点字段
+    def get_select_place_by_divi_text(self):
+        return self.ERp.get_select_place_by_divi().text
+
+    # 获取按照考点名称选择考点字段
+    def get_select_place_by_name_text(self):
+        return self.ERp.get_select_place_by_name().text
+
+    # 获取按照搜索条件选择考点字段
+    def get_select_place_by_search_text(self):
+        return self.ERp.get_select_place_by_search().get_attribute('placeholder')
+
+    # 获取按照搜索条件选择考点输入框
+    def send_select_place_by_search_text(self, placeName):
+        element = self.ERp.get_select_place_by_search()
+        if element != None:
+            element.send_keys(Keys.CONTROL, 'a')
+            element.send_keys(Keys.BACK_SPACE)
+        return self.ERp.get_select_place_by_search().send_keys(placeName)
+
+    # 点击按照搜索条件选择考点下拉框
+    def click_select_place_by_search_btn(self):
+        return self.ERp.get_select_place_by_search_btn().click()
+
+    # 获取按照搜索条件选择考点下拉框第一个选项内容
+
+    def get_place_by_search_fchild_text(self):
+        return self.ERp.select_place_by_search_fchild().text
+
+    # 点击按照搜索条件选择考点下拉框第二个选项
+    def click_select_place_by_search_schild(self):
+        return self.ERp.select_place_by_search_schild().click()
+
+    # 获取首字母导航字段
+    def get_select_letter_text(self):
+        return self.ERp.get_select_letter().text
+
+    # 获取基本资料编辑可用总机位数字段状态
+    def get_basic_edit_total_computer_num_status(self):
+        element = self.ERp.get_basic_edit_total_computer_num()
+        return element.is_enabled()
+
+    # 获取基本资料编辑可用编排机位数字段状态
+    def get_basic_edit_use_computer_num_status(self):
+        element = self.ERp.get_basic_edit_use_computer_num()
+        return element.is_enabled()
+
+    # 获取基本资料编辑考场数字段状态
+    def get_basic_edit_place_num_status(self):
+        element = self.ERp.get_basic_edit_place_num()
+        return element.is_enabled()
+    #清空基本资料编辑编号字段
+    def clear_basic_edit_code_text(self):
+        element=self.ERp.get_basic_edit_code()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
 
     # 判断基本信息部分元素是否完整
     def judge_basic_info(self):
@@ -173,6 +261,27 @@ class ExaminationRoomHandle(object):
         else:
             return False
 
+    # 判断按钮完整性
+    def judge_btn_complete(self):
+        btn1 = self.get_basic_edit_btn_text()
+        btn2 = self.get_traffic_edit_btn_text()
+        btn3 = self.get_book_add_btn_text()
+        if btn1 == '编辑' and btn2 == '编辑' and btn3 == '添加':
+            return True
+        else:
+            return False
+
+    # 判断选择考点功能页面元素是否完整
+    def select_place_complete(self):
+        select_place_by_divi_text = self.get_select_place_by_divi_text()
+        select_place_by_name_text = self.get_select_place_by_name_text()
+        select_place_by_search_text = self.get_select_place_by_search_text()
+        select_letter_text = self.get_select_letter_text()
+        if select_place_by_divi_text == '按行政区划' and select_place_by_name_text == '按考点名称' and select_place_by_search_text == '请输入考点名称搜索' and self.get_select_letter_text() != None:
+            return True
+        else:
+            return False
+
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
@@ -183,12 +292,8 @@ if __name__ == "__main__":
     ERh = ExaminationRoomHandle(getattr(getattr(lkc, 'lk'), 'driver'))
     EPh.click_detailed_btn()
     time.sleep(2)
-    print(ERh.get_book_table_text())
-    print(ERh.get_book_table_sex_text())
-    print(ERh.get_book_table_position_text())
-    print(ERh.get_book_table_tel_text())
-    print(ERh.get_book_table_fixed_phone_text())
-    print(ERh.get_book_table_post_address_text())
-    print(ERh.get_book_table_email_text())
+    ERh.click_basic_edit_btn()
+    time.sleep(2)
 
-    ERh.click_book_table()
+    print(ERh.clear_basic_edit_code_text())
+

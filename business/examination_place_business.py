@@ -152,6 +152,7 @@ class ExaminationPlaceBusiness(object):
                     # 遍历完一页数据后记录剩余个数
                     total_query_nums -= page_size
                     self.Tu.click_next_page()
+                    #self.Tu.click_refresh_next_page()
                 # 遍历最后一页数据
                 for rows in range(1, total_query_nums + 1):
                     if query_condition not in self.Tu.get_data(rows, 4):

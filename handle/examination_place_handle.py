@@ -556,8 +556,6 @@ class ExaminationPlaceHandle(object):
     #点击详情按钮
     def click_detailed_btn(self):
         return self.Ep.get_detailed_btn().click()
-
-
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()
