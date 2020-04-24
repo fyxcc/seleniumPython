@@ -50,7 +50,6 @@ class ExaminationRoomBusiness(object):
             return False
     #判断编辑考点总机位数、可编排机位数、考场数三字段是否不可编辑
     def judge_filed_status(self):
-        self.ERh.click_basic_edit_btn()
         status1=self.ERh.get_basic_edit_total_computer_num_status()
         status2=self.ERh.get_basic_edit_use_computer_num_status()
         status3=self.ERh.get_basic_edit_place_num_status()
@@ -58,9 +57,18 @@ class ExaminationRoomBusiness(object):
             return True
         else:
             return False
-    #清空基本资料编辑的所有字段
+    #编辑考点基本信息编辑框清空
     def clear_basic_all_edit(self):
-        self.ERh.click_basic_edit_btn()
+        self.ERh.clear_basic_edit_code_text()
+        self.ERh.clear_basic_edit_name_text()
+        self.ERh.clear_basic_edit_time_text()
+        self.ERh.clear_basic_edit_duration_text()
+        self.ERh.clear_basic_edit_post_code_text()
+        self.ERh.clear_basic_edit_place_person_text()
+        self.ERh.clear_basic_edit_person_tel_text()
+        #self.ERh.click_get_basic_edit_save_btn()
+
+
 
 
 

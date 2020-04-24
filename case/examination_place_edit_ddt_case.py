@@ -5,7 +5,6 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
 sys.path.append('D:/pythonWork/autoTest')
-from time import sleep
 from case.login_keyword_cases import LoginKeywordCases
 import ddt
 import unittest

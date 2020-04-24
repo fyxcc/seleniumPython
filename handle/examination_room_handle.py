@@ -209,14 +209,73 @@ class ExaminationRoomHandle(object):
     def get_basic_edit_place_num_status(self):
         element = self.ERp.get_basic_edit_place_num()
         return element.is_enabled()
-    #清空基本资料编辑编号字段
+    #点击基本资料编辑保存按钮
+    def click_get_basic_edit_save_btn(self):
+        return self.ERp.get_basic_edit_save_btn().click()
+    #点击基本资料编辑取消按钮
+    def click_basic_edit_cancle_btn(self):
+        return self.ERp.get_basic_edit_cancle_btn().click()
+    # 清空基本资料编辑编号字段
     def clear_basic_edit_code_text(self):
-        element=self.ERp.get_basic_edit_code()
+        element = self.ERp.get_basic_edit_code()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 获取错误基本资料编辑编号提示语
+    def get_basic_edit_code_error_text(self):
+        return self.ERp.get_basic_edit_code_error().text
+    # 清空基本资料编辑名称字段
+
+    def clear_basic_edit_name_text(self):
+        element = self.ERp.get_basic_edit_name()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空基本资料编辑性质字段
+
+    def clear_basic_edit_character_text(self):
+        element = self.ERp.get_basic_edit_character()
+        time.sleep(1)
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空基本资料编辑合同签订时间字段
+
+    def clear_basic_edit_time_text(self):
+        element = self.ERp.get_basic_edit_time()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空基本资料编辑合同签订时长字段
+
+    def clear_basic_edit_duration_text(self):
+        element = self.ERp.get_basic_edit_duration()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空基本资料编辑邮政编码字段
+
+    def clear_basic_edit_post_code_text(self):
+        element = self.ERp.get_basic_edit_post_code()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空基本资料编辑考点负责人字段
+
+    def clear_basic_edit_place_person_text(self):
+        element = self.ERp.get_basic_edit_place_person()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空基本资料编辑考点负责人电话字段
+
+    def clear_basic_edit_person_tel_text(self):
+        element = self.ERp.get_basic_edit_person_tel()
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
 
     # 判断基本信息部分元素是否完整
     def judge_basic_info(self):
+
         code = self.get_basic_code_text()
         name = self.get_basic_name_text
         character = self.get_basic_character_text()
@@ -295,5 +354,5 @@ if __name__ == "__main__":
     ERh.click_basic_edit_btn()
     time.sleep(2)
 
-    print(ERh.clear_basic_edit_code_text())
 
+    print(ERh.clear_basic_edit_character_text())
