@@ -210,6 +210,34 @@ class ExaminationRoomPage(object):
 
     def get_basic_edit_character(self):
         return self.fe.get_element('basic_edit_character', 'ExaminationPlaceRoom')
+    #基本资料编辑性质1
+    def get_basic_edit_character_1child(self):
+        return self.fe.get_element('basic_edit_character_1child', 'ExaminationPlaceRoom')
+    # 基本资料编辑性质2
+
+    def get_basic_edit_character_2child(self):
+        return self.fe.get_element('basic_edit_character_2child', 'ExaminationPlaceRoom')
+    # 基本资料编辑性质3
+
+    def get_basic_edit_character_3child(self):
+        return self.fe.get_element('basic_edit_character_3child', 'ExaminationPlaceRoom')
+    # 基本资料编辑性质4
+
+    def get_basic_edit_character_4child(self):
+        return self.fe.get_element('basic_edit_character_4child', 'ExaminationPlaceRoom')
+    # 基本资料编辑性质5
+
+    def get_basic_edit_character_5child(self):
+        return self.fe.get_element('basic_edit_character_5child', 'ExaminationPlaceRoom')
+    # 基本资料编辑性质6
+
+    def get_basic_edit_character_6child(self):
+        return self.fe.get_element('basic_edit_character_6child', 'ExaminationPlaceRoom')
+    # 基本资料编辑性质7
+
+    def get_basic_edit_character_7child(self):
+        return self.fe.get_element('basic_edit_character_7child', 'ExaminationPlaceRoom')
+
     # 错误基本资料编辑性质提示语
     """ 
    def get_basic_edit_character_error(self):
@@ -269,7 +297,9 @@ class ExaminationRoomPage(object):
     def get_basic_edit_person_tel(self):
         return self.fe.get_element('basic_edit_person_tel', 'ExaminationPlaceRoom')
 
-
+    #编辑成功提示语
+    def get_basic_edit_success(self):
+        return self.fe.get_element('basic_edit_success', 'ExaminationPlaceRoom')
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()

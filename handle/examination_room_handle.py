@@ -194,6 +194,24 @@ class ExaminationRoomHandle(object):
     # 获取首字母导航字段
     def get_select_letter_text(self):
         return self.ERp.get_select_letter().text
+    #获取基本资料编辑考点性质子选项
+    def get_basic_edit_character_child(self,child_lever):
+        if child_lever=='basic_edit_character_1child':
+            return self.ERp.get_basic_edit_character_1child().text
+        elif child_lever == 'basic_edit_character_2child':
+            return self.ERp.get_basic_edit_character_2child().text
+        elif child_lever == 'basic_edit_character_3child':
+            return self.ERp.get_basic_edit_character_3child().text
+        elif child_lever == 'basic_edit_character_4child':
+            return self.ERp.get_basic_edit_character_4child().text
+        elif child_lever == 'basic_edit_character_5child':
+            return self.ERp.get_basic_edit_character_5child().text
+        elif child_lever == 'basic_edit_character_6child':
+            return self.ERp.get_basic_edit_character_6child().text
+        elif child_lever == 'basic_edit_character_7child':
+            return self.ERp.get_basic_edit_character_7child().text
+
+
 
     # 获取基本资料编辑可用总机位数字段状态
     def get_basic_edit_total_computer_num_status(self):
@@ -209,20 +227,21 @@ class ExaminationRoomHandle(object):
     def get_basic_edit_place_num_status(self):
         element = self.ERp.get_basic_edit_place_num()
         return element.is_enabled()
-    #点击基本资料编辑保存按钮
+
+    # 点击基本资料编辑保存按钮
     def click_get_basic_edit_save_btn(self):
-        return self.ERp.get_basic_edit_save_btn().click()
-    #点击基本资料编辑取消按钮
+            return self.ERp.get_basic_edit_save_btn().click()
+
+    # 点击基本资料编辑取消按钮
     def click_basic_edit_cancle_btn(self):
         return self.ERp.get_basic_edit_cancle_btn().click()
+
     # 清空基本资料编辑编号字段
     def clear_basic_edit_code_text(self):
         element = self.ERp.get_basic_edit_code()
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
-    # 获取错误基本资料编辑编号提示语
-    def get_basic_edit_code_error_text(self):
-        return self.ERp.get_basic_edit_code_error().text
+
     # 清空基本资料编辑名称字段
 
     def clear_basic_edit_name_text(self):
@@ -341,6 +360,118 @@ class ExaminationRoomHandle(object):
         else:
             return False
 
+    # 输入编辑基本考点编号
+    def send_basic_edit_code(self, basic_edit_code):
+        if len(basic_edit_code) != 0:
+            self.ERp.get_basic_edit_code().send_keys(basic_edit_code)
+
+    # 输入编辑基本考点名称
+    def send_basic_edit_name(self, basic_edit_name):
+        if len(basic_edit_name) != 0:
+            self.ERp.get_basic_edit_name().send_keys(basic_edit_name)
+    # 输入编辑基本合同签订时间
+
+    def send_basic_edit_time(self, basic_edit_time):
+        if len(basic_edit_time) != 0:
+            self.ERp.get_basic_edit_time().send_keys(basic_edit_time)
+
+    # 输入编辑基本合同签订时长
+
+    def send_basic_edit_duration(self, basic_edit_duration):
+        if len(basic_edit_duration) != 0:
+            self.ERp.get_basic_edit_duration().send_keys(basic_edit_duration)
+
+    # 输入编辑基本邮政编码
+
+    def send_basic_edit_post_code(self, basic_edit_post_code):
+        if len(basic_edit_post_code) != 0:
+            self.ERp.get_basic_edit_post_code().send_keys(basic_edit_post_code)
+
+    # 输入编辑基本考点负责人
+
+    def send_basic_edit_place_person(self, basic_edit_place_person):
+        if len(basic_edit_place_person) != 0:
+            self.ERp.get_basic_edit_place_person().send_keys(basic_edit_place_person)
+
+    # 输入编辑基本考点负责人电话
+
+    def send_basic_edit_person_tel(self, basic_edit_person_tel):
+        if len(basic_edit_person_tel) != 0:
+            self.ERp.get_basic_edit_person_tel().send_keys(basic_edit_person_tel)
+    #获取编辑成功提示语
+    def get_basic_edit_success_text(self):
+        if self.ERp.get_basic_edit_success()!=None:
+            self.ERp.get_basic_edit_success().text
+        else:
+            return None
+
+    # 获取基本资料编辑错误信息
+
+    def get_edit_user_text(self, error_info, assertText):
+        try:
+
+            if error_info == 'basic_edit_code_error':
+                text_content = self.ERp.get_basic_edit_code_error().text
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'basic_edit_name_error':
+                # text = self.Ep.get_edit_place_name_error().text
+                text_content = self.ERp.get_basic_edit_name_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'edit_place_division_code_error':
+                '''
+                WebDriverWait(self.driver, 10).until(
+                    lambda x: x.find_element_by_xpath('/html/body/div[3]/div/div'))
+                text = self.driver.find_element_by_xpath('/html/body/div[3]/div/div').text
+                '''
+                # text = self.Ep.get_place_division_code_error().text
+                text_content = self.Ep.get_edit_place_division_code_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'basic_edit_duration_error':
+                # text = self.Ep.get_place_address_error().text
+                text_content = self.ERp.get_basic_edit_duration_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'basic_edit_place_person_error':
+                # text = self.Ep.get_edit_place_person_error().text
+                text_content = self.ERp.get_basic_edit_place_person_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'basic_edit_person_tel_error':
+                # text = self.Ep.get_edit_place_person_tel_error().text
+                text_content = self.ERp.get_basic_edit_person_tel_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'basic_edit_post_code_error':
+                # text = self.Ep.get_edit_place_person_tel_error().text
+                text_content = self.ERp.get_basic_edit_post_code_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'repeat_place_code_error':
+                WebDriverWait(self.driver, 10).until(
+                    lambda x: x.find_element_by_xpath('/html/body/div[14]/div/div'))
+                text_content = self.driver.find_element_by_xpath('/html/body/div[14]/div/div').text
+                # text_content = self.Ep.get_edit_repeat_code_error().text
+                if text_content == assertText:
+                    text = 'ok'
+            else:
+                text1 = self.ERp.get_basic_edit_code_error().get_attribute("innerHTML")
+                text2 = self.ERp.get_basic_edit_name_error().get_attribute("innerHTML")
+                #text3=self.ERP.get_basic_edit_time_error().get_attribute("innerHTML")
+                text4 = self.ERp.get_basic_edit_duration_error().get_attribute("innerHTML")
+                text5 = self.ERp.get_basic_edit_post_code_error().get_attribute("innerHTML")
+                text6 = self.ERp.get_basic_edit_place_person_error().get_attribute("innerHTML")
+                text7 = self.ERp.get_basic_edit_person_tel_error().get_attribute("innerHTML")
+                if text1 and text2 and text4 and text5 and text6 and text7:
+                    text = 'ok'
+
+            return text
+        except BaseException as e:
+            print(repr(e))
+            return None
+
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
@@ -353,6 +484,5 @@ if __name__ == "__main__":
     time.sleep(2)
     ERh.click_basic_edit_btn()
     time.sleep(2)
-
 
     print(ERh.clear_basic_edit_character_text())
