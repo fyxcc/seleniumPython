@@ -180,6 +180,70 @@ class ExaminationRoomBusiness(object):
                     print('添加失败，用例未通过')
                     return False
 
+    #判断添加通讯录字段是否完整
+    def judge_add_book_complete(self):
+        data1=self.ERh.get_book_add_name_info()
+        data2=self.ERh.get_book_add_sex_text()
+        data3=self.ERh.get_book_add_position_info()
+        data4=self.ERh.get_book_add_phone_info()
+        data5=self.ERh.get_book_add_tel_info()
+        data6=self.ERh.get_book_add_post_address_info()
+        data7=self.ERh.get_book_add_mail_info()
+        data8=self.ERh.get_book_add_qq_info()
+        if data1!=None and data2!=None and data3!=None and data4!=None and data5!=None and data6!=None and data7!=None and data8!=None:
+            return True
+        else:
+            return False
+    # 清空添加通讯录所有字段
+
+    def clear_book_all_add(self):
+        self.ERh.clear_book_add_name_text()
+        #self.ERh.clear_book_add_position_text()
+        self.ERh.clear_book_add_phone_text()
+        self.ERh.clear_book_add_tel_text()
+        self.ERh.clear_book_add_post_address_text()
+        self.ERh.clear_book_add_mail_text()
+        self.ERh.clear_book_add_qq_text()
+    # 通讯录成功添加
+
+    def book_success_add(self, book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq,assertCode):
+        self.ERh.send_book_add_name(book_add_name)
+        self.ERh.send_book_add_phone(book_add_phone)
+        self.ERh.send_book_add_tel(book_add_tel)
+        self.ERh.send_book_add_post_address(book_add_post_address)
+        self.ERh.send_book_add_mail(book_add_mail)
+        self.ERh.send_book_add_qq(book_add_qq)
+        self.ERh.click_book_add_confirm_btn()
+
+    # 数据驱动整合代码
+
+    def book_add_function(self, book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq,
+                                         assertCode, assertText):
+        self.book_success_add(book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq,assertCode)
+        if assertText == '添加成功':
+            self.result = self.Eh.get_add_success_text()
+        if len(assertCode) != 0:
+            if self.ERh.get_book_error_text(assertCode, assertText) is None:
+                return False
+            else:
+                print("用例通过")
+                return True
+        else:
+            if assertText == '添加失败!':
+                if self.Eh.judge_add_frame():
+                    return True
+                else:
+                    return False
+            elif assertText == '添加成功':
+                if self.Eh.judge_add_frame():
+                    return False
+                elif self.result == assertText:
+                    self.driver.refresh()
+                    if place_code == self.get_last_table_data():
+                        print('添加成功，用例通过')
+                        return True
+                    else:
+                        return False
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()
@@ -188,4 +252,4 @@ if __name__ == "__main__":
     EPh = ExaminationPlaceHandle(driver)
     EPh.click_detailed_btn()
     ERb = ExaminationRoomBusiness(driver)
-    print(ERb.judge_edit_traffic_complete())
+    print(ERb.judge_add_book_complete())

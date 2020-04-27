@@ -637,6 +637,182 @@ class ExaminationRoomHandle(object):
             print(repr(e))
             return None
 
+    # 点击通讯录添加按钮
+    def click_book_add_btn(self):
+        return self.ERp.get_book_add_btn().click()
+
+    # 点击通讯录添加确定按钮
+    def click_book_add_confirm_btn(self):
+        return self.ERp.get_book_add_confirm_btn().click()
+
+    # 点击通讯录添加取消按钮
+    def click_book_add_cancle_btn(self):
+        return self.ERp.get_book_add_cancle_btn().click()
+
+    # 判断添加通讯录弹框是否打开
+    def judge_book_add_frame(self):
+        if self.ERp.get_book_add_frame() is not None:
+            if self.ERp.get_book_add_frame().text == '添加通讯录':
+                return True
+        else:
+            return False
+
+    # 添加通讯录姓名提示语
+    def get_book_add_name_info(self):
+        return self.ERp.get_book_add_name().get_attribute("placeholder")
+
+    # 添加通讯录性别提示语
+    def get_book_add_sex_text(self):
+        return self.ERp.get_book_add_sex().text
+
+    # 添加通讯录职位提示语
+    def get_book_add_position_info(self):
+        return self.ERp.get_book_add_position().text
+
+    # 添加通讯录手机提示语
+    def get_book_add_phone_info(self):
+        return self.ERp.get_book_add_phone().get_attribute("placeholder")
+
+    # 添加通讯录固定电话提示语
+
+    def get_book_add_tel_info(self):
+        return self.ERp.get_book_add_tel().get_attribute("placeholder")
+
+    # 添加通讯录邮寄地址提示语
+
+    def get_book_add_post_address_info(self):
+        return self.ERp.get_book_add_post_address().get_attribute("placeholder")
+
+    # 添加通讯录电子邮箱提示语
+
+    def get_book_add_mail_info(self):
+        return self.ERp.get_book_add_mail().get_attribute("placeholder")
+
+    # 添加通讯录qq提示语
+
+    def get_book_add_qq_info(self):
+        return self.ERp.get_book_add_qq().get_attribute("placeholder")
+
+    # 清空通讯录添加姓名字段
+    def clear_book_add_name_text(self):
+        element = self.ERp.get_book_add_name()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录添加职位字段
+    def clear_book_add_position_text(self):
+        element = self.ERp.get_book_add_position()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空通讯录添加手机字段
+    def clear_book_add_phone_text(self):
+        element = self.ERp.get_book_add_phone()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录添加固定电话字段
+    def clear_book_add_tel_text(self):
+        element = self.ERp.get_book_add_tel()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空通讯录添加邮寄地址字段
+    def clear_book_add_post_address_text(self):
+        element = self.ERp.get_book_add_post_address()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录添加电子邮箱字段
+    def clear_book_add_mail_text(self):
+        element = self.ERp.get_book_add_mail()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录添加qq字段
+    def clear_book_add_qq_text(self):
+        element = self.ERp.get_book_add_qq()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 输入添加通讯录姓名
+
+    def send_book_add_name(self, book_add_name):
+        if len(book_add_name) != 0:
+            self.ERp.get_book_add_name().send_keys(book_add_name)
+    # 输入添加通讯录手机
+
+    def send_book_add_phone(self, book_add_phone):
+        if len(book_add_phone) != 0:
+            self.ERp.get_book_add_phone().send_keys(book_add_phone)
+    # 输入添加通讯录固定电话
+
+    def send_book_add_tel(self, book_add_tel):
+        if len(book_add_tel) != 0:
+            self.ERp.get_book_add_tel().send_keys(book_add_tel)
+    # 输入添加通讯录邮寄地址
+
+    def send_book_add_post_address(self, book_add_post_address):
+        if len(book_add_post_address) != 0:
+            self.ERp.get_book_add_post_address().send_keys(book_add_post_address)
+    # 输入添加通讯录电子邮箱
+
+    def send_book_add_mail(self, book_add_mail):
+        if len(book_add_mail) != 0:
+            self.ERp.get_book_add_mail().send_keys(book_add_mail)
+    # 输入添加通讯录qq
+
+    def send_book_add_qq(self, book_add_qq):
+        if len(book_add_qq) != 0:
+            self.ERp.get_book_add_qq().send_keys(book_add_qq)
+    # 获取通讯录添加错误信息
+
+    def get_book_error_text(self, error_info, assertText):
+        try:
+
+            if error_info == 'place_code_error':
+                text_content = self.Ep.get_place_code_error().text
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'place_name_error':
+                # text = self.Ep.get_place_name_error().text
+                text_content = self.Ep.get_place_name_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'place_division_code_error':
+                '''
+                WebDriverWait(self.driver, 10).until(
+                    lambda x: x.find_element_by_xpath('/html/body/div[3]/div/div'))
+                text = self.driver.find_element_by_xpath('/html/body/div[3]/div/div').text
+                '''
+                # text = self.Ep.get_place_division_code_error().text
+                text_content = self.Ep.get_place_division_code_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'place_address_error':
+                # text = self.Ep.get_place_address_error().text
+                text_content = self.Ep.get_place_address_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'place_person_error':
+                # text = self.Ep.get_place_person_error().text
+                text_content = self.Ep.get_place_person_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'place_person_tel_error':
+                # text = self.Ep.get_place_person_tel_error().text
+                text_content = self.Ep.get_place_person_tel_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            else:
+                text1 = self.ERp.get_book_add_name_error().get_attribute("innerHTML")
+                text2 = self.ERp.get_book_add_position_error().get_attribute("innerHTML")
+                #text3 = self.ERp.get_book_add_phone_error().get_attribute("innerHTML")
+                #text4 = self.ERp.get_book_add_tel_error().get_attribute("innerHTML")
+                #text5 = self.ERp.get_book_add_post_address_error().get_attribute("innerHTML")
+                #text6 = self.ERp.get_book_add_mail_error().get_attribute("innerHTML")
+                if text1!=None and text2!=None:
+                    text = 'ok'
+
+            return text
+        except BaseException as e:
+            print(repr(e))
+            return None
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()

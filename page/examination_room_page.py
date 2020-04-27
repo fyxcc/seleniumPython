@@ -330,6 +330,87 @@ class ExaminationRoomPage(object):
 
     def get_book_add_btn(self):
         return self.fe.get_element('book_add_btn', 'ExaminationPlaceRoom')
+    # 通讯录添加确定按钮
+
+    def get_book_add_confirm_btn(self):
+        return self.fe.get_element('book_add_confirm_btn', 'ExaminationPlaceRoom')
+    # 通讯录添加取消按钮
+
+    def get_book_add_cancle_btn(self):
+        return self.fe.get_element('book_add_cancle_btn', 'ExaminationPlaceRoom')
+
+    #获取添加通讯录弹框
+    def get_book_add_frame(self):
+        return self.fe.get_element('book_add_frame', 'ExaminationPlaceRoom')
+    #添加通讯录姓名
+    def get_book_add_name(self):
+        return self.fe.get_element('book_add_name', 'ExaminationPlaceRoom')
+    #错误添加通讯录姓名提示语
+    def get_book_add_name_error(self):
+        return self.fe.get_element('book_add_name_error', 'ExaminationPlaceRoom')
+    # 添加通讯录性别
+
+    def get_book_add_sex(self):
+        return self.fe.get_element('book_add_sex', 'ExaminationPlaceRoom')
+
+    # 添加通讯录性别男
+    def get_book_add_male(self):
+        return self.fe.get_element('book_add_male', 'ExaminationPlaceRoom')
+
+    # 添加通讯录性别女
+    def get_book_add_female(self):
+        return self.fe.get_element('book_add_female', 'ExaminationPlaceRoom')
+    #添加通讯录职位
+
+    def get_book_add_position(self):
+        return self.fe.get_element('book_add_position', 'ExaminationPlaceRoom')
+    #错误添加通讯录职位提示语
+
+    def get_book_add_position_error(self):
+        return self.fe.get_element('book_add_position_error', 'ExaminationPlaceRoom')
+    #添加通讯录手机
+    def get_book_add_phone(self):
+        return self.fe.get_element('book_add_phone', 'ExaminationPlaceRoom')
+    # 错误添加通讯录手机提示语
+    def get_book_add_phone_error(self):
+        return self.fe.get_element('book_add_phone_error', 'ExaminationPlaceRoom')
+    #添加通讯录固定电话
+    def get_book_add_tel(self):
+        return self.fe.get_element('book_add_tel', 'ExaminationPlaceRoom')
+
+    # 错误添加通讯录固定电话提示语
+    def get_book_add_tel_error(self):
+        return self.fe.get_element('book_add_tel_error', 'ExaminationPlaceRoom')
+    #添加通讯录邮寄地址
+    def get_book_add_post_address(self):
+        return self.fe.get_element('book_add_post_address', 'ExaminationPlaceRoom')
+    #错误添加通讯录邮寄地址提示语
+    def get_book_add_post_address_error(self):
+        return self.fe.get_element('book_add_post_address_error', 'ExaminationPlaceRoom')
+    #添加通讯录电子邮箱
+    def get_book_add_mail(self):
+        return self.fe.get_element('book_add_mail', 'ExaminationPlaceRoom')
+    # 错误添加通讯录电子邮箱提示语
+
+    def get_book_add_mail_error(self):
+        return self.fe.get_element('book_add_mail_error', 'ExaminationPlaceRoom')
+    #添加通讯录qq
+    def get_book_add_qq(self):
+        return self.fe.get_element('book_add_qq', 'ExaminationPlaceRoom')
+    # 错误添加通讯录qq提示语
+
+    def get_book_add_qq(self):
+        return self.fe.get_element('book_add_qq', 'ExaminationPlaceRoom')
+
+
+
+
+
+
+
+
+
+
 
     # 选择考点按钮
     def get_select_btn(self):
