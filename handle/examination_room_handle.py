@@ -194,9 +194,10 @@ class ExaminationRoomHandle(object):
     # 获取首字母导航字段
     def get_select_letter_text(self):
         return self.ERp.get_select_letter().text
-    #获取基本资料编辑考点性质子选项
-    def get_basic_edit_character_child(self,child_lever):
-        if child_lever=='basic_edit_character_1child':
+
+    # 获取基本资料编辑考点性质子选项
+    def get_basic_edit_character_child(self, child_lever):
+        if child_lever == 'basic_edit_character_1child':
             return self.ERp.get_basic_edit_character_1child().text
         elif child_lever == 'basic_edit_character_2child':
             return self.ERp.get_basic_edit_character_2child().text
@@ -210,8 +211,6 @@ class ExaminationRoomHandle(object):
             return self.ERp.get_basic_edit_character_6child().text
         elif child_lever == 'basic_edit_character_7child':
             return self.ERp.get_basic_edit_character_7child().text
-
-
 
     # 获取基本资料编辑可用总机位数字段状态
     def get_basic_edit_total_computer_num_status(self):
@@ -230,7 +229,7 @@ class ExaminationRoomHandle(object):
 
     # 点击基本资料编辑保存按钮
     def click_get_basic_edit_save_btn(self):
-            return self.ERp.get_basic_edit_save_btn().click()
+        return self.ERp.get_basic_edit_save_btn().click()
 
     # 点击基本资料编辑取消按钮
     def click_basic_edit_cancle_btn(self):
@@ -369,6 +368,7 @@ class ExaminationRoomHandle(object):
     def send_basic_edit_name(self, basic_edit_name):
         if len(basic_edit_name) != 0:
             self.ERp.get_basic_edit_name().send_keys(basic_edit_name)
+
     # 输入编辑基本合同签订时间
 
     def send_basic_edit_time(self, basic_edit_time):
@@ -398,12 +398,10 @@ class ExaminationRoomHandle(object):
     def send_basic_edit_person_tel(self, basic_edit_person_tel):
         if len(basic_edit_person_tel) != 0:
             self.ERp.get_basic_edit_person_tel().send_keys(basic_edit_person_tel)
-    #获取编辑成功提示语
+
+    # 获取编辑成功提示语
     def get_basic_edit_success_text(self):
-        if self.ERp.get_basic_edit_success()!=None:
-            self.ERp.get_basic_edit_success().text
-        else:
-            return None
+        self.ERp.get_basic_edit_success().text
 
     # 获取基本资料编辑错误信息
 
@@ -459,12 +457,179 @@ class ExaminationRoomHandle(object):
             else:
                 text1 = self.ERp.get_basic_edit_code_error().get_attribute("innerHTML")
                 text2 = self.ERp.get_basic_edit_name_error().get_attribute("innerHTML")
-                #text3=self.ERP.get_basic_edit_time_error().get_attribute("innerHTML")
+                # text3=self.ERP.get_basic_edit_time_error().get_attribute("innerHTML")
                 text4 = self.ERp.get_basic_edit_duration_error().get_attribute("innerHTML")
                 text5 = self.ERp.get_basic_edit_post_code_error().get_attribute("innerHTML")
                 text6 = self.ERp.get_basic_edit_place_person_error().get_attribute("innerHTML")
                 text7 = self.ERp.get_basic_edit_person_tel_error().get_attribute("innerHTML")
                 if text1 and text2 and text4 and text5 and text6 and text7:
+                    text = 'ok'
+
+            return text
+        except BaseException as e:
+            print(repr(e))
+            return None
+
+    # 点击编辑交通信息按钮
+    def click_traffic_edit_btn(self):
+        return self.ERp.get_traffic_edit_btn().click()
+
+    # 点击编辑交通信息保存按钮
+    def click_traffic_edit_save_btn(self):
+        return self.ERp.get_traffic_edit_save_btn().click()
+
+    # 点击编辑交通信息取消按钮
+    def click_traffic_edit_cancle_btn(self):
+        return self.ERp.get_traffic_edit_cancle_btn().click()
+
+    # 获取编辑交通信息考点地址提示语
+    def get_traffic_edit_address_info(self):
+        return self.ERp.get_traffic_edit_address().get_attribute("placeholder")
+
+    # 获取编辑交通信息交通状况提示语
+
+    def get_traffic_edit_condition_info(self):
+        return self.ERp.get_traffic_edit_condition().get_attribute("placeholder")
+
+    # 交通路线的编辑具体线路提示语
+
+    def get_traffic_edit_concrete_route_info(self):
+        return self.ERp.get_traffic_edit_concrete_route().get_attribute("placeholder")
+
+    # 交通路线的编辑地理位置描述提示语
+
+    def get_traffic_edit_location_info(self):
+        return self.ERp.get_traffic_edit_location().get_attribute("placeholder")
+
+    # 交通路线的编辑经度提示语
+
+    def get_traffic_edit_longitude_info(self):
+        return self.ERp.get_traffic_edit_longitude().get_attribute("placeholder")
+
+    # 交通路线的编辑纬度提示语
+
+    def get_traffic_edit_latitude_info(self):
+        return self.ERp.get_traffic_edit_latitude().get_attribute("placeholder")
+
+    # 清空交通信息编辑地址字段
+    def clear_traffic_edit_address_text(self):
+        element = self.ERp.get_traffic_edit_address()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空交通信息编辑情况字段
+
+    def clear_traffic_edit_condition_text(self):
+        element = self.ERp.get_traffic_edit_condition()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空交通信息编辑具体线路字段
+
+    def clear_traffic_edit_concrete_route_text(self):
+        element = self.ERp.get_traffic_edit_concrete_route()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空交通信息编辑地理位置字段
+
+    def clear_traffic_edit_location_text(self):
+        element = self.ERp.get_traffic_edit_location()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空交通信息编辑经度字段
+
+    def clear_traffic_edit_longitude_text(self):
+        element = self.ERp.get_traffic_edit_longitude()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 清空交通信息编辑地址字段
+
+    def clear_traffic_edit_latitude_text(self):
+        element = self.ERp.get_traffic_edit_latitude()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 输入编辑交通信息考点地址
+
+    def send_traffic_edit_address(self, traffic_edit_address):
+        if len(traffic_edit_address) != 0:
+            self.ERp.get_traffic_edit_address().send_keys(traffic_edit_address)
+
+    # 输入编辑交通信息考交通情况
+
+    def send_traffic_edit_condition(self, traffic_edit_condition):
+        if len(traffic_edit_condition) != 0:
+            self.ERp.get_traffic_edit_condition().send_keys(traffic_edit_condition)
+
+    # 输入编辑交通信息具体线路
+
+    def send_traffic_edit_concrete_route(self, traffic_edit_concrete_route):
+        if len(traffic_edit_concrete_route) != 0:
+            self.ERp.get_traffic_edit_concrete_route().send_keys(traffic_edit_concrete_route)
+
+    # 输入编辑交通信息考地理位置描述
+
+    def send_traffic_edit_location(self, traffic_edit_location):
+        if len(traffic_edit_location) != 0:
+            self.ERp.get_traffic_edit_location().send_keys(traffic_edit_location)
+
+    # 输入编辑交通信息经度
+
+    def send_traffic_edit_longitude(self, traffic_edit_longitude):
+        if len(traffic_edit_longitude) != 0:
+            self.ERp.get_traffic_edit_longitude().send_keys(traffic_edit_longitude)
+
+    # 输入编辑交通信息纬度
+
+    def send_traffic_edit_latitude(self, traffic_edit_latitude):
+        if len(traffic_edit_latitude) != 0:
+            self.ERp.get_traffic_edit_latitude().send_keys(traffic_edit_latitude)
+
+    # 获取交通信息编辑错误信息
+
+    def get_edit_traffic_user_text(self, error_info, assertText):
+        try:
+
+            if error_info == 'traffic_edit_address_error':
+                text_content = self.ERp.get_traffic_address_error().text
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'traffic_edit_condition_error':
+                # text = self.Ep.get_edit_place_name_error().text
+                text_content = self.ERp.get_traffic_edit_condition_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'traffic_edit_concrete_route_error':
+                '''
+                WebDriverWait(self.driver, 10).until(
+                    lambda x: x.find_element_by_xpath('/html/body/div[3]/div/div'))
+                text = self.driver.find_element_by_xpath('/html/body/div[3]/div/div').text
+                '''
+                # text = self.Ep.get_place_division_code_error().text
+                text_content = self.ERp.get_traffic_edit_concrete_route_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'traffic_edit_location_error':
+                # text = self.Ep.get_place_address_error().text
+                text_content = self.ERp.get_traffic_edit_location_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'repeat_place_code_error':
+                WebDriverWait(self.driver, 10).until(
+                    lambda x: x.find_element_by_xpath('/html/body/div[14]/div/div'))
+                text_content = self.driver.find_element_by_xpath('/html/body/div[14]/div/div').text
+                # text_content = self.Ep.get_edit_repeat_code_error().text
+                if text_content == assertText:
+                    text = 'ok'
+            else:
+                text1 = self.ERp.get_traffic_address_error().get_attribute("innerHTML")
+                text2 = self.ERp.get_traffic_edit_condition_error().get_attribute("innerHTML")
+                text3 = self.ERp.get_traffic_edit_concrete_route_error().get_attribute("innerHTML")
+                text4 = self.ERp.get_traffic_edit_location_error().get_attribute("innerHTML")
+                if text1 and text2 and text3 and text4:
                     text = 'ok'
 
             return text

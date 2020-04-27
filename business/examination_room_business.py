@@ -130,7 +130,55 @@ class ExaminationRoomBusiness(object):
                 else:
                     print('添加失败，用例未通过')
                     return False
+    #判断编辑交通信息字段是否完整
+    def judge_edit_traffic_complete(self):
+        data1=self.ERh.get_traffic_edit_address_info()
+        data2=self.ERh.get_traffic_edit_condition_info()
+        data3=self.ERh.get_traffic_edit_concrete_route_info()
+        data4=self.ERh.get_traffic_edit_location_info()
+        data5=self.ERh.get_traffic_edit_longitude_info()
+        data6=self.ERh.get_traffic_edit_latitude_info()
+        if data1!=None and data2!=None and data3!=None and data4!=None and data5!=None and data6!=None:
+            return True
+        else:
+            return False
+    #清空编辑交通信息所有字段
+    def clear_traffic_all_edit(self):
+        self.ERh.clear_traffic_edit_address_text()
+        self.ERh.clear_traffic_edit_condition_text()
+        self.ERh.clear_traffic_edit_concrete_route_text()
+        self.ERh.clear_traffic_edit_location_text()
+        self.ERh.clear_traffic_edit_longitude_text()
+        self.ERh.clear_traffic_edit_latitude_text()
 
+    # 交通信息成功编辑
+    def traffic_success_edit(self,traffic_edit_address,traffic_edit_condition,traffic_edit_concrete_route,traffic_edit_location,traffic_edit_longitude,traffic_edit_latitude):
+        self.ERh.send_traffic_edit_address(traffic_edit_address)
+        self.ERh.send_traffic_edit_condition(traffic_edit_condition)
+        self.ERh.send_traffic_edit_concrete_route(traffic_edit_concrete_route)
+        self.ERh.send_traffic_edit_location(traffic_edit_location)
+        self.ERh.send_traffic_edit_longitude(traffic_edit_longitude)
+        self.ERh.send_traffic_edit_latitude(traffic_edit_latitude)
+        self.ERh.click_traffic_edit_save_btn()
+
+    # 数据驱动整合代码
+    def traffic_edit_function(self, traffic_edit_address,traffic_edit_condition,traffic_edit_concrete_route,traffic_edit_location,traffic_edit_longitude,traffic_edit_latitude,assertCode, assertText):
+        self.traffic_success_edit(traffic_edit_address,traffic_edit_condition,traffic_edit_concrete_route,traffic_edit_location,traffic_edit_longitude,traffic_edit_latitude)
+        if len(assertCode) != 0:
+            if self.ERh.get_edit_traffic_user_text(assertCode, assertText) is None:
+                return False
+            else:
+                print("用例通过")
+                return True
+        else:
+            if assertText == '编辑成功':
+                result = self.ERp.get_traffic_edit_btn()
+                if result != None:
+                    print('添加成功，用例通过')
+                    return True
+                else:
+                    print('添加失败，用例未通过')
+                    return False
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
@@ -140,3 +188,4 @@ if __name__ == "__main__":
     EPh = ExaminationPlaceHandle(driver)
     EPh.click_detailed_btn()
     ERb = ExaminationRoomBusiness(driver)
+    print(ERb.judge_edit_traffic_complete())

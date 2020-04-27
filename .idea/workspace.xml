@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/examination_room_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_room_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handle/examination_room_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_room_handle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/examination_room_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_room_page.py" afterDir="false" />
@@ -41,7 +41,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -68,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_room_basic_info_edit">
+  <component name="RunManager" selected="Python.examination_room_traffic_info_edit">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,6 +258,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="examination_room_handle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/handle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/handle/examination_room_handle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examination_room_traffic_info_edit" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\fengyx\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="first_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -388,6 +430,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.examination_room_traffic_info_edit" />
       <item itemvalue="Python.examination_room_basic_select_ddt_case" />
       <item itemvalue="Python.examination_room_basic_info_edit" />
       <item itemvalue="Python.examination_place_query_ddt_case" />
@@ -403,9 +446,11 @@
       <item itemvalue="Python.run_case" />
       <item itemvalue="Python.login_ddt_case" />
       <item itemvalue="Python.examination_room_business" />
+      <item itemvalue="Python.examination_room_handle" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.examination_room_handle" />
         <item itemvalue="Python.examination_room_business" />
       </list>
     </recent_temporary>
@@ -558,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587698881972</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="编辑考点基本信息">
+      <created>1587895269828</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1587895269828</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

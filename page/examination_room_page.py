@@ -69,6 +69,138 @@ class ExaminationRoomPage(object):
     # 基本资料编辑按钮
     def get_basic_edit_btn(self):
         return self.fe.get_element('basic_edit_btn', 'ExaminationPlaceRoom')
+        # 基本资料编辑保存按钮
+
+    def get_basic_edit_save_btn(self):
+        return self.fe.get_element('basic_edit_save_btn', 'ExaminationPlaceRoom')
+        # 基本资料编辑取消按钮
+
+    def get_basic_edit_cancle_btn(self):
+        return self.fe.get_element('basic_edit_cancle_btn', 'ExaminationPlaceRoom')
+        # 基本资料编辑编号
+
+    def get_basic_edit_code(self):
+        return self.fe.get_element('basic_edit_code', 'ExaminationPlaceRoom')
+        # 错误基本资料编辑编号提示语
+
+    def get_basic_edit_code_error(self):
+        return self.fe.get_element('basic_edit_code_error', 'ExaminationPlaceRoom')
+        # 基本资料编辑名称
+
+    def get_basic_edit_name(self):
+        return self.fe.get_element('basic_edit_name', 'ExaminationPlaceRoom')
+        # 错误基本资料编辑名称提示语
+
+    def get_basic_edit_name_error(self):
+        return self.fe.get_element('basic_edit_name_error', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质
+
+    def get_basic_edit_character(self):
+        return self.fe.get_element('basic_edit_character', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质1
+
+    def get_basic_edit_character_1child(self):
+        return self.fe.get_element('basic_edit_character_1child', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质2
+
+    def get_basic_edit_character_2child(self):
+        return self.fe.get_element('basic_edit_character_2child', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质3
+
+    def get_basic_edit_character_3child(self):
+        return self.fe.get_element('basic_edit_character_3child', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质4
+
+    def get_basic_edit_character_4child(self):
+        return self.fe.get_element('basic_edit_character_4child', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质5
+
+    def get_basic_edit_character_5child(self):
+        return self.fe.get_element('basic_edit_character_5child', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质6
+
+    def get_basic_edit_character_6child(self):
+        return self.fe.get_element('basic_edit_character_6child', 'ExaminationPlaceRoom')
+        # 基本资料编辑性质7
+
+    def get_basic_edit_character_7child(self):
+        return self.fe.get_element('basic_edit_character_7child', 'ExaminationPlaceRoom')
+
+        # 错误基本资料编辑性质提示语
+
+    """ 
+   def get_basic_edit_character_error(self):
+        return self.fe.get_element('basic_edit_character', 'ExaminationPlaceRoom')
+   """
+
+    # 基本资料编辑可用总机位数
+
+    def get_basic_edit_total_computer_num(self):
+        return self.fe.get_element('basic_edit_total_computer_num', 'ExaminationPlaceRoom')
+
+    # 基本资料编辑可编排机位数
+
+    def get_basic_edit_use_computer_num(self):
+        return self.fe.get_element('basic_edit_use_computer_num', 'ExaminationPlaceRoom')
+
+    # 基本资料编辑考场数
+
+    def get_basic_edit_place_num(self):
+        return self.fe.get_element('basic_edit_place_num', 'ExaminationPlaceRoom')
+
+    # 基本资料编辑合同签订时间
+
+    def get_basic_edit_time(self):
+        return self.fe.get_element('basic_edit_time', 'ExaminationPlaceRoom')
+
+    # 错误基本资料编辑合同签订时间提示语
+
+    def get_basic_edit_time_error(self):
+        return self.fe.get_element('basic_edit_time_error', 'ExaminationPlaceRoom')
+
+    # 基本资料编辑合同签订时长
+
+    def get_basic_edit_duration(self):
+        return self.fe.get_element('basic_edit_duration', 'ExaminationPlaceRoom')
+
+    # 错误基本资料编辑合同签订时长提示语
+
+    def get_basic_edit_duration_error(self):
+        return self.fe.get_element('basic_edit_duration_error', 'ExaminationPlaceRoom')
+
+    # 基本资料编辑邮政编码
+
+    def get_basic_edit_post_code(self):
+        return self.fe.get_element('basic_edit_post_code', 'ExaminationPlaceRoom')
+
+    # 错误基本资料编辑邮政编码提示语
+
+    def get_basic_edit_post_code_error(self):
+        return self.fe.get_element('basic_edit_post_code_error', 'ExaminationPlaceRoom')
+
+    # 基本资料编辑考点负责人
+
+    def get_basic_edit_place_person(self):
+        return self.fe.get_element('basic_edit_place_person', 'ExaminationPlaceRoom')
+
+    # 错误基本资料编辑考点负责人提示语
+
+    def get_basic_edit_place_person_error(self):
+        return self.fe.get_element('basic_edit_place_person_error', 'ExaminationPlaceRoom')
+
+    # 错误基本资料编辑负责人电话提示语
+
+    def get_basic_edit_person_tel_error(self):
+        return self.fe.get_element('basic_edit_person_tel_error', 'ExaminationPlaceRoom')
+
+    # 基本资料编辑负责人电话
+
+    def get_basic_edit_person_tel(self):
+        return self.fe.get_element('basic_edit_person_tel', 'ExaminationPlaceRoom')
+
+    # 编辑成功提示语
+    def get_basic_edit_success(self):
+        return self.fe.get_element('basic_edit_success', 'ExaminationPlaceRoom')
 
     # 交通路线的考点地址
     def get_traffic_address(self):
@@ -78,7 +210,6 @@ class ExaminationRoomPage(object):
 
     def get_traffic_condition(self):
         return self.fe.get_element('traffic_condition', 'ExaminationPlaceRoom')
-
     # 交通路线的具体线路
 
     def get_traffic_concrete_route(self):
@@ -103,6 +234,53 @@ class ExaminationRoomPage(object):
 
     def get_traffic_edit_btn(self):
         return self.fe.get_element('traffic_edit_btn', 'ExaminationPlaceRoom')
+
+    # 交通路线的编辑保存按钮
+
+    def get_traffic_edit_save_btn(self):
+        return self.fe.get_element('traffic_edit_save_btn', 'ExaminationPlaceRoom')
+    # 交通路线的编辑取消按钮
+
+    def get_traffic_edit_cancle_btn(self):
+        return self.fe.get_element('traffic_edit_cancle_btn', 'ExaminationPlaceRoom')
+    # 交通路线的编辑考点地址
+
+    def get_traffic_edit_address(self):
+        return self.fe.get_element('traffic_edit_address', 'ExaminationPlaceRoom')
+    # 错误交通路线的考点地址提示语
+
+    def get_traffic_address_error(self):
+        return self.fe.get_element('traffic_edit_address_error', 'ExaminationPlaceRoom')
+    # 交通路线的编辑交通情况
+
+    def get_traffic_edit_condition(self):
+        return self.fe.get_element('traffic_edit_condition', 'ExaminationPlaceRoom')
+
+    # 错误交通路线的交通情况提示语
+    def get_traffic_edit_condition_error(self):
+        return self.fe.get_element('traffic_edit_condition_error', 'ExaminationPlaceRoom')
+    # 交通路线的编辑具体线路
+
+    def get_traffic_edit_concrete_route(self):
+        return self.fe.get_element('traffic_edit_concrete_route', 'ExaminationPlaceRoom')
+    # 错误交通路线的具体线路体提示语
+    def get_traffic_edit_concrete_route_error(self):
+        return self.fe.get_element('traffic_edit_concrete_route_error', 'ExaminationPlaceRoom')
+    # 交通路线的编辑地理位置描述
+
+    def get_traffic_edit_location(self):
+        return self.fe.get_element('traffic_edit_location', 'ExaminationPlaceRoom')
+    # 错误交通路线的地理位置描述提示语
+    def get_traffic_edit_location_error(self):
+        return self.fe.get_element('traffic_edit_location_error', 'ExaminationPlaceRoom')
+    # 交通路线的编辑经度
+
+    def get_traffic_edit_longitude(self):
+        return self.fe.get_element('traffic_edit_longitude', 'ExaminationPlaceRoom')
+    # 交通路线的编辑纬度
+
+    def get_traffic_edit_latitude(self):
+        return self.fe.get_element('traffic_edit_latitude', 'ExaminationPlaceRoom')
 
     # 通讯录姓名
     def get_book_table_name(self):
@@ -186,120 +364,7 @@ class ExaminationRoomPage(object):
     # 首字母导航
     def get_select_letter(self):
         return self.fe.get_element('select_letter', 'ExaminationPlaceRoom')
-    #基本资料编辑保存按钮
-    def get_basic_edit_save_btn(self):
-        return self.fe.get_element('basic_edit_save_btn', 'ExaminationPlaceRoom')
-    #基本资料编辑取消按钮
-    def get_basic_edit_cancle_btn(self):
-        return self.fe.get_element('basic_edit_cancle_btn', 'ExaminationPlaceRoom')
-    #基本资料编辑编号
-    def get_basic_edit_code(self):
-        return self.fe.get_element('basic_edit_code', 'ExaminationPlaceRoom')
-    #错误基本资料编辑编号提示语
-    def get_basic_edit_code_error(self):
-        return self.fe.get_element('basic_edit_code_error', 'ExaminationPlaceRoom')
-    # 基本资料编辑名称
 
-    def get_basic_edit_name(self):
-        return self.fe.get_element('basic_edit_name', 'ExaminationPlaceRoom')
-    # 错误基本资料编辑名称提示语
-
-    def get_basic_edit_name_error(self):
-        return self.fe.get_element('basic_edit_name_error', 'ExaminationPlaceRoom')
-    # 基本资料编辑性质
-
-    def get_basic_edit_character(self):
-        return self.fe.get_element('basic_edit_character', 'ExaminationPlaceRoom')
-    #基本资料编辑性质1
-    def get_basic_edit_character_1child(self):
-        return self.fe.get_element('basic_edit_character_1child', 'ExaminationPlaceRoom')
-    # 基本资料编辑性质2
-
-    def get_basic_edit_character_2child(self):
-        return self.fe.get_element('basic_edit_character_2child', 'ExaminationPlaceRoom')
-    # 基本资料编辑性质3
-
-    def get_basic_edit_character_3child(self):
-        return self.fe.get_element('basic_edit_character_3child', 'ExaminationPlaceRoom')
-    # 基本资料编辑性质4
-
-    def get_basic_edit_character_4child(self):
-        return self.fe.get_element('basic_edit_character_4child', 'ExaminationPlaceRoom')
-    # 基本资料编辑性质5
-
-    def get_basic_edit_character_5child(self):
-        return self.fe.get_element('basic_edit_character_5child', 'ExaminationPlaceRoom')
-    # 基本资料编辑性质6
-
-    def get_basic_edit_character_6child(self):
-        return self.fe.get_element('basic_edit_character_6child', 'ExaminationPlaceRoom')
-    # 基本资料编辑性质7
-
-    def get_basic_edit_character_7child(self):
-        return self.fe.get_element('basic_edit_character_7child', 'ExaminationPlaceRoom')
-
-    # 错误基本资料编辑性质提示语
-    """ 
-   def get_basic_edit_character_error(self):
-        return self.fe.get_element('basic_edit_character', 'ExaminationPlaceRoom')
-   """
-    # 基本资料编辑可用总机位数
-
-    def get_basic_edit_total_computer_num(self):
-        return self.fe.get_element('basic_edit_total_computer_num', 'ExaminationPlaceRoom')
-    # 基本资料编辑可编排机位数
-
-    def get_basic_edit_use_computer_num(self):
-        return self.fe.get_element('basic_edit_use_computer_num', 'ExaminationPlaceRoom')
-    # 基本资料编辑考场数
-
-    def get_basic_edit_place_num(self):
-        return self.fe.get_element('basic_edit_place_num', 'ExaminationPlaceRoom')
-    # 基本资料编辑合同签订时间
-
-    def get_basic_edit_time(self):
-        return self.fe.get_element('basic_edit_time', 'ExaminationPlaceRoom')
-    # 错误基本资料编辑合同签订时间提示语
-
-    def get_basic_edit_time_error(self):
-        return self.fe.get_element('basic_edit_time_error', 'ExaminationPlaceRoom')
-    # 基本资料编辑合同签订时长
-
-    def get_basic_edit_duration(self):
-        return self.fe.get_element('basic_edit_duration', 'ExaminationPlaceRoom')
-    # 错误基本资料编辑合同签订时长提示语
-
-    def get_basic_edit_duration_error(self):
-        return self.fe.get_element('basic_edit_duration_error', 'ExaminationPlaceRoom')
-    # 基本资料编辑邮政编码
-
-    def get_basic_edit_post_code(self):
-        return self.fe.get_element('basic_edit_post_code', 'ExaminationPlaceRoom')
-    # 错误基本资料编辑邮政编码提示语
-
-    def get_basic_edit_post_code_error(self):
-        return self.fe.get_element('basic_edit_post_code_error', 'ExaminationPlaceRoom')
-    # 基本资料编辑考点负责人
-
-    def get_basic_edit_place_person(self):
-        return self.fe.get_element('basic_edit_place_person', 'ExaminationPlaceRoom')
-
-    # 错误基本资料编辑考点负责人提示语
-
-    def get_basic_edit_place_person_error(self):
-        return self.fe.get_element('basic_edit_place_person_error', 'ExaminationPlaceRoom')
-    # 基本资料编辑负责人电话
-
-    def get_basic_edit_person_tel_error(self):
-        return self.fe.get_element('basic_edit_person_tel_error', 'ExaminationPlaceRoom')
-    # 错误基本资料编辑负责人电话提示语
-
-    def get_basic_edit_person_tel(self):
-        return self.fe.get_element('basic_edit_person_tel', 'ExaminationPlaceRoom')
-
-    #编辑成功提示语
-    def get_basic_edit_success(self):
-        return self.fe.get_element('basic_edit_success', 'ExaminationPlaceRoom')
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()
