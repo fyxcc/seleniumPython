@@ -14,6 +14,7 @@ import HTMLTestRunner
 from selenium import webdriver
 from business.examination_room_business import ExaminationRoomBusiness
 from util.excel_util import ExcelUtil
+from util.table_util import TableUtil
 
 # 获取数据
 ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\examinationRoomBookAddDdtData.xls")
@@ -39,7 +40,13 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
         cls.EPh = getattr(cls.EPb, 'Eh')
         cls.EPh.click_detailed_btn()
         time.sleep(1)
+        cls.book_table_num=cls.ERh.get_book_table_empty_text()
+        if cls.book_table_num!='暂无数据':
+            cls.Tu = TableUtil(cls.driver, 'book_table')
+            cls.dataName =cls.Tu.get_data_book(col=1)
+            cls.position=cls.Tu.get_data_book(col=3)
         cls.ERh.click_book_add_btn()
+
 
     # 所有case执行之后的后置条件
     @classmethod
@@ -65,12 +72,16 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
                 self.driver.save_screenshot(file_path)
         if self.ERh.judge_book_add_frame():
             self.ERb.clear_book_all_add()
+        else:
+            self.ERh.click_book_add_btn()
 
 
-    #判断添加通讯录字段是否完整
+
+     #判断添加通讯录字段是否完整
     def test_examination_room_book_add_a(self):
         result = self.ERb.judge_add_book_complete()
         self.assertTrue(result, "添加交通信息字段不完整，该用例执行失败")
+
     # case前加修饰 @ ddt.data()
     @ddt.data(*data)
     # 执行用例，并判断是否执行成功
@@ -84,6 +95,51 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
             self.assertTrue(add_error, "输入重复考点编号，添加成功，该用例执行失败")
         else:
             self.assertTrue(add_error, "添加考点失败，该用例执行失败")
+    # 判断添加通讯录取字典值是否完整
+
+    def test_examination_room_book_add_c(self):
+        result = self.ERb.judge_book_position_complete()
+        self.assertTrue(result, "通讯录取字典值不完整，该用例执行失败")
+    #判断添加通讯录重复联系人结果
+    def test_examination_room_book_add_e(self):
+        if self.book_table_num=='暂无数据':
+            print('此用例不执行')
+        else:
+            self.ERh.send_book_add_name(self.dataName)
+            self.ERh.click_book_add_position()
+            if self.position=='考点负责人':
+                self.ERh.click_book_add_position_child('book_add_position_1child')
+            elif self.position=='考务负责人':
+                self.ERh.click_book_add_position_child('book_add_position_2child')
+            elif self.position=='机房管理员':
+                self.ERh.click_book_add_position_child('book_add_position_3child')
+            elif self.position == '财务负责人':
+                self.ERh.click_book_add_position_child('book_add_position_4child')
+            self.ERh.click_book_add_confirm_btn()
+            #result_text=self.ERh.get_book_add_result_fail_text()
+            #if result_text=='该联系人已存在！':
+            if self.ERh.judge_book_add_frame()==True:
+                result=True
+            else:
+                result=False
+        self.assertTrue(result, "可添加通讯录重复联系人结果，该用例执行失败")
+    #成功添加通讯录信息
+    def test_examination_room_book_add_d(self):
+        self.ERh.send_book_add_name(' 小刘 ')
+        self.ERh.click_book_add_position()
+        self.ERh.click_book_add_position_child('book_add_position_4child')
+        self.ERh.click_book_add_confirm_btn()
+        time.sleep(1)
+        #result_text = self.ERh.get_book_add_result_success_text()
+        #if result_text=='添加成功':
+        result_text=self.ERh.judge_book_add_frame()
+        if result_text==False:
+            result = True
+        else:
+            result = False
+
+        self.assertTrue(result, "添加通讯录信息失败，该用例执行失败")
+
 
 
 if __name__ == "__main__":

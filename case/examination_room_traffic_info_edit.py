@@ -67,7 +67,6 @@ class ExaminationRoomTrafficInfoEditDdtCase(unittest.TestCase):
     def test_examination_room_basic_info_edit_a(self):
         result = self.ERb.judge_edit_traffic_complete()
         self.assertTrue(result, "编辑交通信息字段不完整，该用例执行失败")
-    # 判断考点性质取字典值是否完整
     # case前加修饰 @ ddt.data()
     @ddt.data(*data)
     #  执行用例，并判断是否执行成功

@@ -654,6 +654,8 @@ class ExaminationRoomHandle(object):
         if self.ERp.get_book_add_frame() is not None:
             if self.ERp.get_book_add_frame().text == '添加通讯录':
                 return True
+            else:
+                return False
         else:
             return False
 
@@ -760,38 +762,35 @@ class ExaminationRoomHandle(object):
     def send_book_add_qq(self, book_add_qq):
         if len(book_add_qq) != 0:
             self.ERp.get_book_add_qq().send_keys(book_add_qq)
+    #添加通讯录失败结果提示信息
+    def get_book_add_result_fail_text(self):
+        return self.ERp.get_book_add_result_fail().text
+    # 添加通讯录成功结果提示信息
+
+    def get_book_add_result_success_text(self):
+        return self.ERp.get_book_add_result_success().text
     # 获取通讯录添加错误信息
 
     def get_book_error_text(self, error_info, assertText):
         try:
 
-            if error_info == 'place_code_error':
-                text_content = self.Ep.get_place_code_error().text
+            if error_info == 'book_add_phone_error':
+                text_content = self.ERp.get_book_add_phone_error().text
                 if text_content == assertText:
                     text = 'ok'
-            elif error_info == 'place_name_error':
+            elif error_info == 'book_add_tel_error':
                 # text = self.Ep.get_place_name_error().text
-                text_content = self.Ep.get_place_name_error().get_attribute("innerHTML")
+                text_content = self.ERp.get_book_add_tel_error().get_attribute("innerHTML")
                 if text_content == assertText:
                     text = 'ok'
-            elif error_info == 'place_division_code_error':
-                '''
-                WebDriverWait(self.driver, 10).until(
-                    lambda x: x.find_element_by_xpath('/html/body/div[3]/div/div'))
-                text = self.driver.find_element_by_xpath('/html/body/div[3]/div/div').text
-                '''
-                # text = self.Ep.get_place_division_code_error().text
-                text_content = self.Ep.get_place_division_code_error().get_attribute("innerHTML")
-                if text_content == assertText:
-                    text = 'ok'
-            elif error_info == 'place_address_error':
+            elif error_info == 'book_add_mail_error':
                 # text = self.Ep.get_place_address_error().text
-                text_content = self.Ep.get_place_address_error().get_attribute("innerHTML")
+                text_content = self.ERp.get_book_add_mail_error().get_attribute("innerHTML")
                 if text_content == assertText:
                     text = 'ok'
-            elif error_info == 'place_person_error':
+            elif error_info == 'book_add_post_address_error':
                 # text = self.Ep.get_place_person_error().text
-                text_content = self.Ep.get_place_person_error().get_attribute("innerHTML")
+                text_content = self.ERp.get_book_add_post_address_error().get_attribute("innerHTML")
                 if text_content == assertText:
                     text = 'ok'
             elif error_info == 'place_person_tel_error':
@@ -808,11 +807,43 @@ class ExaminationRoomHandle(object):
                 #text6 = self.ERp.get_book_add_mail_error().get_attribute("innerHTML")
                 if text1!=None and text2!=None:
                     text = 'ok'
-
             return text
         except BaseException as e:
             print(repr(e))
             return None
+    # 点击添加通讯录职位
+
+    def click_book_add_position(self):
+        self.ERp.get_book_add_position().click()
+    # 获取通讯录添加职位子选项
+
+    def get_book_add_position_child(self, child_lever):
+        if child_lever == 'book_add_position_1child':
+            return self.ERp.get_book_add_position_1child().text
+        elif child_lever == 'book_add_position_2child':
+            return self.ERp.get_book_add_position_2child().text
+        elif child_lever == 'book_add_position_3child':
+            return self.ERp.get_book_add_position_3child().text
+        elif child_lever == 'book_add_position_4child':
+            return self.ERp.get_book_add_position_4child().text
+    # 点击通讯录添加职位子选项
+
+    def click_book_add_position_child(self, child_lever):
+        if child_lever == 'book_add_position_1child':
+            return self.ERp.get_book_add_position_1child().click()
+        elif child_lever == 'book_add_position_2child':
+            return self.ERp.get_book_add_position_2child().click()
+        elif child_lever == 'book_add_position_3child':
+            return self.ERp.get_book_add_position_3child().click()
+        elif child_lever == 'book_add_position_4child':
+            return self.ERp.get_book_add_position_4child().click()
+    #获取空通讯录提示信息
+    def get_book_table_empty_text(self):
+        if self.ERp.get_book_table_empty()!=None:
+            return self.ERp.get_book_table_empty().text
+        else:
+            return None
+
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()

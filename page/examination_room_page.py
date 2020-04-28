@@ -210,6 +210,7 @@ class ExaminationRoomPage(object):
 
     def get_traffic_condition(self):
         return self.fe.get_element('traffic_condition', 'ExaminationPlaceRoom')
+
     # 交通路线的具体线路
 
     def get_traffic_concrete_route(self):
@@ -239,18 +240,22 @@ class ExaminationRoomPage(object):
 
     def get_traffic_edit_save_btn(self):
         return self.fe.get_element('traffic_edit_save_btn', 'ExaminationPlaceRoom')
+
     # 交通路线的编辑取消按钮
 
     def get_traffic_edit_cancle_btn(self):
         return self.fe.get_element('traffic_edit_cancle_btn', 'ExaminationPlaceRoom')
+
     # 交通路线的编辑考点地址
 
     def get_traffic_edit_address(self):
         return self.fe.get_element('traffic_edit_address', 'ExaminationPlaceRoom')
+
     # 错误交通路线的考点地址提示语
 
     def get_traffic_address_error(self):
         return self.fe.get_element('traffic_edit_address_error', 'ExaminationPlaceRoom')
+
     # 交通路线的编辑交通情况
 
     def get_traffic_edit_condition(self):
@@ -259,24 +264,30 @@ class ExaminationRoomPage(object):
     # 错误交通路线的交通情况提示语
     def get_traffic_edit_condition_error(self):
         return self.fe.get_element('traffic_edit_condition_error', 'ExaminationPlaceRoom')
+
     # 交通路线的编辑具体线路
 
     def get_traffic_edit_concrete_route(self):
         return self.fe.get_element('traffic_edit_concrete_route', 'ExaminationPlaceRoom')
+
     # 错误交通路线的具体线路体提示语
     def get_traffic_edit_concrete_route_error(self):
         return self.fe.get_element('traffic_edit_concrete_route_error', 'ExaminationPlaceRoom')
+
     # 交通路线的编辑地理位置描述
 
     def get_traffic_edit_location(self):
         return self.fe.get_element('traffic_edit_location', 'ExaminationPlaceRoom')
+
     # 错误交通路线的地理位置描述提示语
     def get_traffic_edit_location_error(self):
         return self.fe.get_element('traffic_edit_location_error', 'ExaminationPlaceRoom')
+
     # 交通路线的编辑经度
 
     def get_traffic_edit_longitude(self):
         return self.fe.get_element('traffic_edit_longitude', 'ExaminationPlaceRoom')
+
     # 交通路线的编辑纬度
 
     def get_traffic_edit_latitude(self):
@@ -330,24 +341,29 @@ class ExaminationRoomPage(object):
 
     def get_book_add_btn(self):
         return self.fe.get_element('book_add_btn', 'ExaminationPlaceRoom')
+
     # 通讯录添加确定按钮
 
     def get_book_add_confirm_btn(self):
         return self.fe.get_element('book_add_confirm_btn', 'ExaminationPlaceRoom')
+
     # 通讯录添加取消按钮
 
     def get_book_add_cancle_btn(self):
         return self.fe.get_element('book_add_cancle_btn', 'ExaminationPlaceRoom')
 
-    #获取添加通讯录弹框
+    # 获取添加通讯录弹框
     def get_book_add_frame(self):
         return self.fe.get_element('book_add_frame', 'ExaminationPlaceRoom')
-    #添加通讯录姓名
+
+    # 添加通讯录姓名
     def get_book_add_name(self):
         return self.fe.get_element('book_add_name', 'ExaminationPlaceRoom')
-    #错误添加通讯录姓名提示语
+
+    # 错误添加通讯录姓名提示语
     def get_book_add_name_error(self):
         return self.fe.get_element('book_add_name_error', 'ExaminationPlaceRoom')
+
     # 添加通讯录性别
 
     def get_book_add_sex(self):
@@ -360,55 +376,87 @@ class ExaminationRoomPage(object):
     # 添加通讯录性别女
     def get_book_add_female(self):
         return self.fe.get_element('book_add_female', 'ExaminationPlaceRoom')
-    #添加通讯录职位
+
+    # 添加通讯录职位
 
     def get_book_add_position(self):
         return self.fe.get_element('book_add_position', 'ExaminationPlaceRoom')
-    #错误添加通讯录职位提示语
+
+    # 错误添加通讯录职位提示语
 
     def get_book_add_position_error(self):
         return self.fe.get_element('book_add_position_error', 'ExaminationPlaceRoom')
-    #添加通讯录手机
+    # 添加通讯录职位1
+
+    def get_book_add_position_1child(self):
+        return self.fe.get_element('book_add_position_1child', 'ExaminationPlaceRoom')
+    # 添加通讯录职位2
+
+    def get_book_add_position_2child(self):
+        return self.fe.get_element('book_add_position_2child', 'ExaminationPlaceRoom')
+    # 添加通讯录职位3
+
+    def get_book_add_position_3child(self):
+        return self.fe.get_element('book_add_position_3child', 'ExaminationPlaceRoom')
+    # 添加通讯录职位4
+
+    def get_book_add_position_4child(self):
+        return self.fe.get_element('book_add_position_4child', 'ExaminationPlaceRoom')
+
+    # 添加通讯录手机
     def get_book_add_phone(self):
         return self.fe.get_element('book_add_phone', 'ExaminationPlaceRoom')
+
     # 错误添加通讯录手机提示语
     def get_book_add_phone_error(self):
         return self.fe.get_element('book_add_phone_error', 'ExaminationPlaceRoom')
-    #添加通讯录固定电话
+
+    # 添加通讯录固定电话
     def get_book_add_tel(self):
         return self.fe.get_element('book_add_tel', 'ExaminationPlaceRoom')
 
     # 错误添加通讯录固定电话提示语
     def get_book_add_tel_error(self):
         return self.fe.get_element('book_add_tel_error', 'ExaminationPlaceRoom')
-    #添加通讯录邮寄地址
+
+    # 添加通讯录邮寄地址
     def get_book_add_post_address(self):
         return self.fe.get_element('book_add_post_address', 'ExaminationPlaceRoom')
-    #错误添加通讯录邮寄地址提示语
+
+    # 错误添加通讯录邮寄地址提示语
     def get_book_add_post_address_error(self):
         return self.fe.get_element('book_add_post_address_error', 'ExaminationPlaceRoom')
-    #添加通讯录电子邮箱
+
+    # 添加通讯录电子邮箱
     def get_book_add_mail(self):
         return self.fe.get_element('book_add_mail', 'ExaminationPlaceRoom')
+
     # 错误添加通讯录电子邮箱提示语
 
     def get_book_add_mail_error(self):
         return self.fe.get_element('book_add_mail_error', 'ExaminationPlaceRoom')
-    #添加通讯录qq
+
+    # 添加通讯录qq
     def get_book_add_qq(self):
         return self.fe.get_element('book_add_qq', 'ExaminationPlaceRoom')
+
     # 错误添加通讯录qq提示语
 
     def get_book_add_qq(self):
         return self.fe.get_element('book_add_qq', 'ExaminationPlaceRoom')
+    #添加失败结果提示信息
+    def get_book_add_result_fail(self):
+        return self.fe.get_element('book_add_result_fail', 'ExaminationPlaceRoom')
+    # 添加成功结果提示信息
 
-
-
-
-
-
-
-
+    def get_book_add_result_success(self):
+        return self.fe.get_element('book_add_result_success', 'ExaminationPlaceRoom')
+    #通讯录表格
+    def get_book_table(self):
+        return self.fe.get_element('book_table', 'ExaminationPlaceRoom')
+    #空通讯录表格提醒字段
+    def get_book_table_empty(self):
+        return self.fe.get_element('book_table_empty', 'ExaminationPlaceRoom')
 
 
 
@@ -435,16 +483,19 @@ class ExaminationRoomPage(object):
     # 按照搜索条件选择考点下拉框
     def get_select_place_by_search_btn(self):
         return self.fe.get_element('select_place_by_search_btn', 'ExaminationPlaceRoom')
-    #获取搜索条件选择考点下拉框第一个选项
+
+    # 获取搜索条件选择考点下拉框第一个选项
     def select_place_by_search_fchild(self):
         return self.fe.get_element('select_place_by_search_fchild', 'ExaminationPlaceRoom')
 
     # 按照搜索条件选择考点下拉框第二个选项
     def select_place_by_search_schild(self):
         return self.fe.get_element('select_place_by_search_schild', 'ExaminationPlaceRoom')
+
     # 首字母导航
     def get_select_letter(self):
         return self.fe.get_element('select_letter', 'ExaminationPlaceRoom')
+
 
 if __name__ == "__main__":
     lkc = LoginKeywordCases()

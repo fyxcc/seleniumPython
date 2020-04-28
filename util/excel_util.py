@@ -50,6 +50,12 @@ class ExcelUtil:
         write_data = copy(read_value)
         write_data.get_sheet(0).write(row, 9, value)
         write_data.save(self.excel_path)
+    # 写入指定行列数据
+    def write_appoint_value(self, row, col,value):
+        read_value = xlrd.open_workbook(self.excel_path)
+        write_data = copy(read_value)
+        write_data.get_sheet(0).write(row, col, value)
+        write_data.save(self.excel_path)
 
 
 if __name__ == '__main__':

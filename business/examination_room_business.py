@@ -222,6 +222,9 @@ class ExaminationRoomBusiness(object):
         self.book_success_add(book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq,assertCode)
         if assertText == '添加成功':
             self.result = self.Eh.get_add_success_text()
+        elif assertText == '正确的电话格式':
+            if self.ERp.get_book_add_tel_error()==None:
+                return True
         if len(assertCode) != 0:
             if self.ERh.get_book_error_text(assertCode, assertText) is None:
                 return False
@@ -229,12 +232,7 @@ class ExaminationRoomBusiness(object):
                 print("用例通过")
                 return True
         else:
-            if assertText == '添加失败!':
-                if self.Eh.judge_add_frame():
-                    return True
-                else:
-                    return False
-            elif assertText == '添加成功':
+            if assertText == '添加成功':
                 if self.Eh.judge_add_frame():
                     return False
                 elif self.result == assertText:
@@ -244,6 +242,20 @@ class ExaminationRoomBusiness(object):
                         return True
                     else:
                         return False
+    # 判断添加通讯录取字典值是否完整
+
+    def judge_book_position_complete(self):
+        self.ERh.click_book_add_position()
+        time.sleep(1)
+        child1 = self.ERh.get_book_add_position_child('book_add_position_1child')
+        child2 = self.ERh.get_book_add_position_child('book_add_position_2child')
+        child3 = self.ERh.get_book_add_position_child('book_add_position_3child')
+        child4 = self.ERh.get_book_add_position_child('book_add_position_4child')
+        if child1 == '考点负责人' and child2 == '考务负责人' and child3 == '机房管理员' and child4 == '财务负责人':
+            return True
+        else:
+            return False
+    #判断
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()

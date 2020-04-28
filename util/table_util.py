@@ -17,8 +17,9 @@ class TableUtil:
             self.table = self.fe.get_element(self.table_path, 'ExaminationPlacePage')
         else:
             self.table_path = table_path
+            self.table=self.fe.get_element(self.table_path, 'ExaminationPlaceRoom')
 
-    # # 获取单元格的数据(行号与列号）
+    #  获取单元格的数据(行号与列号）
     def get_data(self, row=0, col=0):
         if self.get_lines() >= row:
             data_xpath = '//*[@id="app"]/div/div[2]/div[2]/div[2]/div/div/div/div/div[3]/div[1]/div[2]/table/tbody' + '/tr[' + str(
@@ -26,6 +27,14 @@ class TableUtil:
             data = self.driver.find_element_by_xpath(data_xpath).text
             return data
         return None
+    #  获取单元格的数据(行号与列号）
+    def get_data_book(self, row=0, col=0):
+        data_xpath = '//*[@id="app"]/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[5]/div/div/div[1]/div[2]/table/tbody/tr ' + '/td[' + str(col) + ']'
+        data = self.driver.find_element_by_xpath(data_xpath)
+        if data!=None:
+            return data.text
+        else:
+            return None
 
     # 获取table总行数
     def get_lines(self):
