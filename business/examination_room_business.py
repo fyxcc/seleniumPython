@@ -220,28 +220,15 @@ class ExaminationRoomBusiness(object):
     def book_add_function(self, book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq,
                                          assertCode, assertText):
         self.book_success_add(book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq,assertCode)
-        if assertText == '添加成功':
-            self.result = self.Eh.get_add_success_text()
-        elif assertText == '正确的电话格式':
+        if assertText == '正确的电话格式':
             if self.ERp.get_book_add_tel_error()==None:
                 return True
-        if len(assertCode) != 0:
+        elif len(assertCode) != 0:
             if self.ERh.get_book_error_text(assertCode, assertText) is None:
                 return False
             else:
                 print("用例通过")
                 return True
-        else:
-            if assertText == '添加成功':
-                if self.Eh.judge_add_frame():
-                    return False
-                elif self.result == assertText:
-                    self.driver.refresh()
-                    if place_code == self.get_last_table_data():
-                        print('添加成功，用例通过')
-                        return True
-                    else:
-                        return False
     # 判断添加通讯录取字典值是否完整
 
     def judge_book_position_complete(self):
@@ -255,7 +242,68 @@ class ExaminationRoomBusiness(object):
             return True
         else:
             return False
-    #判断
+    # 清空编辑通讯录信息所有字段
+
+    def clear_book_all_edit(self):
+        self.ERh.clear_book_edit_name_text()
+        self.ERh.clear_book_edit_phone_text()
+        self.ERh.clear_book_edit_tel_text()
+        self.ERh.clear_book_edit_post_address_text()
+        self.ERh.clear_book_edit_mail_text()
+        self.ERh.clear_book_edit_qq_text()
+    # 判断通讯录编辑框内容是否完整
+    def book_edit_complete(self):
+        if self.ERh.get_book_edit_backfill_data() == '回填信息数据完整':
+            return True
+        elif self.ERh.get_book_edit_backfill_data() == '回填信息数据不完整':
+            return False
+
+    # 交通信息成功编辑
+
+    def book_success_edit(self, book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq):
+        self.ERh.send_book_edit_name(book_add_name)
+        self.ERh.send_book_edit_phone(book_add_phone)
+        self.ERh.send_book_edit_tel(book_add_tel)
+        self.ERh.send_book_edit_post_address(book_add_post_address)
+        self.ERh.send_book_edit_mail(book_add_mail)
+        self.ERh.send_book_edit_qq(book_add_qq)
+        self.ERh.click_book_edit_save_btn()
+
+        # 数据驱动整合代码
+
+    def book_edit_function(self, book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq,assertCode,assertText):
+        self.book_success_edit(book_add_name, book_add_phone, book_add_tel, book_add_post_address, book_add_mail,book_add_qq)
+        if len(assertCode) != 0:
+            if self.ERh.get_book_edit_error_text(assertCode, assertText) is None:
+                return False
+            else:
+                print("用例通过")
+                return True
+        elif  assertText == '正确的电话格式':
+            if self.ERp.get_book_edit_tel_error()==None:
+                return True
+        else:
+            if assertText == '编辑成功':
+                result = self.ERp.get_traffic_edit_btn()
+                if result != None:
+                    print('添加成功，用例通过')
+                    return True
+                else:
+                    print('添加失败，用例未通过')
+                    return False
+        # 判断添加通讯录取字典值是否完整
+
+    def judge_book_edit_position_complete(self):
+        self.ERh.click_book_edit_position()
+        time.sleep(1)
+        child1 = self.ERh.get_book_edit_position_child('book_edit_position_1child')
+        child2 = self.ERh.get_book_edit_position_child('book_edit_position_2child')
+        child3 = self.ERh.get_book_edit_position_child('book_edit_position_3child')
+        child4 = self.ERh.get_book_edit_position_child('book_edit_position_4child')
+        if child1 == '考点负责人' and child2 == '考务负责人' and child3 == '机房管理员' and child4 == '财务负责人':
+            return True
+        else:
+            return False
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()

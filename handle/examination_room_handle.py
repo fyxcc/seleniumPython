@@ -793,11 +793,12 @@ class ExaminationRoomHandle(object):
                 text_content = self.ERp.get_book_add_post_address_error().get_attribute("innerHTML")
                 if text_content == assertText:
                     text = 'ok'
-            elif error_info == 'place_person_tel_error':
+            elif error_info == 'book_add_name_error':
                 # text = self.Ep.get_place_person_tel_error().text
-                text_content = self.Ep.get_place_person_tel_error().get_attribute("innerHTML")
+                text_content = self.ERp.get_book_add_name_error().get_attribute("innerHTML")
                 if text_content == assertText:
                     text = 'ok'
+
             else:
                 text1 = self.ERp.get_book_add_name_error().get_attribute("innerHTML")
                 text2 = self.ERp.get_book_add_position_error().get_attribute("innerHTML")
@@ -843,6 +844,170 @@ class ExaminationRoomHandle(object):
             return self.ERp.get_book_table_empty().text
         else:
             return None
+    #点击通讯录编辑按钮
+    def click_book_edit_btn(self):
+        return self.ERp.get_book_edit_btn().click()
+
+    # 点击通讯录编辑保存按钮
+    def click_book_edit_save_btn(self):
+        return self.ERp.get_book_edit_save_btn().click()
+
+    # 点击通讯录编辑取消按钮
+    def click_book_edit_cancle_btn(self):
+        return self.ERp.get_book_edit_cancle_btn().click()
+    #点击编辑通讯录职位
+    def click_book_edit_position(self):
+        return self.ERp.get_book_edit_position().click()
+    # 判断编辑通讯录弹框是否打开
+
+    def judge_book_edit_frame(self):
+        if self.ERp.get_book_edit_frame() is not None:
+            if self.ERp.get_book_edit_frame().text == '编辑通讯录':
+                return True
+            else:
+                return False
+        else:
+            return False
+
+    # 获取回填数据
+    def get_book_edit_backfill_data(self):
+        data1 = self.ERp.get_book_edit_name().get_attribute('value')
+        data2 = self.ERp.get_book_edit_position().text
+        if data1 and data2 :
+            result = '回填信息数据完整'
+        else:
+            result = '回填信息数据不完整'
+        return result
+    #输入通讯录编辑姓名
+
+    def send_book_edit_name(self, book_edit_name):
+        if len(book_edit_name) != 0:
+            self.ERp.get_book_edit_name().send_keys(book_edit_name)
+
+    #输入通讯录编辑手机
+
+    def send_book_edit_phone(self, book_edit_phone):
+        if len(book_edit_phone) != 0:
+            self.ERp.get_book_edit_phone().send_keys(book_edit_phone)
+    #输入通讯录编辑固定电话
+
+    def send_book_edit_tel(self, book_edit_tel):
+        if len(book_edit_tel) != 0:
+            self.ERp.get_book_edit_tel().send_keys(book_edit_tel)
+    #输入通讯录编辑邮寄地址
+
+    def send_book_edit_post_address(self, book_edit_post_address):
+        if len(book_edit_post_address) != 0:
+            self.ERp.get_book_edit_post_address().send_keys(book_edit_post_address)
+
+    #输入通讯录编辑电子邮箱
+
+    def send_book_edit_mail(self, book_edit_mail):
+        if len(book_edit_mail) != 0:
+            self.ERp.get_book_edit_mail().send_keys(book_edit_mail)
+    #输入通讯录编辑qq
+
+    def send_book_edit_qq(self, book_edit_qq):
+        if len(book_edit_qq) != 0:
+            self.ERp.get_book_edit_qq().send_keys(book_edit_qq)
+    # 清空通讯录编辑姓名字段
+    def clear_book_edit_name_text(self):
+        element = self.ERp.get_book_edit_name()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录编辑手机字段
+
+    def clear_book_edit_phone_text(self):
+        element = self.ERp.get_book_edit_phone()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录编辑固定电话字段
+
+    def clear_book_edit_tel_text(self):
+        element = self.ERp.get_book_edit_tel()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录编辑邮寄地址字段
+
+    def clear_book_edit_post_address_text(self):
+        element = self.ERp.get_book_edit_post_address()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录编辑邮箱字段
+
+    def clear_book_edit_mail_text(self):
+        element = self.ERp.get_book_edit_mail()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 清空通讯录编辑qq字段
+
+    def clear_book_edit_qq_text(self):
+        element = self.ERp.get_book_edit_qq()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 获取通讯录编辑错误信息
+
+    def get_book_edit_error_text(self, error_info, assertText):
+        try:
+
+            if error_info == 'book_edit_phone_error':
+                text_content = self.ERp.get_book_edit_phone_error().text
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'book_edit_tel_error':
+                text_content = self.ERp.get_book_edit_tel_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'book_edit_mail_error':
+                text_content = self.ERp.get_book_edit_mail_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'book_edit_post_address_error':
+                # text = self.Ep.get_place_person_error().text
+                text_content = self.ERp.get_book_edit_post_address_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'book_edit_name_error':
+                text_content = self.ERp.get_book_edit_name_error().get_attribute("innerHTML")
+                if text_content == assertText:
+                    text = 'ok'
+            else:
+                text1 = self.ERp.get_book_edit_name_error().get_attribute("innerHTML")
+                text2 = self.ERp.get_book_edit_position_error().get_attribute("innerHTML")
+                # text3 = self.ERp.get_book_add_phone_error().get_attribute("innerHTML")
+                # text4 = self.ERp.get_book_add_tel_error().get_attribute("innerHTML")
+                # text5 = self.ERp.get_book_add_post_address_error().get_attribute("innerHTML")
+                # text6 = self.ERp.get_book_add_mail_error().get_attribute("innerHTML")
+                if text1 != None and text2 != None:
+                    text = 'ok'
+            return text
+        except BaseException as e:
+            print(repr(e))
+            return None
+    # 获取通讯录编辑职位子选项
+
+    def get_book_edit_position_child(self, child_lever):
+        if child_lever == 'book_edit_position_1child':
+            return self.ERp.get_book_edit_position_1child().text
+        elif child_lever == 'book_edit_position_2child':
+            return self.ERp.get_book_edit_position_2child().text
+        elif child_lever == 'book_edit_position_3child':
+            return self.ERp.get_book_edit_position_3child().text
+        elif child_lever == 'book_edit_position_4child':
+            return self.ERp.get_book_edit_position_4child().text
+    # 点击通讯录编辑职位子选项
+
+    def click_book_edit_position_child(self, child_lever):
+        if child_lever == 'book_edit_position_1child':
+            return self.ERp.get_book_edit_position_1child().click()
+        elif child_lever == 'book_edit_position_2child':
+            return self.ERp.get_book_edit_position_2child().click()
+        elif child_lever == 'book_edit_position_3child':
+            return self.ERp.get_book_edit_position_3child().click()
+        elif child_lever == 'book_edit_position_4child':
+            return self.ERp.get_book_edit_position_4child().click()
+
 
 
 if __name__ == "__main__":

@@ -35,6 +35,16 @@ class TableUtil:
             return data.text
         else:
             return None
+    #  获取单元格的数据(行号与列号）
+
+    def get_data_book_edit(self, row=0, col=0):
+        data_xpath = '//*[@id="app"]/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[5]/div/div/div[1]/div[2]/table/tbody' + '/tr[' + str(
+                row) + ']/td[' + str(col) + ']'
+        data = self.driver.find_element_by_xpath(data_xpath)
+        if data != None:
+            return data.text
+        else:
+            return None
 
     # 获取table总行数
     def get_lines(self):

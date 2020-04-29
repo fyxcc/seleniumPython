@@ -457,6 +457,80 @@ class ExaminationRoomPage(object):
     #空通讯录表格提醒字段
     def get_book_table_empty(self):
         return self.fe.get_element('book_table_empty', 'ExaminationPlaceRoom')
+    #通讯录编辑按钮
+    def get_book_edit_btn(self):
+        return self.fe.get_element('book_edit_btn', 'ExaminationPlaceRoom')
+    #通讯录编辑保存按钮
+    def get_book_edit_save_btn(self):
+        return self.fe.get_element('book_edit_save_btn', 'ExaminationPlaceRoom')
+    #通讯录编辑取消按钮
+    def get_book_edit_cancle_btn(self):
+        return self.fe.get_element('book_edit_cancle_btn', 'ExaminationPlaceRoom')
+    #通讯录编辑弹框
+    def get_book_edit_frame(self):
+        return self.fe.get_element('book_edit_frame', 'ExaminationPlaceRoom')
+    #通讯录编辑姓名
+    def get_book_edit_name(self):
+        return self.fe.get_element('book_edit_name', 'ExaminationPlaceRoom')
+    # 错误通讯录编辑姓名提示语
+
+    def get_book_edit_name_error(self):
+        return self.fe.get_element('book_edit_name_error', 'ExaminationPlaceRoom')
+
+    # 通讯录编辑职位
+    def get_book_edit_position(self):
+        return self.fe.get_element('book_edit_position', 'ExaminationPlaceRoom')
+    # 错误通讯录编辑职位提示语
+
+    def get_book_edit_position_error(self):
+        return self.fe.get_element('book_edit_position_error', 'ExaminationPlaceRoom')
+    # 编辑通讯录职位1
+
+    def get_book_edit_position_1child(self):
+        return self.fe.get_element('book_edit_position_1child', 'ExaminationPlaceRoom')
+    # 编辑通讯录职位2
+
+    def get_book_edit_position_2child(self):
+        return self.fe.get_element('book_edit_position_2child', 'ExaminationPlaceRoom')
+    # 编辑通讯录职位3
+
+    def get_book_edit_position_3child(self):
+        return self.fe.get_element('book_edit_position_3child', 'ExaminationPlaceRoom')
+    # 编辑通讯录职位4
+
+    def get_book_edit_position_4child(self):
+        return self.fe.get_element('book_edit_position_4child', 'ExaminationPlaceRoom')
+    # 通讯录编辑手机
+    def get_book_edit_phone(self):
+        return self.fe.get_element('book_edit_phone', 'ExaminationPlaceRoom')
+    # 错误通讯录编辑手机提示语
+    def get_book_edit_phone_error(self):
+        return self.fe.get_element('book_edit_phone_error', 'ExaminationPlaceRoom')
+    # 通讯录编辑固定电话
+    def get_book_edit_tel(self):
+        return self.fe.get_element('book_edit_tel', 'ExaminationPlaceRoom')
+    # 错误通讯录编辑固定电话提示语
+
+    def get_book_edit_tel_error(self):
+        return self.fe.get_element('book_edit_tel_error', 'ExaminationPlaceRoom')
+    # 通讯录编辑邮寄地址
+    def get_book_edit_post_address(self):
+        return self.fe.get_element('book_edit_post_address', 'ExaminationPlaceRoom')
+    # 错误通讯录编辑邮寄地址提示语
+
+    def get_book_edit_post_address_error(self):
+        return self.fe.get_element('book_edit_post_address_error', 'ExaminationPlaceRoom')
+    # 通讯录编辑电子邮箱
+    def get_book_edit_mail(self):
+        return self.fe.get_element('book_edit_mail', 'ExaminationPlaceRoom')
+    # 错误讯录编辑电子邮箱提示语
+    def get_book_edit_mail_error(self):
+        return self.fe.get_element('book_edit_mail_error', 'ExaminationPlaceRoom')
+    # 通讯录编辑qq
+    def get_book_edit_qq(self):
+        return self.fe.get_element('book_edit_qq', 'ExaminationPlaceRoom')
+
+
 
 
 
