@@ -304,6 +304,12 @@ class ExaminationRoomBusiness(object):
             return True
         else:
             return False
+    # 删除通讯录
+    def delete_examination_room_book(self):
+        self.ERh.click_book_delete_btn()
+        time.sleep(1)
+        self.ERh.click_book_confirm_delete_btn()
+        return self.ERh.get_delete_book_result_text()
 if __name__ == "__main__":
     lkc = LoginKeywordCases()
     lkc.run_keyword_excel_cases()

@@ -529,11 +529,23 @@ class ExaminationRoomPage(object):
     # 通讯录编辑qq
     def get_book_edit_qq(self):
         return self.fe.get_element('book_edit_qq', 'ExaminationPlaceRoom')
+    # 删除通讯录按钮
 
+    def get_book_delete_btn(self):
+        return self.fe.get_element('book_delete_btn', 'ExaminationPlaceRoom')
+    #确定删除按钮
+    def get_book_confirm_delete_btn(self):
+        return self.fe.get_element('book_confirm_delete_btn', 'ExaminationPlaceRoom')
+    # 定位删除通讯录结果提示信息
 
-
-
-
+    def get_delete_book_result(self):
+        WebDriverWait(self.driver, 10).until(
+            lambda x: x.find_element_by_xpath('/html/body/div[10]/div/div/div[1]/div/span'))
+        result=self.driver.find_element_by_xpath('/html/body/div[10]/div/div/div[1]/div/span')
+        if result!=None:
+            return result
+        else:
+            return None
     # 选择考点按钮
     def get_select_btn(self):
         return self.fe.get_element('select_btn', 'ExaminationPlaceRoom')

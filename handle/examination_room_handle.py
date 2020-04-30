@@ -1007,7 +1007,25 @@ class ExaminationRoomHandle(object):
             return self.ERp.get_book_edit_position_3child().click()
         elif child_lever == 'book_edit_position_4child':
             return self.ERp.get_book_edit_position_4child().click()
+    #点击删除通讯录按钮
+    def click_book_delete_btn(self):
+        return self.ERp.get_book_delete_btn().click()
+    # 点击确定删除通讯录按钮
 
+    def click_book_confirm_delete_btn(self):
+        return self.ERp.get_book_confirm_delete_btn().click()
+
+    # 获得删除通讯录结果内容
+    def get_delete_book_result_text(self):
+        result=self.ERp.get_delete_book_result()
+        if result!=None:
+            result_text=result.text
+            if result_text=='删除成功！':
+                return True
+            else:
+                return  False
+        else:
+            return False
 
 
 if __name__ == "__main__":

@@ -158,7 +158,7 @@ class ExaminationPlacePage(object):
         return self.fe.get_element('cancle_delete', 'ExaminationPlacePage')
 
     # 定位删除考点失败提示信息
-    def get_delete_examination_place_result(self):
+    def  get_delete_examination_place_result(self):
         WebDriverWait(self.driver, 10).until(
             lambda x: x.find_element_by_xpath('/html/body/div[17]/div/div'))
         return self.driver.find_element_by_xpath('/html/body/div[17]/div/div').text

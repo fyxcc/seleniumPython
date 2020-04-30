@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/examination_room_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_room_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handle/examination_room_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_room_handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/examination_place_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_place_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/examination_room_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_room_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/table_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/table_util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -70,7 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_room_book_edit_ddt_case">
+  <component name="RunManager" selected="Python.examination_room_book_delete_ddt_case">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,7 +259,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="examination_room_book_edit_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="examination_room_book_delete_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -272,7 +271,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -475,7 +474,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.examination_room_book_add_ddt_case" />
-      <item itemvalue="Python.examination_room_book_edit_ddt_case" />
+      <item itemvalue="Python.examination_room_book_delete_ddt_case" />
       <item itemvalue="Python.examination_room_traffic_info_edit" />
       <item itemvalue="Python.examination_room_basic_select_ddt_case" />
       <item itemvalue="Python.examination_room_basic_info_edit" />
@@ -677,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588062343365</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="编辑通讯录">
+      <created>1588154572489</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588154572489</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +717,8 @@
     <MESSAGE value="编辑考点基本信息" />
     <MESSAGE value="编辑交通信息" />
     <MESSAGE value="添加通讯录" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加通讯录" />
+    <MESSAGE value="编辑通讯录" />
+    <option name="LAST_COMMIT_MESSAGE" value="编辑通讯录" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
@@ -787,6 +794,21 @@
           <url>file://$PROJECT_DIR$/case/examination_room_basic_info_edit.py</url>
           <line>78</line>
           <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/handle/examination_place_handle.py</url>
+          <line>219</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/handle/examination_room_handle.py</url>
+          <line>1022</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
