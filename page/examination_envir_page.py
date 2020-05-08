@@ -146,6 +146,245 @@ class ExaminationEnvirPage(object):
 
     def get_medkit(self):
         return self.fe.get_element('medkit', 'ExaminationEnvironment')
+    #机器设备编辑按钮
+    def get_machine_edit_btn(self):
+        return self.fe.get_element('machine_edit_btn', 'ExaminationEnvironment')
+    # 机器设备编辑保存按钮
+
+    def get_machine_edit_save_btn(self):
+        return self.fe.get_element('machine_edit_save_btn', 'ExaminationEnvironment')
+    # 机器设备编辑取消按钮
+
+    def get_machine_edit_cancle_btn(self):
+        return self.fe.get_element('machine_edit_cancle_btn', 'ExaminationEnvironment')
+    #机器设备编辑金属探测仪
+    def get_machine_edit_metal_detector(self):
+        return self.fe.get_element('machine_edit_metal_detector', 'ExaminationEnvironment')
+    # 机器设备编辑信号屏蔽仪
+
+    def get_machine_edit_signal_shield(self):
+        return self.fe.get_element('machine_edit_signal_shield', 'ExaminationEnvironment')
+
+    # 机器设备编辑视频监控
+
+    def get_machine_edit_video_monitor(self):
+        return self.fe.get_element('machine_edit_video_monitor', 'ExaminationEnvironment')
+
+    # 机器设备编辑发电机
+
+    def get_machine_edit_gen(self):
+        return self.fe.get_element('machine_edit_gen', 'ExaminationEnvironment')
+
+    # 机器设备编辑双路电
+
+    def get_machine_edit_electricity(self):
+        return self.fe.get_element('machine_edit_electricity', 'ExaminationEnvironment')
+
+    # 机器设备编辑云桌面
+
+    def get_machine_edit_cloud_desktop(self):
+        return self.fe.get_element('machine_edit_cloud_desktop', 'ExaminationEnvironment')
+
+    # 机器设备编辑虚拟服务器
+
+    def get_machine_edit_virtual_server(self):
+        return self.fe.get_element('machine_edit_virtual_server', 'ExaminationEnvironment')
+    #机器设备编辑考试可用服务器数
+    def get_machine_edit_available_examination(self):
+        return self.fe.get_element('machine_edit_available_examination', 'ExaminationEnvironment')
+    # 机器设备编辑考试可用服务器数错误提示信息
+
+    def get_machine_edit_available_examination_error(self):
+        return self.fe.get_element('machine_edit_available_examination_error', 'ExaminationEnvironment')
+    #机器设备编辑处理器
+    def get_machine_edit_processor(self):
+        return self.fe.get_element('machine_edit_processor', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select(self):
+        return self.fe.get_element('machine_edit_processor_select', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select1(self):
+        return self.fe.get_element('machine_edit_processor_select1', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select2(self):
+        return self.fe.get_element('machine_edit_processor_select2', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select3(self):
+        return self.fe.get_element('machine_edit_processor_select3', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select4(self):
+        return self.fe.get_element('machine_edit_processor_select4', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select5(self):
+        return self.fe.get_element('machine_edit_processor_select5', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select6(self):
+        return self.fe.get_element('machine_edit_processor_select6', 'ExaminationEnvironment')
+    # 机器设备编辑处理器下拉框
+
+    def get_machine_edit_processor_select7(self):
+        return self.fe.get_element('machine_edit_processor_select7', 'ExaminationEnvironment')
+    # 机器设备编辑处理器错误提示信息
+
+    def get_machine_edit_processor_error(self):
+        return self.fe.get_element('machine_edit_processor_error', 'ExaminationEnvironment')
+    #机器设备编辑网卡1
+    def get_machine_edit_internet_card1(self):
+        return self.fe.get_element('machine_edit_internet_card1', 'ExaminationEnvironment')
+    #机器设备编辑网卡2
+    def get_machine_edit_internet_card2(self):
+        return self.fe.get_element('machine_edit_internet_card2', 'ExaminationEnvironment')
+    #机器设备编辑网卡3
+    def get_machine_edit_internet_card3(self):
+        return self.fe.get_element('machine_edit_internet_card3', 'ExaminationEnvironment')
+
+
+    #机器设备编辑内存
+    def get_machine_edit_storage(self):
+        return self.fe.get_element('machine_edit_storage', 'ExaminationEnvironment')
+    # 机器设备编辑内存错误信息
+
+    def get_machine_edit_storage_error(self):
+        return self.fe.get_element('machine_edit_storage_error', 'ExaminationEnvironment')
+    # 机器设备编辑硬盘
+
+    def get_machine_edit_caliche(self):
+        return self.fe.get_element('machine_edit_caliche', 'ExaminationEnvironment')
+    # 机器设备编辑硬盘错误信息
+
+    def get_machine_edit_caliche_error(self):
+        return self.fe.get_element('machine_edit_caliche_error', 'ExaminationEnvironment')
+    #机器设备操作系统下拉框
+
+    def get_machine_edit_operating_system(self):
+        return self.fe.get_element('machine_edit_operating_system', 'ExaminationEnvironment')
+    # 机器设备操作系统下拉框1
+
+    def get_machine_edit_operating_system1(self):
+        return self.fe.get_element('machine_edit_operating_system1', 'ExaminationEnvironment')
+    # 机器设备操作系统下拉框2
+
+    def get_machine_edit_operating_system2(self):
+        return self.fe.get_element('machine_edit_operating_system2', 'ExaminationEnvironment')
+    # 机器设备操作系统下拉框3
+
+    def get_machine_edit_operating_system3(self):
+        return self.fe.get_element('machine_edit_operating_system3', 'ExaminationEnvironment')
+    # 机器设备操作系统下拉框4
+
+    def get_machine_edit_operating_system4(self):
+        return self.fe.get_element('machine_edit_operating_system4', 'ExaminationEnvironment')
+    # 机器设备操作系统下拉框5
+
+    def get_machine_edit_operating_system5(self):
+        return self.fe.get_element('machine_edit_operating_system5', 'ExaminationEnvironment')
+    # 机器设备操作系统下拉框6
+
+    def get_machine_edit_operating_system6(self):
+        return self.fe.get_element('machine_edit_operating_system6', 'ExaminationEnvironment')
+
+    # 机器设备编辑服务器ups
+
+    def get_machine_edit_ups(self):
+        return self.fe.get_element('machine_edit_ups', 'ExaminationEnvironment')
+    # 机器设备编辑服务器ups型号
+
+    def get_machine_edit_ups_model(self):
+        return self.fe.get_element('machine_edit_ups_model', 'ExaminationEnvironment')
+    # 机器设备编辑服务器ups型号错误信息
+
+    def get_machine_edit_ups_model_error(self):
+        return self.fe.get_element('machine_edit_ups_model_error', 'ExaminationEnvironment')
+    # 机器设备编辑服务器接入互联网
+
+    def get_machine_edit_insert(self):
+        return self.fe.get_element('machine_edit_insert', 'ExaminationEnvironment')
+    # 机器设备编辑服务器ups供电时间
+    def get_machine_edit_ups_time(self):
+        return self.fe.get_element('machine_edit_ups_time', 'ExaminationEnvironment')
+    # 机器设备编辑服务器ups供电时间错误信息
+
+    def get_machine_edit_ups_time_error(self):
+        return self.fe.get_element('machine_edit_ups_time_error', 'ExaminationEnvironment')
+    # 机器设备编辑是否互通
+
+    def get_machine_edit_interworking(self):
+        return self.fe.get_element('machine_edit_interworking', 'ExaminationEnvironment')
+    # 机器设备编辑网络带宽
+
+    def get_machine_edit_tape_width(self):
+        return self.fe.get_element('machine_edit_tape_width', 'ExaminationEnvironment')
+
+    # 机器设备编辑网络带宽1
+
+    def get_machine_edit_tape_width1(self):
+        return self.fe.get_element('machine_edit_tape_width1', 'ExaminationEnvironment')
+
+    # 机器设备编辑网络带宽2
+
+    def get_machine_edit_tape_width2(self):
+        return self.fe.get_element('machine_edit_tape_width2', 'ExaminationEnvironment')
+
+    # 机器设备编辑网络带宽3
+
+    def get_machine_edit_tape_width3(self):
+        return self.fe.get_element('machine_edit_tape_width3', 'ExaminationEnvironment')
+
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select(self):
+        return self.fe.get_element('machine_motion_select', 'ExaminationEnvironment')
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select1(self):
+        return self.fe.get_element('machine_motion_select1', 'ExaminationEnvironment')
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select2(self):
+        return self.fe.get_element('machine_motion_select2', 'ExaminationEnvironment')
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select3(self):
+        return self.fe.get_element('machine_motion_select3', 'ExaminationEnvironment')
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select4(self):
+        return self.fe.get_element('machine_motion_select4', 'ExaminationEnvironment')
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select5(self):
+        return self.fe.get_element('machine_motion_select5', 'ExaminationEnvironment')
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select6(self):
+        return self.fe.get_element('machine_motion_select6', 'ExaminationEnvironment')
+    # 机器设备编辑网络运营
+
+    def get_machine_motion_select7(self):
+        return self.fe.get_element('machine_motion_select7', 'ExaminationEnvironment')
+
+
+    # 机器设备编辑核心交换机型号
+
+    def get_machine_edit_center_switch_board(self):
+        return self.fe.get_element('machine_edit_center_switch_board', 'ExaminationEnvironment')
+
+    # 机器设备编辑接入层交换机型号
+
+    def get_machine_edit_insert_switch_board(self):
+        return self.fe.get_element('machine_edit_insert_switch_board', 'ExaminationEnvironment')
+
+    # 机器设备编辑网络架构
+
+    def get_machine_edit_framework(self):
+        return self.fe.get_element('machine_edit_framework', 'ExaminationEnvironment')
 
     # 机器设备金属探测仪
     def get_machine_metal_detector(self):
@@ -173,8 +412,8 @@ class ExaminationEnvirPage(object):
 
     # 机器设备考试可用服务器数
 
-    def get_machine_available_examination(self):
-        return self.fe.get_element('machine_available_examination', 'ExaminationEnvironment')
+    def get_machine_edit_available_examination(self):
+        return self.fe.get_element('machine_edit_available_examination', 'ExaminationEnvironment')
 
     # 机器设备云桌面
 
