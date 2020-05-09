@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="编辑环境信息">
-      <change afterPath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" afterDir="false" />
+    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/examination_envir_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_envir_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_envir_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_envir_ddt_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handle/examination_envir_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_envir_handle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/examination_envir_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_envir_page.py" afterDir="false" />
@@ -69,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_envir_business">
+  <component name="RunManager" selected="Python.examination_machine_ddt_case">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -771,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588845705680</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="编辑机器设备">
+      <created>1588932140387</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1588932140387</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -809,7 +815,8 @@
     <MESSAGE value="删除通讯录" />
     <MESSAGE value="考场环境信息" />
     <MESSAGE value="编辑环境信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="编辑环境信息" />
+    <MESSAGE value="编辑机器设备" />
+    <option name="LAST_COMMIT_MESSAGE" value="编辑机器设备" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
@@ -895,11 +902,6 @@
           <url>file://$PROJECT_DIR$/handle/examination_room_handle.py</url>
           <line>1022</line>
           <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/business/examination_envir_business.py</url>
-          <line>177</line>
-          <option name="timeStamp" value="85" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

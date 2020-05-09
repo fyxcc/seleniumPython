@@ -224,7 +224,13 @@ class ExaminationeEnvirHandle(object):
     # 点击机器设备编辑取消按钮
     def click_machine_edit_cancle_btn(self):
         return self.Eep.get_machine_edit_cancle_btn().click()
-        # 获取环境信息编辑错误信息
+    #获取机器设备编辑成功消息内容
+    def get_machine_edit_success_text(self):
+        WebDriverWait(self.driver, 10).until(
+            lambda x: x.find_element_by_xpath('/html/body/div[6]/div/div'))
+        text_content = self.driver.find_element_by_xpath('/html/body/div[6]/div/div').text
+        return text_content
+    # 获取环境信息编辑错误信息
 
     def get_machine_edit_error_text(self, error_info, assertText):
         try:
@@ -461,7 +467,7 @@ class ExaminationeEnvirHandle(object):
     # 点击机器设备编辑网络带宽
 
     def click_machine_edit_tape_width_text(self):
-        return self.Eep.get_machine_edit_tape_width().clcik()
+        return self.Eep.get_machine_edit_tape_width().click()
     # 机器设备编辑网络带宽1
 
     def get_machine_edit_tape_width1_text(self):
@@ -477,7 +483,7 @@ class ExaminationeEnvirHandle(object):
     # 点击机器设备编辑网络运营
 
     def click_get_machine_motion_select(self):
-        return self.Eep.get_machine_motion_select().clcik()
+        return self.Eep.get_machine_motion_select().click()
     # 机器设备编辑网络运营1
     def get_machine_motion_select1_text(self):
         return self.Eep.get_machine_motion_select1().text
@@ -709,10 +715,16 @@ class ExaminationeEnvirHandle(object):
         data1 = self.Eep.get_photo()
         data2 = self.get_photo_title_text()
         data3 = self.get_photo_content_text()
-        if data1 != None and data2 != None and data3 != None:
+        data4=self.Eep.get_upload_photo_btn()
+        data5 = self.Eep.get_photo_edit_btn()
+        data6 = self.Eep.get_photo_delete_btn()
+        if data1 != None and data2 != None and data3 != None and data4!=None and data5!=None and data6!=None:
             return True
         else:
             return False
+    #点击照片编辑按钮
+    def click_photo_add_btn(self):
+        return self.Eep.get_photo_add_btn()
 
 
 if __name__ == "__main__":

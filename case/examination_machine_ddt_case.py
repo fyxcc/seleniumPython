@@ -67,8 +67,6 @@ class ExaminationMachineDdtCase(unittest.TestCase):
                 self.driver.save_screenshot(file_path)
         if self.Eep.get_machine_edit_storage()!=None:
             self.Eeb.clear_all_machine()
-        #if self.Eep.get_machine_edit_btn() ==None:
-            #self.Eeh.click_machine_edit_btn()
 
     #判断开关键是否默认为否
     def test_examination_machine_a(self):
@@ -76,9 +74,10 @@ class ExaminationMachineDdtCase(unittest.TestCase):
         self.assertTrue(page_complete, "开关选项未默认未否，该用例执行失败")
 
     # case前加修饰 @ ddt.data()
+
     @ddt.data(*data)
-    # 执行用例，并判断是否执行成功
-    def test_examination_machine_b(self, data):
+   # 执行用例，并判断是否执行成功
+    def test_examination_machine_g(self, data):
         machine_edit_available_examination, machine_edit_processor, machine_edit_storage,machine_edit_caliche,machine_edit_ups_model, machine_edit_ups_time,assertCode, assertText = data
         add_error = self.Eeb.machine_edit_function(machine_edit_available_examination, machine_edit_processor, machine_edit_storage,machine_edit_caliche,machine_edit_ups_model,machine_edit_ups_time,assertCode, assertText)
         if len(assertCode) != 0 and assertText != '添加成功':
@@ -87,16 +86,33 @@ class ExaminationMachineDdtCase(unittest.TestCase):
             self.assertTrue(add_error, "输入重复考点编号，添加成功，该用例执行失败")
         else:
             self.assertTrue(add_error, "添加考点失败，该用例执行失败")
-    #判断机器设备编辑内容完整性
-    def test_examination_machine_c(self):
+    #判断机器设备编辑处理器内容完整性
+    def test_examination_machine_b(self):
         page_complete1 = self.Eeb.judge_machine_processor_select()
-        page_complete2=self.Eeb.judge_internet_card_complete()
-        page_complete3=self.Eeb.judge_machine_operating_system_select()
-        if page_complete1 and page_complete2 and page_complete3:
-            result=True
-        else:
-            result=False
-        self.assertTrue(result, "开关选项未默认未否，该用例执行失败")
+        self.assertTrue(page_complete1, "机器设备编辑处理器内容不完整，该用例执行失败")
+    #判断机器设备编辑网卡内容完整性
+    def test_examination_machine_c(self):
+        page_complete2 = self.Eeb.judge_internet_card_complete()
+        self.assertTrue(page_complete2, "机器设备编辑网卡内容不完整，该用例执行失败")
+
+    # 判断机器设备编辑操作系统内容完整性
+    def test_examination_machine_e(self):
+        page_complete3 = self.Eeb.judge_machine_operating_system_select()
+        self.assertTrue(page_complete3, "机器设备编辑操作系统内容不完整，该用例执行失败")
+
+    # 判断机器设备编辑网络带宽内容完整性
+    def test_examination_machine_d(self):
+        page_complete4 = self.Eeb.judge_machine_tape_width_select()
+        self.assertTrue(page_complete4, "机器设备编辑网络带宽内容不完整，该用例执行失败")
+      # 判断机器设备编辑网络运营内容完整性
+
+    def test_examination_machine_f(self):
+        page_complete5 = self.Eeb.judge_machine_motion_select()
+        self.assertTrue(page_complete5, "机器设备编辑网络运营内容不完整，该用例执行失败")
+
+
+
+
 
 if __name__ == "__main__":
     # 报告存放路径

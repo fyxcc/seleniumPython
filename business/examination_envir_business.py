@@ -119,8 +119,10 @@ class ExaminationEnvirBusiness(object):
 
     def machine_edit_function(self, machine_edit_available_examination, machine_edit_processor, machine_edit_storage,machine_edit_caliche,machine_edit_ups_model,machine_edit_ups_time,assertCode, assertText):
         self.machine_success_edit(machine_edit_available_examination, machine_edit_processor, machine_edit_storage,machine_edit_caliche,machine_edit_ups_model,machine_edit_ups_time)
-        if assertText == '正确的电话格式':
-            if self.ERp.get_book_add_tel_error() == None:
+        if assertText == '编辑成功':
+            time.sleep(1)
+            result= self.Eeh.get_machine_edit_success_text()
+            if result== assertText:
                 return True
         elif len(assertCode) != 0:
             if self.Eeh.get_machine_edit_error_text(assertCode, assertText) is None:
@@ -211,4 +213,4 @@ if __name__ == "__main__":
     Eeh.click_machine_edit_btn()
     time.sleep(1)
     Eeb = ExaminationEnvirBusiness(driver)
-    print(Eeb.judge_machine_tape_width_select())
+    print(Eeb.judge_machine_operating_system_select())

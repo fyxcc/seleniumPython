@@ -157,6 +157,10 @@ class ExaminationEnvirPage(object):
 
     def get_machine_edit_cancle_btn(self):
         return self.fe.get_element('machine_edit_cancle_btn', 'ExaminationEnvironment')
+    # 机器设备编辑成功消息
+
+    def get_machine_edit_success(self):
+        return self.fe.get_element('machine_edit_success', 'ExaminationEnvironment')
     #机器设备编辑金属探测仪
     def get_machine_edit_metal_detector(self):
         return self.fe.get_element('machine_edit_metal_detector', 'ExaminationEnvironment')
@@ -412,8 +416,8 @@ class ExaminationEnvirPage(object):
 
     # 机器设备考试可用服务器数
 
-    def get_machine_edit_available_examination(self):
-        return self.fe.get_element('machine_edit_available_examination', 'ExaminationEnvironment')
+    def get_machine_available_examination(self):
+        return self.fe.get_element('machine_available_examination', 'ExaminationEnvironment')
 
     # 机器设备云桌面
 
@@ -516,6 +520,23 @@ class ExaminationEnvirPage(object):
     # 照片简介
     def get_photo_content(self):
         return self.fe.get_element('photo_content', 'ExaminationEnvironment')
+    #照片上传按钮
+    def get_upload_photo_btn(self):
+        return self.fe.get_element('upload_photo_btn', 'ExaminationEnvironment')
+    # 照片编辑按钮
+
+    def get_photo_edit_btn(self):
+        return self.fe.get_element('photo_edit_btn', 'ExaminationEnvironment')
+    # 照片编辑按钮
+
+    def get_photo_delete_btn(self):
+        return self.fe.get_element('photo_delete_btn', 'ExaminationEnvironment')
+    #照片添加按钮
+
+    def get_photo_add_btn(self):
+        return self.fe.get_element('photo_add_btn', 'ExaminationEnvironment')
+
+
 
 
 if __name__ == "__main__":
