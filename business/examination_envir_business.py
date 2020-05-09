@@ -197,7 +197,36 @@ class ExaminationEnvirBusiness(object):
             return True
         else:
             return False
+        # 清空机器设备输入框
 
+    def clear_all_photo_add(self):
+        self.Eeh.clear_photo_add_title()
+        self.Eeh.clear_photo_add_content()
+
+        # 考点照片成功添加
+
+    def machine_success_add_photo(self,photo_add_title, photo_add_content):
+        self.Eeh.send_photo_add_title(photo_add_title)
+        self.Eeh.send_photo_add_content(photo_add_content)
+        time.sleep(1)
+        self.Eeh.click_photo_add_save_btn()
+
+    # 考点照片数据驱动整合代码
+
+    def machine_photo_add_function(self, photo_add_title, photo_add_content, assertCode,assertText):
+        self.machine_success_add_photo(photo_add_title, photo_add_content)
+        time.sleep(1)
+        if assertText == '编辑成功':
+            time.sleep(1)
+            result = self.Eeh.get_machine_edit_success_text()
+            if result == assertText:
+                return True
+        elif len(assertCode) != 0:
+            if self.Eeh.get_photo_add_error_text(assertCode, assertText) is None:
+                return False
+            else:
+                print("用例通过")
+                return True
 
 
 if __name__ == "__main__":

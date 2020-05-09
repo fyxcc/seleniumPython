@@ -724,7 +724,87 @@ class ExaminationeEnvirHandle(object):
             return False
     #点击照片编辑按钮
     def click_photo_add_btn(self):
-        return self.Eep.get_photo_add_btn()
+        return self.Eep.get_photo_add_btn().click()
+    #点击照片编辑确定按钮
+    def click_photo_add_save_btn(self):
+        return self.Eep.get_photo_add_save_btn().click()
+    # 点击照片编辑取消按钮
+
+    def click_add_cancle_btn(self):
+        return self.Eep.get_add_cancle_btn().click()
+
+    # 清空考点照片照片标题字段
+    def clear_photo_add_title(self):
+        element = self.Eep.get_photo_add_title()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+
+    # 输入考点照片照片标题字段
+
+    def send_photo_add_title(self, photo_add_title):
+        if len(photo_add_title) != 0:
+            self.Eep.get_photo_add_title().send_keys(photo_add_title)
+    # 清空考点照片照片简介字段
+    def clear_photo_add_content(self):
+        element = self.Eep.get_photo_add_content()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
+    # 获取考点照片照片标题字段错误信息
+
+    def get_photo_add_title_error_text(self):
+        return self.Eep.get_photo_add_title_error().text
+
+    # 输入考点照片照片简介字段
+
+    def send_photo_add_content(self, photo_add_content):
+        if len(photo_add_content) != 0:
+            self.Eep.get_photo_add_content().send_keys(photo_add_content)
+    # 获取考点照片照片简介字段错误信息
+
+    def get_photo_add_content_error_text(self):
+        return self.Eep.get_photo_add_content_error().text
+
+    # 获取环境信息编辑错误信息
+
+    def get_photo_add_error_text(self, error_info, assertText):
+        try:
+
+            if error_info == 'photo_add_title_error':
+                text_content = self.get_photo_add_title_error_text()
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'photo_add_content_error':
+                text_content = self.get_photo_add_content_error_text()
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'machine_edit_storage_error':
+                text_content = self.get_machine_edit_storage_error_text()
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'machine_edit_caliche_error':
+                text_content = self.get_machine_edit_caliche_error_text()
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'machine_edit_ups_model_error':
+                text_content = self.get_machine_edit_ups_model_error_text()
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'machine_edit_ups_time_error':
+                text_content = self.get_machine_edit_ups_time_error_text()
+                if text_content == assertText:
+                    text = 'ok'
+
+
+            elif error_info == '所有输入条件为空':
+                time.sleep(1)
+                result = self.Eep.get_envir_edit_success()
+                resultText = result.text
+                if resultText == assertText:
+                    text = 'ok'
+            return text
+        except BaseException as e:
+            print(repr(e))
+            return None
 
 
 if __name__ == "__main__":
