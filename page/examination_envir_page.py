@@ -527,7 +527,14 @@ class ExaminationEnvirPage(object):
 
     def get_photo_edit_btn(self):
         return self.fe.get_element('photo_edit_btn', 'ExaminationEnvironment')
-    # 照片编辑按钮
+    #照片编辑标题
+
+    def get_photo_edit_title(self):
+        return self.fe.get_element('photo_edit_title', 'ExaminationEnvironment')
+    #照片编辑简介
+    def get_photo_edit_content(self):
+        return self.fe.get_element('photo_edit_content', 'ExaminationEnvironment')
+    # 照片删除按钮
 
     def get_photo_delete_btn(self):
         return self.fe.get_element('photo_delete_btn', 'ExaminationEnvironment')
@@ -535,6 +542,9 @@ class ExaminationEnvirPage(object):
 
     def get_photo_add_btn(self):
         return self.fe.get_element('photo_add_btn', 'ExaminationEnvironment')
+    #照片添加弹框信息
+    def get_photo_add_frame(self):
+        return self.fe.get_element('photo_add_frame', 'ExaminationEnvironment')
     #照片添加照片标题
     def get_photo_add_title(self):
         return self.fe.get_element('photo_add_title', 'ExaminationEnvironment')
@@ -555,8 +565,8 @@ class ExaminationEnvirPage(object):
         return self.fe.get_element('photo_add_save_btn', 'ExaminationEnvironment')
 
     # 照片添加取消按钮
-    def get_add_cancle_btn(self):
-        return self.fe.get_element('add_cancle_btn', 'ExaminationEnvironment')
+    def get_photo_add_cancle_btn(self):
+        return self.fe.get_element('photo_add_cancle_btn', 'ExaminationEnvironment')
 
 
 
