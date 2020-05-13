@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gallery/examination_photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match/function_photo/photo_file_name.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match/function_photo/photo_file_path.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match/function_photo/photo_open_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match/image_match.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/examination_envir_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_envir_business.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handle/examination_envir_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_envir_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handle/examination_room_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_room_handle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/examination_envir_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_envir_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/_init_.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/image_match/action_execute.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,19 +47,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_photo_ddt_case.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/util/image_match/function_photo" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\pythonWork\untitled2\basic" />
-      <recent name="D:\pythonWork\untitled2\api" />
-      <recent name="D:\pythonWork\untitled2\util" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonWork\autoTest\util\image_match\function_photo" />
       <recent name="D:\pythonWork\autoTest\data" />
       <recent name="D:\pythonWork\untitled2\util" />
       <recent name="D:\pythonWork\untitled2\tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pythonWork\autoTest\gallery" />
+      <recent name="D:\pythonWork\untitled2\basic" />
+      <recent name="D:\pythonWork\untitled2\api" />
+      <recent name="D:\pythonWork\untitled2\util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -68,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_machine_ddt_case">
+  <component name="RunManager" selected="Python.examination_photo_ddt_case">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -469,6 +477,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="image_match" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util/image_match" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/image_match/image_match.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="login_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -555,6 +584,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="window_capture" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/window_capture.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.examination_photo_ddt_case" />
       <item itemvalue="Python.examination_machine_ddt_case" />
@@ -579,11 +629,15 @@
       <item itemvalue="Python.examination_room_handle" />
       <item itemvalue="Python.examination_envir_handle" />
       <item itemvalue="Python.examination_envir_business" />
+      <item itemvalue="Python.window_capture" />
+      <item itemvalue="Python.image_match" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.examination_envir_handle" />
+        <item itemvalue="Python.image_match" />
         <item itemvalue="Python.examination_envir_business" />
+        <item itemvalue="Python.window_capture" />
+        <item itemvalue="Python.examination_envir_handle" />
         <item itemvalue="Python.examination_room_handle" />
       </list>
     </recent_temporary>
@@ -813,7 +867,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589011624819</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="解决脚本问题">
+      <created>1589016762560</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1589016762560</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -853,7 +914,8 @@
     <MESSAGE value="编辑环境信息" />
     <MESSAGE value="编辑机器设备" />
     <MESSAGE value="考点照片" />
-    <option name="LAST_COMMIT_MESSAGE" value="考点照片" />
+    <MESSAGE value="解决脚本问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决脚本问题" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
@@ -934,6 +996,16 @@
           <url>file://$PROJECT_DIR$/handle/examination_place_handle.py</url>
           <line>219</line>
           <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/handle/examination_envir_handle.py</url>
+          <line>832</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/image_match/image_match.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="84" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -9,6 +9,9 @@ from case.login_keyword_cases import LoginKeywordCases
 from handle.examination_place_handle import ExaminationPlaceHandle
 from handle.examination_room_handle import ExaminationRoomHandle
 from util.table_util import TableUtil
+from PIL import Image, ImageGrab
+from util.excel_util import ExcelUtil
+from util.image_match.image_match import ImageMatch
 
 
 class ExaminationeEnvirHandle(object):
@@ -224,12 +227,14 @@ class ExaminationeEnvirHandle(object):
     # 点击机器设备编辑取消按钮
     def click_machine_edit_cancle_btn(self):
         return self.Eep.get_machine_edit_cancle_btn().click()
-    #获取机器设备编辑成功消息内容
+
+    # 获取机器设备编辑成功消息内容
     def get_machine_edit_success_text(self):
         WebDriverWait(self.driver, 10).until(
             lambda x: x.find_element_by_xpath('/html/body/div[6]/div/div'))
         text_content = self.driver.find_element_by_xpath('/html/body/div[6]/div/div').text
         return text_content
+
     # 获取环境信息编辑错误信息
 
     def get_machine_edit_error_text(self, error_info, assertText):
@@ -306,42 +311,53 @@ class ExaminationeEnvirHandle(object):
 
     def get_machine_edit_virtual_server_text(self):
         return self.Eep.get_machine_edit_virtual_server().text
+
     # 输入机器设备编辑考试可用服务器数
 
     def send_machine_edit_available_examination(self, machine_edit_available_examination):
         if len(machine_edit_available_examination) != 0:
             self.Eep.get_machine_edit_available_examination().send_keys(machine_edit_available_examination)
+
     # 获取机器设备编辑考试可用服务器数错误提示信息
 
     def get_machine_edit_available_examination_error_text(self):
         return self.Eep.get_machine_edit_available_examination_error().text
+
     # 清空机器设备编辑考试可用服务器数字段
     def clear_machine_edit_available_examination(self):
         element = self.Eep.get_machine_edit_available_examination()
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
-    #点击处理器下拉框
+
+    # 点击处理器下拉框
     def click_machine_edit_processor_select(self):
         return self.Eep.get_machine_edit_processor_select().click()
-    #点击处理器下拉框1
+
+    # 点击处理器下拉框1
     def get_machine_edit_processor_select1_text(self):
         return self.Eep.get_machine_edit_processor_select1().text
-    #点击处理器下拉框2
+
+    # 点击处理器下拉框2
     def get_machine_edit_processor_select2_text(self):
         return self.Eep.get_machine_edit_processor_select2().text
-    #点击处理器下拉框3
+
+    # 点击处理器下拉框3
     def get_machine_edit_processor_select3_text(self):
         return self.Eep.get_machine_edit_processor_select3().text
-    #点击处理器下拉框4
+
+    # 点击处理器下拉框4
     def get_machine_edit_processor_select4_text(self):
         return self.Eep.get_machine_edit_processor_select4().text
-    #点击处理器下拉框5
+
+    # 点击处理器下拉框5
     def get_machine_edit_processor_select5_text(self):
         return self.Eep.get_machine_edit_processor_select5().text
-    #点击处理器下拉框6
+
+    # 点击处理器下拉框6
     def get_machine_edit_processor_select6_text(self):
         return self.Eep.get_machine_edit_processor_select6().text
-    #点击处理器下拉框7
+
+    # 点击处理器下拉框7
     def get_machine_edit_processor_select7_text(self):
         return self.Eep.get_machine_edit_processor_select7().text
 
@@ -350,24 +366,30 @@ class ExaminationeEnvirHandle(object):
     def send_machine_edit_processor(self, machine_edit_processor):
         if len(machine_edit_processor) != 0:
             self.Eep.get_machine_edit_processor().send_keys(machine_edit_processor)
+
     # 获取机器设备编处理器错误提示信息
     def get_machine_edit_processor_error_text(self):
         return self.Eep.get_machine_edit_processor_error().text
+
     # 清空机器设备处理器字段
 
     def clear_machine_edit_processor(self):
         element = self.Eep.get_machine_edit_processor()
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
-    #获取网卡1
+
+    # 获取网卡1
     def get_machine_edit_internet_card1_text(self):
         return self.Eep.get_machine_edit_internet_card1().text
-    #获取网卡2
+
+    # 获取网卡2
     def get_machine_edit_internet_card2_text(self):
         return self.Eep.get_machine_edit_internet_card2().text
-    #获取网卡3
+
+    # 获取网卡3
     def get_machine_edit_internet_card3_text(self):
         return self.Eep.get_machine_edit_internet_card3().text
+
     # 输入机器设备编辑内存
 
     def send_machine_edit_storage(self, machine_edit_storage):
@@ -383,11 +405,13 @@ class ExaminationeEnvirHandle(object):
         element = self.Eep.get_machine_edit_storage()
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
+
     # 输入机器设备编辑硬盘
 
     def send_machine_edit_caliche(self, machine_edit_caliche):
         if len(machine_edit_caliche) != 0:
             self.Eep.get_machine_edit_caliche().send_keys(machine_edit_caliche)
+
     # 获取机器设备编辑硬盘错误提示信息
     def get_machine_edit_caliche_error_text(self):
         return self.Eep.get_machine_edit_caliche_error().text
@@ -397,31 +421,40 @@ class ExaminationeEnvirHandle(object):
         element = self.Eep.get_machine_edit_caliche()
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
-    #点击操作系统下拉框
+
+    # 点击操作系统下拉框
     def click_machine_edit_operating_system(self):
         return self.Eep.get_machine_edit_operating_system().click()
-    #点击操作系统下拉框1
+
+    # 点击操作系统下拉框1
     def get_machine_edit_operating_system1_text(self):
         return self.Eep.get_machine_edit_operating_system1().text
-    #点击操作系统下拉框2
+
+    # 点击操作系统下拉框2
     def get_machine_edit_operating_system2_text(self):
         return self.Eep.get_machine_edit_operating_system2().text
-    #点击操作系统下拉框3
+
+    # 点击操作系统下拉框3
     def get_machine_edit_operating_system3_text(self):
         return self.Eep.get_machine_edit_operating_system3().text
-    #点击操作系统下拉框4
+
+    # 点击操作系统下拉框4
     def get_machine_edit_operating_system4_text(self):
         return self.Eep.get_machine_edit_operating_system4().text
-    #点击操作系统下拉框5
+
+    # 点击操作系统下拉框5
     def get_machine_edit_operating_system5_text(self):
         return self.Eep.get_machine_edit_operating_system5().text
-    #点击操作系统下拉框6
+
+    # 点击操作系统下拉框6
     def get_machine_edit_operating_system6_text(self):
         return self.Eep.get_machine_edit_operating_system6().text
+
     # 机器设备编辑服务器ups字段
 
     def get_machine_edit_ups_text(self):
         return self.Eep.get_machine_edit_ups().text
+
     # 输入机器设备编辑服务器ups型号字段
 
     def send_machine_edit_ups_model(self, machine_edit_ups_model):
@@ -431,6 +464,7 @@ class ExaminationeEnvirHandle(object):
     # 获取机器设备编辑服务器ups型号错误提示信息
     def get_machine_edit_ups_model_error_text(self):
         return self.Eep.get_machine_edit_ups_model_error().text
+
     # 清空机器设备编辑服务器ups型号字段
 
     def clear_machine_edit_ups_model(self):
@@ -448,6 +482,7 @@ class ExaminationeEnvirHandle(object):
     def send_machine_edit_ups_time(self, machine_edit_ups_time):
         if len(machine_edit_ups_time) != 0:
             self.Eep.get_machine_edit_ups_time().send_keys(machine_edit_ups_time)
+
     # 获取机器设备编辑服务器ups供电时间错误提示信息
     def get_machine_edit_ups_time_error_text(self):
         return self.Eep.get_machine_edit_ups_time_error().text
@@ -468,25 +503,31 @@ class ExaminationeEnvirHandle(object):
 
     def click_machine_edit_tape_width_text(self):
         return self.Eep.get_machine_edit_tape_width().click()
+
     # 机器设备编辑网络带宽1
 
     def get_machine_edit_tape_width1_text(self):
         return self.Eep.get_machine_edit_tape_width1().text
+
     # 机器设备编辑网络带宽2
 
     def get_machine_edit_tape_width2_text(self):
         return self.Eep.get_machine_edit_tape_width2().text
+
     # 机器设备编辑网络带宽3
 
     def get_machine_edit_tape_width3_text(self):
         return self.Eep.get_machine_edit_tape_width3().text
+
     # 点击机器设备编辑网络运营
 
     def click_get_machine_motion_select(self):
         return self.Eep.get_machine_motion_select().click()
+
     # 机器设备编辑网络运营1
     def get_machine_motion_select1_text(self):
         return self.Eep.get_machine_motion_select1().text
+
     # 机器设备编辑网络运营2
 
     def get_machine_motion_select2_text(self):
@@ -703,24 +744,27 @@ class ExaminationeEnvirHandle(object):
     # 获取照片标题字段
 
     def get_photo_title_text(self):
-        if self.Eep.get_photo_title() !=None:
+        if self.Eep.get_photo_title() != None:
             return self.Eep.get_photo_title().text
         else:
-            return  None
+            return None
 
     # 获取照片简介字段
 
     def get_photo_content_text(self):
-        if self.Eep.get_photo_content()!=None:
+        if self.Eep.get_photo_content() != None:
             return self.Eep.get_photo_content().text
         else:
             return None
-    #点击照片编辑按钮
+
+    # 点击照片编辑按钮
     def click_photo_edit_btn(self):
         return self.Eep.get_photo_edit_btn().click()
-    #获取照片编辑标题内容
+
+    # 获取照片编辑标题内容
     def get_photo_edit_title_text(self):
         return self.Eep.get_photo_edit_title().get_attribute('value')
+
     # 获取照片编辑简介内容
 
     def get_photo_edit_content_text(self):
@@ -731,26 +775,34 @@ class ExaminationeEnvirHandle(object):
         data1 = self.Eep.get_photo()
         data2 = self.get_photo_title_text()
         data3 = self.get_photo_content_text()
-        data4=self.Eep.get_upload_photo_btn()
+        data4 = self.Eep.get_upload_photo_btn()
         data5 = self.Eep.get_photo_edit_btn()
         data6 = self.Eep.get_photo_delete_btn()
-        if data1 != None and data2 != None and data3 != None and data4!=None and data5!=None and data6!=None:
+        if data1 != None and data2 != None and data3 != None and data4 != None and data5 != None and data6 != None:
             return True
         else:
             return False
-    #点击照片添加按钮
+
+    # 点击照片添加按钮
     def click_photo_add_btn(self):
         return self.Eep.get_photo_add_btn().click()
-    #获取照片弹框信息内容
+
+    # 点击照片浏览按钮
+    def click_photo_add_browse_btn(self):
+        return self.Eep.get_photo_add_browse_btn().click()
+
+    # 获取照片弹框信息内容
     def get_photo_add_frame_text(self):
-        element=self.Eep.get_photo_add_frame()
-        if element!=None:
+        element = self.Eep.get_photo_add_frame()
+        if element != None:
             return element.text
         else:
             return None
-    #点击照片添加确定按钮
+
+    # 点击照片添加确定按钮
     def click_photo_add_save_btn(self):
         return self.Eep.get_photo_add_save_btn().click()
+
     # 点击照片添加取消按钮
 
     def click_add_cancle_btn(self):
@@ -762,16 +814,38 @@ class ExaminationeEnvirHandle(object):
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
 
+    # 浏览上传考点照片文件路径字段
+    def browse_photo_add_photo_path(self, photo_path, photo_name,screen_capture):
+        # 点击浏览按钮
+        self.click_photo_add_browse_btn()
+        time.sleep(3)
+        #截取当前页面
+        im = ImageGrab.grab()
+        #实例化图像匹配类
+        IM=ImageMatch()
+        #保存截取页面到固定路径
+        im.save(screen_capture)
+        #循环获取excel模板图数据
+        ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\examinationPhotoImageMatchData.xls")
+        rows=ex.get_lines()
+        for row in range(0,rows):
+            function_photo=ex.get_col_value(row,2)
+            IM.ImageMatch(function_photo,screen_capture)
+
+
+
     # 输入考点照片照片标题字段
 
     def send_photo_add_title(self, photo_add_title):
         if len(photo_add_title) != 0:
             self.Eep.get_photo_add_title().send_keys(photo_add_title)
+
     # 清空考点照片照片简介字段
     def clear_photo_add_content(self):
         element = self.Eep.get_photo_add_content()
         element.send_keys(Keys.CONTROL, 'a')
         element.send_keys(Keys.BACK_SPACE)
+
     # 获取考点照片照片标题字段错误信息
 
     def get_photo_add_title_error_text(self):
@@ -782,6 +856,7 @@ class ExaminationeEnvirHandle(object):
     def send_photo_add_content(self, photo_add_content):
         if len(photo_add_content) != 0:
             self.Eep.get_photo_add_content().send_keys(photo_add_content)
+
     # 获取考点照片照片简介字段错误信息
 
     def get_photo_add_content_error_text(self):
