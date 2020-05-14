@@ -1,4 +1,6 @@
 # coding=utf-8
+import win32api
+import win32con
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -12,6 +14,7 @@ from util.table_util import TableUtil
 from PIL import Image, ImageGrab
 from util.excel_util import ExcelUtil
 from util.image_match.image_match import ImageMatch
+from util.image_match.action_execute import ActionExecute
 
 
 class ExaminationeEnvirHandle(object):
@@ -815,24 +818,48 @@ class ExaminationeEnvirHandle(object):
         element.send_keys(Keys.BACK_SPACE)
 
     # 浏览上传考点照片文件路径字段
-    def browse_photo_add_photo_path(self, photo_path, photo_name,screen_capture):
+    def browse_photo_add_photo_path(self, photo_path, photo_name, screen_capture):
         # 点击浏览按钮
         self.click_photo_add_browse_btn()
         time.sleep(3)
-        #截取当前页面
+        # 截取当前页面
         im = ImageGrab.grab()
-        #实例化图像匹配类
-        IM=ImageMatch()
-        #保存截取页面到固定路径
+        # 实例化图像匹配类
+        IM = ImageMatch()
+        # 实例化控件操作类
+        AE = ActionExecute()
+        # 保存截取页面到固定路径
         im.save(screen_capture)
-        #循环获取excel模板图数据
+        # 读入数据
         ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\examinationPhotoImageMatchData.xls")
-        rows=ex.get_lines()
-        for row in range(0,rows):
-            function_photo=ex.get_col_value(row,2)
-            IM.ImageMatch(function_photo,screen_capture)
-
-
+        # 获取excel行数
+        rows = ex.get_lines()
+        # 循环获取excel模板图数据
+        for row in range(0, rows):
+            # 获取模板图
+            function_photo = ex.get_col_value(row, 2)
+            # 获取模板图处执行方法
+            operate_method = ex.get_col_value(row, 3)
+            # 引入模板匹配模块
+            operate_location = IM.ImageMatch(function_photo, screen_capture)
+            operate_location_x = int(operate_location[0])
+            operate_location_y = int(operate_location[1])
+            if operate_location != None:
+                # 鼠标定位到识别元素位置
+                win32api.SetCursorPos([operate_location_x, operate_location_y])
+                # 鼠标左击
+                win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP | win32con.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                time.sleep(2)
+                # 鼠标右击
+                # win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP | win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
+                # 将内容复制到剪切板里
+                AE.add_to_clipboard(photo_name)
+                time.sleep(2)
+                # 获取剪切板的内容
+                # AE.get_clipboard()
+                #执行ctrl+v
+                AE.paste_method()
+                time.sleep(2)
 
     # 输入考点照片照片标题字段
 

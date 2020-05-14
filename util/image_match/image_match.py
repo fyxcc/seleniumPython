@@ -13,8 +13,8 @@ class ImageMatch():
         # 记录图像模板的尺寸
         w, h = template.shape[::-1]
         # 六种模板匹配算法：平方差匹配法，归一化平方差匹配法，相关匹配法(最慢，运算量大)，归一化相关匹配法，相关系数匹配法，归一化相关系数匹配法
-        methods = ['cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED', 'cv2.TM_CCORR', 'cv2.TM_CCORR_NORMED', 'cv2.TM_CCOEFF',
-                   'cv2.TM_CCOEFF_NORMED']
+        #'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED', 'cv2.TM_CCORR', 'cv2.TM_CCORR_NORMED', 'cv2.TM_CCOEFF',
+        methods = ['cv2.TM_CCOEFF_NORMED']
         for meth in methods:
             img = img2.copy()
             # eval 语句用来计算存储在字符串中的有效 Python 表达式
@@ -31,13 +31,15 @@ class ImageMatch():
                 top_left = max_loc
             bottom_right = (top_left[0] + w, top_left[1] + h)
             # 绘制矩形
-            cv2.rectangle(img, top_left, bottom_right, 255, 2)
+            """  cv2.rectangle(img, top_left, bottom_right, 255, 2)
             plt.subplot(121), plt.imshow(res, cmap='gray')
             plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
             plt.subplot(122), plt.imshow(img, cmap='gray')
             plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
             plt.suptitle(meth)
-            plt.show()
+            plt.show()"""
+            operate_location = (top_left[0] + w/2, top_left[1] + h/2)
+            return operate_location
 
 
 if __name__ == '__main__':
