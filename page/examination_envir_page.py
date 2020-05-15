@@ -611,6 +611,10 @@ class ExaminationEnvirPage(object):
     def get_photo_add_browse_btn(self):
         return self.fe.get_element('photo_add_browse_btn', 'ExaminationEnvironment')
 
+    # 照片添加照片错误信息
+    def get_photo_add_browse_error(self):
+        return self.fe.get_element('photo_add_browse_error', 'ExaminationEnvironment')
+
     # 照片添加照片标题
     def get_photo_add_title(self):
         return self.fe.get_element('photo_add_title', 'ExaminationEnvironment')
@@ -637,6 +641,12 @@ class ExaminationEnvirPage(object):
     # 照片添加取消按钮
     def get_photo_add_cancle_btn(self):
         return self.fe.get_element('photo_add_cancle_btn', 'ExaminationEnvironment')
+    #考点照片删除按钮
+    def get_photo_dele_btn(self):
+        return self.fe.get_element('photo_dele_btn', 'ExaminationEnvironment')
+    #考点照片确定删除按钮
+    def get_photo_delete_confirm_btn(self):
+        return self.fe.get_element('photo_delete_confirm_btn', 'ExaminationEnvironment')
 
 
 if __name__ == "__main__":

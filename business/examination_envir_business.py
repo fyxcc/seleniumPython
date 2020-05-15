@@ -208,13 +208,13 @@ class ExaminationEnvirBusiness(object):
             return True
         else:
             return False
-        # 清空机器设备输入框
+    # 清空机器设备输入框
 
     def clear_all_photo_add(self):
         self.Eeh.clear_photo_add_title()
         self.Eeh.clear_photo_add_content()
 
-        # 考点照片成功添加
+    # 考点照片成功添加
 
     def machine_success_add_photo(self, photo_path,photo_name,screen_capture,photo_add_title, photo_add_content):
         self.Eeh.browse_photo_add_photo_path(photo_path,photo_name,screen_capture)
@@ -228,9 +228,9 @@ class ExaminationEnvirBusiness(object):
     def machine_photo_add_function(self, photo_path,photo_name,screen_capture,photo_add_title, photo_add_content, assertCode, assertText):
         self.machine_success_add_photo(photo_path,photo_name,screen_capture,photo_add_title, photo_add_content)
         time.sleep(1)
-        if assertText == '编辑成功':
+        if assertText == '添加成功':
             time.sleep(1)
-            result = self.Eeh.get_machine_edit_success_text()
+            result = self.Eeh.get_photo_add_result_text()
             if result == assertText:
                 return True
         elif len(assertCode) != 0:

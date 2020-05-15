@@ -744,6 +744,13 @@ class ExaminationeEnvirHandle(object):
         else:
             return False
 
+    # 获取照片添加成功消息内容
+    def get_photo_add_result_text(self):
+        WebDriverWait(self.driver, 10).until(
+            lambda x: x.find_element_by_xpath('/html/body/div[6]/div/div/div[1]/div/span'))
+        text_content = self.driver.find_element_by_xpath('/html/body/div[6]/div/div').text
+        return text_content
+
     # 获取照片标题字段
 
     def get_photo_title_text(self):
@@ -788,7 +795,9 @@ class ExaminationeEnvirHandle(object):
 
     # 点击照片添加按钮
     def click_photo_add_btn(self):
-        return self.Eep.get_photo_add_btn().click()
+        element = self.Eep.get_photo_add_btn()
+        if element != None:
+            return element.click()
 
     # 点击照片浏览按钮
     def click_photo_add_browse_btn(self):
@@ -808,26 +817,35 @@ class ExaminationeEnvirHandle(object):
 
     # 点击照片添加取消按钮
 
+
     def click_add_cancle_btn(self):
         return self.Eep.get_photo_add_cancle_btn().click()
 
-    # 清空考点照片照片标题字段
-    def clear_photo_add_title(self):
-        element = self.Eep.get_photo_add_title()
-        element.send_keys(Keys.CONTROL, 'a')
-        element.send_keys(Keys.BACK_SPACE)
+    # 点击照片删除按钮
+
+    def click_photo_dele_btn(self):
+        return self.Eep.get_photo_dele_btn().click()
+
+    # 点击照片删除确定按钮
+    def click_photo_delete_confirm_btn(self):
+        return self.Eep.get_photo_delete_confirm_btn().click()
+
+    # 获取照片添加照片错误信息内容
+    def get_photo_add_browse_error_text(self):
+        self.Eep.get_photo_add_browse_error().text
 
     # 浏览上传考点照片文件路径字段
+
     def browse_photo_add_photo_path(self, photo_path, photo_name, screen_capture):
         # 点击浏览按钮
         self.click_photo_add_browse_btn()
-        time.sleep(3)
-        # 截取当前页面
-        im = ImageGrab.grab()
+        time.sleep(2)
         # 实例化图像匹配类
         IM = ImageMatch()
         # 实例化控件操作类
         AE = ActionExecute()
+        # 截取当前页面
+        im = ImageGrab.grab()
         # 保存截取页面到固定路径
         im.save(screen_capture)
         # 读入数据
@@ -854,12 +872,18 @@ class ExaminationeEnvirHandle(object):
                 # win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP | win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0)
                 # 将内容复制到剪切板里
                 AE.add_to_clipboard(photo_name)
-                time.sleep(2)
                 # 获取剪切板的内容
                 # AE.get_clipboard()
-                #执行ctrl+v
-                AE.paste_method()
-                time.sleep(2)
+                # 执行ctrl+v
+                if row == 0:
+                    AE.paste_method()
+                time.sleep(3)
+
+    # 清空考点照片照片标题字段
+    def clear_photo_add_title(self):
+        element = self.Eep.get_photo_add_title()
+        element.send_keys(Keys.CONTROL, 'a')
+        element.send_keys(Keys.BACK_SPACE)
 
     # 输入考点照片照片标题字段
 
@@ -893,8 +917,11 @@ class ExaminationeEnvirHandle(object):
 
     def get_photo_add_error_text(self, error_info, assertText):
         try:
-
-            if error_info == 'photo_add_title_error':
+            if error_info == 'photo_add_browse_error':
+                text_content = self.get_photo_add_browse_error_text()
+                if text_content == assertText:
+                    text = 'ok'
+            elif error_info == 'photo_add_title_error':
                 text_content = self.get_photo_add_title_error_text()
                 if text_content == assertText:
                     text = 'ok'
