@@ -39,11 +39,13 @@ class ExaminationPlaceQueryDdtCase(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print('所有case执行的后置条件')
+        cls.driver.close()
 
     # 每一条case执行之前的前置条件
     def setUp(self):
         # print('每一条case执行前的前置条件')
         pass
+
 
     # 每一条case执行之后的后置条件
     def tearDown(self):

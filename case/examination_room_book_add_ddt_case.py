@@ -24,7 +24,7 @@ data = ex.get_data()
 # 测试类前加修饰@ddt.ddt
 @ddt.ddt
 # 姓名，性别，职位，手机，固定电话，邮寄地址，电子邮箱，qq
-class ExaminationPlaceAddDdtCase(unittest.TestCase):
+class ExaminationRoomBookAddDdtCase(unittest.TestCase):
     # 所有case执行之前的装饰器---前置条件
     @classmethod
     def setUpClass(cls):
@@ -51,7 +51,7 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         print('所有case执行的后置条件')
-        # cls.driver.close()
+        cls.driver.close()
 
     # 每一条case执行之前的前置条件
     def setUp(self):

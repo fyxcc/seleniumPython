@@ -1,7 +1,7 @@
 # coding=utf-8
 import sys
 sys.path.append('D:/pythonWork/autoTest')
-from time import sleep
+from time import sleep, time
 from case.login_keyword_cases import LoginKeywordCases
 import ddt
 import unittest
@@ -10,6 +10,7 @@ import HTMLTestRunner
 from selenium import webdriver
 from business.examination_place_business import ExaminationPlaceBusiness
 from util.excel_util import ExcelUtil
+from util.table_util import TableUtil
 
 # 获取数据
 ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\examinationPlaceAddDdtData.xls")
@@ -19,7 +20,7 @@ data = ex.get_data()
 # 测试类前加修饰@ddt.ddt
 @ddt.ddt
 # 考点编号，考点名称，考点地址，考点负责人，负责人联系电话
-class ExaminationPlaceAddDdtCase(unittest.TestCase):
+class ExaminationPlaceDeleteDdtCase(unittest.TestCase):
     # 所有case执行之前的装饰器---前置条件
     @classmethod
     def setUpClass(cls):
@@ -29,12 +30,13 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
         cls.driver = getattr(getattr(lkc, 'lk'), 'driver')
         cls.driver.maximize_window()
         cls.Eb = ExaminationPlaceBusiness(cls.driver)
+        cls.TU=TableUtil(cls.driver)
 
     # 所有case执行之后的后置条件
     @classmethod
     def tearDownClass(cls):
         print('所有case执行的后置条件')
-        # cls.driver.close()
+        cls.driver.close()
 
     # 每一条case执行之前的前置条件
     def setUp(self):
@@ -56,6 +58,11 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
 
     # 执行用例，并判断是否执行成功
     def test_examination_place_delete_case(self):
+        lines=self.TU.get_lines()
+        PageNum=self.TU.get_page_size()
+        count=int(lines)/int(PageNum)
+        for i in range(0,int(count+1)):
+            self.TU.click_next_page()
         delete_error = self.Eb.delete_examination_place()
         self.assertTrue(delete_error, "删除考点用例成功，该用例执行失败")
 
@@ -67,7 +74,7 @@ if __name__ == "__main__":
     f = open(fire_path, 'wb')
 
     # 添加测试用例
-    suite = unittest.TestLoader().loadTestsFromTestCase(ExaminationPlaceAddDdtCase)
+    suite = unittest.TestLoader().loadTestsFromTestCase(ExaminationPlaceDeleteDdtCase)
 
     # 测试结果以报告显示
     runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',

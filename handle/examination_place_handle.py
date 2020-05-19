@@ -194,7 +194,7 @@ class ExaminationPlaceHandle(object):
     # 获取添加成功提示语
     def get_add_success_text(self):
         #time.sleep(2)
-        return self.Ep.add_success().text
+        return self.Ep.add_success()
 
     # 点击删除考点按钮
     def click_delete_examination_place_btn(self):

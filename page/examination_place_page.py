@@ -138,7 +138,10 @@ class ExaminationPlacePage(object):
 
     # 添加成功提示语
     def add_success(self):
-        return self.fe.get_element('add_success', 'ExaminationPlacePage')
+        WebDriverWait(self.driver, 10).until(
+            lambda x: x.find_element_by_xpath('/html/body/div[17]/div/div'))
+        text_content = self.driver.find_element_by_xpath('/html/body/div[17]/div/div').text
+        return text_content
 
     # 删除考点按钮
     def get_delete_examination_place_btn(self):

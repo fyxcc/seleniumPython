@@ -641,10 +641,12 @@ class ExaminationEnvirPage(object):
     # 照片添加取消按钮
     def get_photo_add_cancle_btn(self):
         return self.fe.get_element('photo_add_cancle_btn', 'ExaminationEnvironment')
-    #考点照片删除按钮
+
+    # 考点照片删除按钮
     def get_photo_dele_btn(self):
         return self.fe.get_element('photo_dele_btn', 'ExaminationEnvironment')
-    #考点照片确定删除按钮
+
+    # 考点照片确定删除按钮
     def get_photo_delete_confirm_btn(self):
         return self.fe.get_element('photo_delete_confirm_btn', 'ExaminationEnvironment')
 
