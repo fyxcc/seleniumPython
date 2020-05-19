@@ -1,5 +1,6 @@
 import HTMLTestRunner
 import unittest
+
 from case.examination_envir_ddt_case import ExaminationEnvirDdtCase
 from case.examination_machine_ddt_case import ExaminationMachineDdtCase
 from case.examination_photo_ddt_case import ExaminationPhotoDdtCase

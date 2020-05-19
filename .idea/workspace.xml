@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_suite/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_suite/examination_envir.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_suite/examination_place.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_suite/examination_room.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_suite/auto_make_suite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/examination_place_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_place_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_delete_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_delete_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_basic_select_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_basic_select_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/LocalElement.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/LocalElement.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handle/examination_place_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_place_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/examination_envir_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_envir_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/examination_place_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/examination_place_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_suite/examination_envir.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/examination_envir.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_envir">
+  <component name="RunManager" selected="Python.auto_make_suite">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,6 +82,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="auto_make_suite" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_suite" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_suite/auto_make_suite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,27 +145,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_suite/examination_envir.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="examination_envir_business" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/business" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/business/examination_envir_business.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -637,19 +618,19 @@
       <item itemvalue="Python.untitled2" />
       <item itemvalue="Python.run_case" />
       <item itemvalue="Python.login_ddt_case" />
-      <item itemvalue="Python.examination_envir_business" />
       <item itemvalue="Python.image_match" />
       <item itemvalue="Python.examination_place" />
       <item itemvalue="Python.examination_room" />
       <item itemvalue="Python.examination_envir" />
+      <item itemvalue="Python.auto_make_suite" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.auto_make_suite" />
         <item itemvalue="Python.examination_envir" />
         <item itemvalue="Python.examination_room" />
         <item itemvalue="Python.examination_place" />
         <item itemvalue="Python.image_match" />
-        <item itemvalue="Python.examination_envir_business" />
       </list>
     </recent_temporary>
   </component>
@@ -906,7 +887,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589527472174</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="批量执行自动化测试用例">
+      <created>1589877393203</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1589877393203</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -950,7 +938,8 @@
     <MESSAGE value="图像匹配模块" />
     <MESSAGE value="控件执行模块" />
     <MESSAGE value="图像处理模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="图像处理模块" />
+    <MESSAGE value="批量执行自动化测试用例" />
+    <option name="LAST_COMMIT_MESSAGE" value="批量执行自动化测试用例" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
@@ -1026,6 +1015,16 @@
           <url>file://$PROJECT_DIR$/handle/examination_place_handle.py</url>
           <line>219</line>
           <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_suite/auto_make_suite.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_suite/auto_make_suite.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
