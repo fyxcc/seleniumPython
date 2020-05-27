@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/util/htmltestrunner/HTMLTestRunner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/htmltestrunner/HTMLTestRunner_in.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/htmltestrunner/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/examination_place_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_place_business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_envir_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_envir_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_delete_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_delete_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_basic_select_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_basic_select_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/login_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/login_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyword_modal/login_keyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_modal/login_keyword.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/auto_make_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/auto_make_suite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/examination_envir.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/examination_envir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/examination_place.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/examination_place.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_suite/examination_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/examination_room.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +38,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/util" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -89,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_room">
+  <component name="RunManager" selected="Python.examination_machine_ddt_case">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -944,7 +923,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589883034035</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="修改测试报告">
+      <created>1590565187508</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1590565187508</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -964,7 +950,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="登录数据驱动实现&#10;用户名密码验证码测试用例编写" />
     <MESSAGE value="登录数据驱动模块" />
     <MESSAGE value="read_ini初始化增加node变量，使配置文件可以根node进行读取" />
     <MESSAGE value="添加考点page,handle,business层脚本实现" />
@@ -989,7 +974,8 @@
     <MESSAGE value="图像处理模块" />
     <MESSAGE value="批量执行自动化测试用例" />
     <MESSAGE value="自构建测试集" />
-    <option name="LAST_COMMIT_MESSAGE" value="自构建测试集" />
+    <MESSAGE value="修改测试报告" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改测试报告" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
