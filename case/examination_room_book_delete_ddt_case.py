@@ -10,7 +10,8 @@ from case.login_keyword_cases import LoginKeywordCases
 import ddt
 import unittest
 import os
-import HTMLTestRunner
+#import HTMLTestRunner
+from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 from selenium import webdriver
 from business.examination_room_business import ExaminationRoomBusiness
 from util.excel_util import ExcelUtil
@@ -70,14 +71,14 @@ class ExaminationRoomBookDeleteDdtCase(unittest.TestCase):
 if __name__ == "__main__":
     # 报告存放路径
     # fire_path = os.path.join(os.path.pardir + "/report/" + "login_ddt_case.html")
-    fire_path = r"D:\pythonWork\autoTest\report\examination_place_delete.html"
+    fire_path = r"D:\pythonWork\autoTest\report\examination_room_book_delete.html"
     f = open(fire_path, 'wb')
 
     # 添加测试用例
     suite = unittest.TestLoader().loadTestsFromTestCase(ExaminationRoomBookDeleteDdtCase)
 
     # 测试结果以报告显示
-    runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',
-                                           description=u'这是我们登录模块数据驱动测试报告',
-                                           verbosity=2)
+    #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',description=u'这是我们登录模块数据驱动测试报告',verbosity=2)
+    runner = HTMLTestRunner(stream=f, title='考场管理测试报告', description='考点基本信息通讯录删除测试用例执行结果如下： ')
+    run = HTMLTestRunner()
     runner.run(suite)

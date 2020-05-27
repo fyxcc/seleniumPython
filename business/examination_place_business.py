@@ -29,6 +29,7 @@ class ExaminationPlaceBusiness(object):
     # 数据驱动整合代码
     def add_function(self, place_code, place_name, place_address, place_person, place_person_tel, assertCode,
                      assertText):
+        time.sleep(1)
         self.success_add(place_code, place_name, place_address, place_person, place_person_tel, assertCode)
         if assertText == '添加成功':
             result = self.Eh.get_add_success_text()

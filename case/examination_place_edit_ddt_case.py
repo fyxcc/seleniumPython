@@ -9,7 +9,8 @@ from case.login_keyword_cases import LoginKeywordCases
 import ddt
 import unittest
 import os
-import HTMLTestRunner
+#import HTMLTestRunner
+from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 from business.examination_place_business import ExaminationPlaceBusiness
 from util.excel_util import ExcelUtil
 
@@ -123,7 +124,7 @@ if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(ExaminationPlaceEditDdtCase)
 
     # 测试结果以报告显示
-    runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',
-                                           description=u'这是我们登录模块数据驱动测试报告',
-                                           verbosity=2)
+    #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report', description=u'这是我们登录模块数据驱动测试报告',verbosity=2)
+    runner = HTMLTestRunner(stream=f, title='考点管理测试报告', description='考点编辑测试用例执行结果如下：')
+    run = HTMLTestRunner()
     runner.run(suite)

@@ -9,7 +9,7 @@ class LoginKeyword(object):
     # 打开浏览器
     def open_browser(self, browser):
         if browser == 'chrome':
-            self.driver = webdriver.Chrome()
+            self.driver = webdriver.Chrome("D:\pythonWork/autoTest/tools\chromedriver83.exe")
         elif browser == 'firefox':
             self.driver = webdriver.Firefox()
         else:

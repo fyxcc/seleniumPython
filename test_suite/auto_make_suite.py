@@ -24,7 +24,7 @@ if __name__ == "__main__":
     runner = unittest.TextTestRunner()
     AMS= AutoMakeSuite()
     MS=AMS.make_suite()
-    fire_path = r"D:\pythonWork\autoTest\report\examination_envir_auto.html"
+    fire_path = r"D:\pythonWork\autoTest\report\auto_make_suite.html"
     f = open(fire_path, 'wb')
     # 测试结果以报告显示
     runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',

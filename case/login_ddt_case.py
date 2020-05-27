@@ -27,7 +27,7 @@ class LoginDdtCase(unittest.TestCase):
     def setUpClass(cls):
         print('所有case执行的前置条件')
         cls.login_url = 'http://localhost:9090/exam-place/login'
-        cls.driver = webdriver.Chrome()
+        cls.driver = webdriver.Firefox()
         cls.driver.get(cls.login_url)
         cls.driver.maximize_window()
         cls.lb = LoginBusiness(cls.driver)

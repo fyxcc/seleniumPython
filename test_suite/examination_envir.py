@@ -1,4 +1,5 @@
-import HTMLTestRunner
+#import HTMLTestRunner
+from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 import unittest
 
 from case.examination_envir_ddt_case import ExaminationEnvirDdtCase
@@ -21,8 +22,8 @@ if __name__ == "__main__":
     fire_path = r"D:\pythonWork\autoTest\report\examination_envir.html"
     f = open(fire_path, 'wb')
     # 测试结果以报告显示
-    runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',
-                                           description=u'这是我们考点环境的基本资料，机器设备，考点照片的测试报告',
-                                           verbosity=2)
+    #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',description=u'这是我们考点环境的基本资料，机器设备，考点照片的测试报告',verbosity=2)
+    runner = HTMLTestRunner(stream=f, title='考点环境测试报告', description='考点环境的基本资料，机器设备，考点照片的测试报告测试用例执行结果如下：')
+    run = HTMLTestRunner()
     for i in range(0, S.__len__()):
         runner.run(S[i])

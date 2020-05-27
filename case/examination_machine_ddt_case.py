@@ -1,5 +1,6 @@
 # coding=utf-8
-import HTMLTestRunner
+#import HTMLTestRunner
+from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 import sys
 import time
 
@@ -15,6 +16,7 @@ from business.examination_room_business import ExaminationRoomBusiness
 from business.examination_envir_business import ExaminationEnvirBusiness
 from util.excel_util import ExcelUtil
 from util.table_util import TableUtil
+
 
 # 获取数据
 ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\examinationMachineDdtCase.xls")
@@ -125,7 +127,7 @@ if __name__ == "__main__":
     suite = unittest.TestLoader().loadTestsFromTestCase(ExaminationMachineDdtCase)
 
     # 测试结果以报告显示
-    runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',
-                                           description=u'这是我们机器设备数据驱动测试报告',
-                                           verbosity=2)
+    #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',description=u'这是我们机器设备数据驱动测试报告',verbosity=2)
+    runner = HTMLTestRunner(stream=f,title='考场管理测试报告',description='考点环境机器设备编辑测试用例执行结果如下：' )
+    run = HTMLTestRunner()
     runner.run(suite)
