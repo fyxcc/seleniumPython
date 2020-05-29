@@ -1,6 +1,7 @@
 # coding=utf-8
 #import HTMLTestRunner
-from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
+#from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
+from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 import sys
 import time
 
@@ -103,5 +104,5 @@ if __name__ == "__main__":
     # 测试结果以报告显示
     #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report', description=u'这是我们登录模块数据驱动测试报告',verbosity=2)
     runner = HTMLTestRunner(stream=f, title='考场管理测试报告', description='选择功能测试用例执行结果如下： ')
-    run = HTMLTestRunner()
+    #run = HTMLTestRunner()
     runner.run(suite)

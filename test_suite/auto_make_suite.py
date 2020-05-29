@@ -1,4 +1,6 @@
-import HTMLTestRunner
+#import HTMLTestRunner
+#from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
+from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 import unittest
 from util.excel_util import ExcelUtil
 from case.examination_envir_ddt_case import ExaminationEnvirDdtCase
@@ -21,15 +23,13 @@ class AutoMakeSuite():
         return result
 
 if __name__ == "__main__":
-    runner = unittest.TextTestRunner()
+    #runner = unittest.TextTestRunner()
     AMS= AutoMakeSuite()
     MS=AMS.make_suite()
     fire_path = r"D:\pythonWork\autoTest\report\auto_make_suite.html"
     f = open(fire_path, 'wb')
     # 测试结果以报告显示
-    runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',
-                                           description=u'这是我们考点环境的基本资料，机器设备，考点照片的测试报告',
-                                           verbosity=2)
+    runner = HTMLTestRunner(stream=f, title='考点管理测试报告',description=u'这是我们考点环境的基本资料，机器设备，考点照片的测试报告')
     length=len(MS)
     for i in range(0, length):
         runner.run(MS[i])

@@ -1,5 +1,6 @@
 #import HTMLTestRunner
 from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
+#from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 import unittest
 from case.examination_room_basic_info_edit import ExaminationRoomBasicInfoEditDdtCase
 from case.examination_room_basic_select_ddt_case import ExaminationRoomBasicSelectDdtCase
@@ -29,6 +30,5 @@ if __name__ == "__main__":
     # 测试结果以报告显示
     #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='考点测试套件执行结果报告',description=u'这是我们考点基本资料的基本资料，交通路线，通讯录的测试报告',verbosity=2)
     runner = HTMLTestRunner(stream=f, title='考场管理测试报告', description='考点基本资料的基本资料，交通路线，通讯录测试用例执行结果如下：')
-    run = HTMLTestRunner()
     for i in range(0, S.__len__()):
         runner.run(S[i])

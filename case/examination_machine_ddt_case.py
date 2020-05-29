@@ -131,8 +131,5 @@ if __name__ == "__main__":
     #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',description=u'这是我们机器设备数据驱动测试报告',verbosity=2)
     #runner = HTMLTestRunner(stream=f,title='考场管理测试报告',description='考点环境机器设备编辑测试用例执行结果如下：' )
     #run = HTMLTestRunner()
-    report_title = 'Example用例执行报告'
-    desc = '用于展示修改样式后的HTMLTestRunner'
-    report_file = 'ExampleReport.html'
-    runner = HTMLTestRunner(stream=f, title=report_title, description=desc)
+    runner = HTMLTestRunner(stream=f, title='考场管理测试报告', description='考点环境机器设备编辑测试用例执行结果如下：' )
     runner.run(suite)

@@ -318,7 +318,7 @@ function html_escape(s) {
     STYLESHEET_TMPL = """
 <style type="text/css" media="screen">
 body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 30px; font-size: 10px; }
-table       { font-size: 30px; }
+table       { font-size: 20px; }
 
 /* -- heading ---------------------------------------------------------------------- */
 .heading {
@@ -348,12 +348,12 @@ table       { font-size: 30px; }
     HEADING_TMPL = """<div class='heading'>
 <h1 style="font-family: Microsoft YaHei">%(title)s</h1>
 %(parameters)s
-<p class='description'>%(description)s</p>
+<p class='description' style="font-size: 10pt;">%(description)s</p>
 </div>
 
 """ # variables: (title, parameters, description)
 
-    HEADING_ATTRIBUTE_TMPL = """<p class='attribute'><strong>%(name)s : </strong> %(value)s</p>
+    HEADING_ATTRIBUTE_TMPL = """<p class='attribute' style="font-size: 10pt;"><strong>%(name)s : </strong> %(value)s</p>
 """ # variables: (name, value)
 
 

@@ -1,10 +1,12 @@
 #import HTMLTestRunner
 from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
+#from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 import unittest
 from case.examination_place_add_ddt_case import ExaminationPlaceAddDdtCase
 from case.examination_place_edit_ddt_case import ExaminationPlaceEditDdtCase
 from case.examination_place_delete_ddt_case import ExaminationPlaceDeleteDdtCase
 from case.examination_place_query_ddt_case import ExaminationPlaceQueryDdtCase
+
 
 
 class ExaminationPlace():
@@ -27,6 +29,5 @@ if __name__ == "__main__":
     # 测试结果以报告显示
     #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',description=u'这是我们添加考点删除考点测试报告',verbosity=2)
     runner = HTMLTestRunner(stream=f, title='考点管理测试报告', description='考点管理的添加，编辑，删除，查询测试报告测试用例执行结果如下：')
-    run = HTMLTestRunner()
     for i in range(0, S.__len__()):
         runner.run(S[i])

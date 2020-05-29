@@ -11,7 +11,8 @@ import ddt
 import unittest
 import os
 #import HTMLTestRunner
-from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
+#from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
+from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 from selenium import webdriver
 from business.examination_room_business import ExaminationRoomBusiness
 from util.excel_util import ExcelUtil
@@ -80,5 +81,4 @@ if __name__ == "__main__":
     # 测试结果以报告显示
     #runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='this is the first ddt report',description=u'这是我们登录模块数据驱动测试报告',verbosity=2)
     runner = HTMLTestRunner(stream=f, title='考场管理测试报告', description='考点基本信息通讯录删除测试用例执行结果如下： ')
-    run = HTMLTestRunner()
     runner.run(suite)
