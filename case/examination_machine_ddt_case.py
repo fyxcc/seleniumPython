@@ -40,10 +40,12 @@ class ExaminationMachineDdtCase(unittest.TestCase):
         cls.ERb = ExaminationRoomBusiness(cls.driver)
         cls.Eeb=ExaminationEnvirBusiness(cls.driver)
         cls.EPh = getattr(cls.EPb, 'Eh')
-        cls.driver.refresh()
+        #cls.driver.refresh()
+        time.sleep(2)
         cls.EPh.click_detailed_btn()
         cls.Eeh = ExaminationeEnvirHandle(cls.driver)
         cls.Eep=getattr(cls.Eeh, 'Eep')
+        time.sleep(1)
         cls.Eeh.click_envir_btn()
         time.sleep(1)
 

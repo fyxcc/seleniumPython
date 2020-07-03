@@ -37,6 +37,7 @@ class ExaminationRoomBasicInfoEditDdtCase(unittest.TestCase):
         cls.ERp=getattr(  cls.ERh,'ERp')
         cls.EPb = ExaminationPlaceBusiness(cls.driver)
         cls.EPh = getattr(cls.EPb,'Eh')
+        time.sleep(2)
         cls.EPh.click_detailed_btn()
         time.sleep(1)
         cls.ERh.click_basic_edit_btn()

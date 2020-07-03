@@ -15,6 +15,7 @@ class ExaminationPlaceBusiness(object):
 
     # 成功添加
     def success_add(self, place_code, place_name, place_address, place_person, place_person_tel, assertCode):
+        time.sleep(2)
         self.Eh.send_place_code(place_code)
         self.Eh.send_place_name(place_name)
         if len(assertCode) == 0:
@@ -24,12 +25,12 @@ class ExaminationPlaceBusiness(object):
         self.Eh.send_place_person_tel(place_person_tel)
         # self.Eh.select_place_status()
         self.Eh.click_confirm_add_btn()
-        sleep(3)
+        time.sleep(2)
 
     # 数据驱动整合代码
     def add_function(self, place_code, place_name, place_address, place_person, place_person_tel, assertCode,
                      assertText):
-        time.sleep(1)
+        time.sleep(2)
         self.success_add(place_code, place_name, place_address, place_person, place_person_tel, assertCode)
         if assertText == '添加成功':
             result = self.Eh.get_add_success_text()
@@ -77,6 +78,7 @@ class ExaminationPlaceBusiness(object):
         self.Eh.send_edit_place_person(place_person)
         self.Eh.send_edit_place_person_tel(place_person_tel)
         # self.Eh.select_edit_place_status()
+        time.sleep(2)
         self.Eh.click_edit_confirm_btn()
 
     # 数据驱动整合代码

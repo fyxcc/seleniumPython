@@ -1,4 +1,6 @@
 #import HTMLTestRunner
+import sys
+
 from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 #from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 import unittest
@@ -6,7 +8,7 @@ from case.examination_place_add_ddt_case import ExaminationPlaceAddDdtCase
 from case.examination_place_edit_ddt_case import ExaminationPlaceEditDdtCase
 from case.examination_place_delete_ddt_case import ExaminationPlaceDeleteDdtCase
 from case.examination_place_query_ddt_case import ExaminationPlaceQueryDdtCase
-
+sys.path.append('D:/pythonWork/autoTest')
 
 
 class ExaminationPlace():

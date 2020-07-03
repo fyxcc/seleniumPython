@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="">
+    <list default="true" id="78e94faf-5fbc-4d67-9ad1-34274d655c3c" name="Default Changelist" comment="单模块添加柱状图测试报告，总模块使用另一种模板">
+      <change afterPath="$PROJECT_DIR$/util/grid_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/action_exe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/function_photo/photo_b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/function_photo/photo_file_path.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/function_photo/photo_name_path.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/function_photo/photo_open_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/function_photo/picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/function_photo/picturedemo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/image_match_by_sift.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/screen_capture/o.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/image_match_sift/screen_capture/photo_add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/untitled2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/examination_envir_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_envir_business.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/examination_place_business.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/examination_place_business.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_envir_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_envir_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_machine_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_photo_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_add_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_place_delete_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_delete_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_edit_ddt_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_basic_info_edit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_room_basic_select_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_basic_select_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_add_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_delete_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_book_edit_ddt_case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/examination_room_traffic_info_edit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/login_keyword_cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/login_keyword_cases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/register_keyword_cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/register_keyword_cases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle/examination_envir_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/handle/examination_envir_handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyword_modal/login_keyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyword_modal/login_keyword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/logs/2020-03-23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/logs/2020-03-24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/logs/2020-03-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/user_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/log/user_log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_suite/auto_make_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/auto_make_suite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_suite/examination_envir.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/examination_envir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_suite/examination_place.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/examination_place.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_suite/examination_room.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_suite/examination_room.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/htmltestrunner/HTMLTestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/htmltestrunner/HTMLTestRunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/image_match/action_execute.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/image_match/action_execute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/image_match/image_match.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/image_match/image_match.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,22 +77,22 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Daemon_AutoFramework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\pythonWork\autoTest\util" />
-      <recent name="D:\pythonWork\autoTest" />
-      <recent name="D:\pythonWork\autoTest\util\image_match\function_photo" />
-      <recent name="D:\pythonWork\autoTest\data" />
-      <recent name="D:\pythonWork\untitled2\util" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\pythonWork\autoTest\gallery" />
       <recent name="D:\pythonWork\untitled2\basic" />
       <recent name="D:\pythonWork\untitled2\api" />
       <recent name="D:\pythonWork\untitled2\util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonWork\autoTest\util\image_match_sift\screen_capture" />
+      <recent name="D:\pythonWork\autoTest\util\image_match_sift\function_photo" />
+      <recent name="D:\pythonWork\autoTest\util\image_match_sift" />
+      <recent name="D:\pythonWork\autoTest\util" />
+      <recent name="D:\pythonWork\autoTest" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.examination_room">
+  <component name="RunManager" selected="Python.examination_photo_ddt_case">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,19 +129,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="auto_make_suite" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="action_exe" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_suite" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util/image_match_sift" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_suite/auto_make_suite.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/image_match_sift/action_exe.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,19 +172,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="examination_envir" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="examination_envir_business" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_suite" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/business" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_suite/examination_envir.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/business/examination_envir_business.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,13 +200,36 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\fengyx\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_envir_ddt_case.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examination_envir_handle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/handle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/handle/examination_envir_handle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,34 +265,14 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\fengyx\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_photo_ddt_case.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="examination_place" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_suite" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_suite/examination_place.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -329,27 +357,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/examination_place_query_ddt_case.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="examination_room" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_suite" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_suite/examination_room.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -484,6 +491,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="excel_util" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/excel_util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="first_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -527,6 +556,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="image_match" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util/image_match" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/image_match/image_match.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="image_match_by_sift" type="PythonConfigurationType" factoryName="Python">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="D:\anaconda3\Library\bin" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util/image_match_sift" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/image_match_sift/image_match_by_sift.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="login_ddt_case" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -540,27 +613,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/login_ddt_case.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="login_keyword_cases" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case/login_keyword_cases.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -635,6 +687,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.image_match_by_sift" />
       <item itemvalue="Python.examination_room_book_edit_ddt_case" />
       <item itemvalue="Python.examination_photo_ddt_case" />
       <item itemvalue="Python.examination_machine_ddt_case" />
@@ -656,19 +709,19 @@
       <item itemvalue="Python.untitled2" />
       <item itemvalue="Python.run_case" />
       <item itemvalue="Python.login_ddt_case" />
-      <item itemvalue="Python.examination_room" />
-      <item itemvalue="Python.auto_make_suite" />
-      <item itemvalue="Python.login_keyword_cases" />
-      <item itemvalue="Python.examination_envir" />
-      <item itemvalue="Python.examination_place" />
+      <item itemvalue="Python.image_match" />
+      <item itemvalue="Python.examination_envir_business" />
+      <item itemvalue="Python.examination_envir_handle" />
+      <item itemvalue="Python.action_exe" />
+      <item itemvalue="Python.excel_util" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.examination_room" />
-        <item itemvalue="Python.examination_envir" />
-        <item itemvalue="Python.auto_make_suite" />
-        <item itemvalue="Python.examination_place" />
-        <item itemvalue="Python.login_keyword_cases" />
+        <item itemvalue="Python.image_match" />
+        <item itemvalue="Python.examination_envir_business" />
+        <item itemvalue="Python.excel_util" />
+        <item itemvalue="Python.action_exe" />
+        <item itemvalue="Python.examination_envir_handle" />
       </list>
     </recent_temporary>
   </component>
@@ -953,11 +1006,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590573392565</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="单模块添加柱状图测试报告，总模块使用另一种模板">
+      <created>1590731751821</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1590731751821</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -973,7 +1036,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="read_ini初始化增加node变量，使配置文件可以根node进行读取" />
     <MESSAGE value="添加考点page,handle,business层脚本实现" />
     <MESSAGE value="添加考点失败测试用例编写" />
     <MESSAGE value="添加考点成功关键字测试用例编写" />
@@ -998,7 +1060,8 @@
     <MESSAGE value="自构建测试集" />
     <MESSAGE value="修改测试报告" />
     <MESSAGE value="添加柱状图测试报告" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加柱状图测试报告" />
+    <MESSAGE value="单模块添加柱状图测试报告，总模块使用另一种模板" />
+    <option name="LAST_COMMIT_MESSAGE" value="单模块添加柱状图测试报告，总模块使用另一种模板" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="147" key="#Unittests_in_first_case.py" timestamp="1583993886118">
@@ -1066,14 +1129,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/handle/examination_place_handle.py</url>
-          <line>219</line>
-          <option name="timeStamp" value="77" />
+          <url>file://$PROJECT_DIR$/case/run_case.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/case/login_keyword_cases.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="78" />
+          <url>file://$PROJECT_DIR$/case/examination_place_edit_ddt_case.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/util/image_match_sift/image_match_by_sift.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="84" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

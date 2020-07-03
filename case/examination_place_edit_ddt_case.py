@@ -1,5 +1,6 @@
 # coding=utf-8
 import sys
+import time
 
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -34,6 +35,7 @@ class ExaminationPlaceEditDdtCase(unittest.TestCase):
         cls.driver.maximize_window()
         cls.Eb = ExaminationPlaceBusiness(cls.driver)
         Eh = getattr(cls.Eb, 'Eh')
+        time.sleep(2)
         Eh.click_edit_btn()
 
     # 所有case执行之后的后置条件
@@ -62,7 +64,6 @@ class ExaminationPlaceEditDdtCase(unittest.TestCase):
         Ep = getattr(getattr(self.Eb, 'Eh'), 'Ep')
         Eh = getattr(self.Eb, 'Eh')
         if Eh.judge_edit_frame():
-            #Ep.get_edit_place_code().clear()
             if Ep.get_edit_place_code().get_attribute('value') is not None:
                 edit_place_code=Ep.get_edit_place_code()
                 edit_place_code.send_keys(Keys.CONTROL, 'a')

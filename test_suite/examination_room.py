@@ -1,7 +1,10 @@
 #import HTMLTestRunner
+import sys
+
 from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 #from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 import unittest
+sys.path.append('D:/pythonWork/autoTest')
 from case.examination_room_basic_info_edit import ExaminationRoomBasicInfoEditDdtCase
 from case.examination_room_basic_select_ddt_case import ExaminationRoomBasicSelectDdtCase
 from case.examination_room_traffic_info_edit import ExaminationRoomTrafficInfoEditDdtCase

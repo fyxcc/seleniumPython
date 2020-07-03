@@ -217,7 +217,10 @@ class ExaminationEnvirBusiness(object):
     # 考点照片成功添加
 
     def machine_success_add_photo(self, photo_path,photo_name,screen_capture,photo_add_title, photo_add_content):
-        self.Eeh.browse_photo_add_photo_path(photo_path,photo_name,screen_capture)
+        if screen_capture !='':
+            #self.Eeh.browse_photo_add_photo_path(photo_path,photo_name,screen_capture)
+            #self.Eeh.browse_photo_add_photo_path_sift(photo_path,photo_name,screen_capture)
+            self.Eeh.browse_photo_add_photo_path_sift_demo(photo_path,photo_name,screen_capture)
         self.Eeh.send_photo_add_title(photo_add_title)
         self.Eeh.send_photo_add_content(photo_add_content)
         time.sleep(1)

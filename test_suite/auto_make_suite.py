@@ -1,11 +1,14 @@
 #import HTMLTestRunner
 #from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
+import sys
+sys.path.append('D:/pythonWork/autoTest')
 from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 import unittest
 from util.excel_util import ExcelUtil
 from case.examination_envir_ddt_case import ExaminationEnvirDdtCase
 from case.examination_machine_ddt_case import ExaminationMachineDdtCase
 from case.examination_photo_ddt_case import ExaminationPhotoDdtCase
+
 # 获取数据
 ex = ExcelUtil(excel_path=r"D:\pythonWork\autoTest\data\automakesuite.xls")
 

@@ -13,7 +13,7 @@ class ImageMatch():
         # 记录图像模板的尺寸
         w, h = template.shape[::-1]
         # 六种模板匹配算法：平方差匹配法，归一化平方差匹配法，相关匹配法(最慢，运算量大)，归一化相关匹配法，相关系数匹配法，归一化相关系数匹配法
-        #'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED', 'cv2.TM_CCORR', 'cv2.TM_CCORR_NORMED', 'cv2.TM_CCOEFF',
+        #'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED', 'cv2.TM_CCORR', 'cv2.TM_CCORR_NORMED', 'cv2.TM_CCOEFF','CV_TM_CCOEFF_NORMED '
         methods = ['cv2.TM_CCOEFF_NORMED']
         for meth in methods:
             img = img2.copy()
@@ -43,7 +43,7 @@ class ImageMatch():
 
 
 if __name__ == '__main__':
-    function_photo = r'D:\pythonWork/autoTest\util\image_match/function_photo\photo_file_path.png'
+    function_photo = r'D:\pythonWork\autoTest\util\image_match\function_photo\photo_open_btn.png'
     screen_capture = r'D:\pythonWork/autoTest\util\image_match\screen_capture\photo_add.png'
     IM = ImageMatch()
-    IM.ImageMatch(function_photo, screen_capture)
+    print(IM.ImageMatch(function_photo, screen_capture))

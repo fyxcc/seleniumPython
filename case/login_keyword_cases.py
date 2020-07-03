@@ -11,15 +11,18 @@
 (5)对比预期结果和实际结果的值
    对比结果一样，测试结论为pass；否则为fail
 '''
+import sys
+
 from util.excel_util import ExcelUtil
 from keyword_modal.login_keyword import LoginKeyword
-from selenium import webdriver
+sys.path.append('D:/pythonWork/autoTest')
 
 
 class LoginKeywordCases(object):
     # 执行关键词测试用例
 
     def run_keyword_excel_cases(self):
+
         self.lk = LoginKeyword()
         self.excel_path = r'D:\pythonWork\autoTest\data\loginKeyWord.xls'
         handle_excel = ExcelUtil(self.excel_path)

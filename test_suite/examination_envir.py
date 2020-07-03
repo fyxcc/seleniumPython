@@ -1,12 +1,13 @@
 #import HTMLTestRunner
+import sys
+
 from util.htmltestrunner.HTMLTestRunner import HTMLTestRunner
 #from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 import unittest
-
+sys.path.append('D:/pythonWork/autoTest')
 from case.examination_envir_ddt_case import ExaminationEnvirDdtCase
 from case.examination_machine_ddt_case import ExaminationMachineDdtCase
 from case.examination_photo_ddt_case import ExaminationPhotoDdtCase
-3
 class ExaminationRoom():
     def suite(self):
         # 一次性加载一个类文件下所有测试用例到suite中去。

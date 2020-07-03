@@ -34,7 +34,7 @@ class ExaminationPlaceAddDdtCase(unittest.TestCase):
         cls.driver.maximize_window()
         cls.Eb = ExaminationPlaceBusiness(cls.driver)
         Eh = getattr(cls.Eb, 'Eh')
-        time.sleep(1)
+        time.sleep(2)
         Eh.click_add_btn()
 
     # 所有case执行之后的后置条件

@@ -4,7 +4,7 @@
 from util.HTMLTestRunner_PY3.HTMLTestRunner_PY3 import HTMLTestRunner
 import sys
 import time
-
+from log.user_log import UserLog
 from handle.examination_envir_handle import ExaminationeEnvirHandle
 
 sys.path.append('D:/pythonWork/autoTest')
@@ -30,6 +30,11 @@ class ExaminationEnvirDdtCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print('所有case执行的前置条件')
+        cls.log = UserLog()
+        cls.logger = cls.log.get_log()
+        cls.log.clear_log()
+
+
         lkc = LoginKeywordCases()
         lkc.run_keyword_excel_cases()
         cls.driver = getattr(getattr(lkc, 'lk'), 'driver')
@@ -39,10 +44,12 @@ class ExaminationEnvirDdtCase(unittest.TestCase):
         cls.ERb = ExaminationRoomBusiness(cls.driver)
         cls.Eeb=ExaminationEnvirBusiness(cls.driver)
         cls.EPh = getattr(cls.EPb, 'Eh')
-        cls.driver.refresh()
+        #cls.driver.refresh()
+        time.sleep(2)
         cls.EPh.click_detailed_btn()
         cls.Eeh = ExaminationeEnvirHandle(cls.driver)
         cls.Eep=getattr(cls.Eeh, 'Eep')
+        time.sleep(1)
         cls.Eeh.click_envir_btn()
         time.sleep(1)
 
@@ -51,12 +58,14 @@ class ExaminationEnvirDdtCase(unittest.TestCase):
     def tearDownClass(cls):
         print('所有case执行的后置条件')
         cls.driver.close()
+        cls.log.close_handle()
+
 
     # 每一条case执行之前的前置条件
     def setUp(self):
         # print('每一条case执行前的前置条件')
+        self.logger.info(self._testMethodName+'用例开始执行')
         pass
-
     # 每一条case执行之后的后置条件
     def tearDown(self):
         print('每一条case执行之后的后置条件')
@@ -68,6 +77,9 @@ class ExaminationEnvirDdtCase(unittest.TestCase):
                 # 设置失败截图存储路径
                 file_path = os.path.join(os.path.pardir + "/report/" + case_name + ".png")
                 self.driver.save_screenshot(file_path)
+                self.logger.info(case_name+'用例执行出错')
+            #else:
+                #self.logger.info(self._testMethodName + '用例执行成功')
         if self.Eep.get_envir_edit_place_spread()!=None:
             self.Eeb.clear_all_envir()
 

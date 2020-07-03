@@ -40,13 +40,15 @@ class ExaminationRoomBookAddDdtCase(unittest.TestCase):
         cls.ERp = getattr(cls.ERh, 'ERp')
         cls.EPb = ExaminationPlaceBusiness(cls.driver)
         cls.EPh = getattr(cls.EPb, 'Eh')
+        time.sleep(2)
         cls.EPh.click_detailed_btn()
-        time.sleep(1)
+        time.sleep(2)
         cls.book_table_num = cls.ERh.get_book_table_empty_text()
         if cls.book_table_num != '暂无数据':
             cls.Tu = TableUtil(cls.driver, 'book_table')
             cls.dataName = cls.Tu.get_data_book(col=1)
             cls.position = cls.Tu.get_data_book(col=3)
+        time.sleep(2)
         cls.ERh.click_book_add_btn()
 
     # 所有case执行之后的后置条件

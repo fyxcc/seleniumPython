@@ -11,10 +11,12 @@
 (5)对比预期结果和实际结果的值
    对比结果一样，测试结论为pass；否则为fail
 '''
+import sys
+
 from util.excel_util import ExcelUtil
 from keyword_modal.register_keyword import RegisterKeyword
 from selenium import webdriver
-
+sys.path.append('D:/pythonWork/autoTest')
 
 class RegisterKeywordCases(object):
     # 执行关键词测试用例

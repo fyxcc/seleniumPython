@@ -3,7 +3,7 @@ import time
 from tkinter import Tk
 
 
-class ActionExecute():
+class ActionExe():
     def __init__(self):
         self.r = Tk()
 
@@ -13,7 +13,7 @@ class ActionExecute():
         self.r.clipboard_clear()
         self.r.clipboard_append(string)
         self.r.update()
-        #self.r.destroy()
+        self.r.destroy()
 
 
     # 获取剪切板的内容

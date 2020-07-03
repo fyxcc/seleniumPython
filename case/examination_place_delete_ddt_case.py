@@ -60,6 +60,7 @@ class ExaminationPlaceDeleteDdtCase(unittest.TestCase):
 
     # 执行用例，并判断是否执行成功
     def test_examination_place_delete_case(self):
+        sleep(3)
         lines=self.TU.get_lines()
         PageNum=self.TU.get_page_size()
         count=int(lines)/int(PageNum)

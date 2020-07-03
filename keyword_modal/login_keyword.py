@@ -1,19 +1,30 @@
 # coding=utf-8
+import time
 
 from selenium import webdriver
 from basic.find_element import FindElement
 from time import sleep
-
+from util import grid_module
 
 class LoginKeyword(object):
     # 打开浏览器
-    def open_browser(self, browser):
+    def open_browser(self,browser):
         if browser == 'chrome':
             self.driver = webdriver.Chrome("D:\pythonWork/autoTest/tools\chromedriver83.exe")
         elif browser == 'firefox':
             self.driver = webdriver.Firefox()
         else:
-            self.driver = webdriver.Edge()
+            self.driver = webdriver.Ie("D:\pythonWork/autoTest/tools\IEDriverServer.exe")
+        """ for host, browser in grid_module.grid().items():
+            self.driver = webdriver.Remote(
+                command_executor=host,
+                desired_capabilities={
+                    'platform': 'ANY',
+                    'browserName': browser,
+                    'version': '',
+                    'javascriptEnabled': True
+                }
+            )"""
 
     # 获取driver
     def get_driver(self):

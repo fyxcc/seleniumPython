@@ -32,8 +32,9 @@ class ExaminationRoomBookDeleteDdtCase(unittest.TestCase):
         cls.ERp = getattr(cls.ERh, 'ERp')
         cls.EPb = ExaminationPlaceBusiness(cls.driver)
         cls.EPh = getattr(cls.EPb, 'Eh')
+        time.sleep(2)
         cls.EPh.click_detailed_btn()
-        time.sleep(1)
+        time.sleep(2)
         cls.book_table_num = cls.ERh.get_book_table_empty_text()
 
     # 所有case执行之后的后置条件
